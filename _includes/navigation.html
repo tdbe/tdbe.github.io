@@ -8,54 +8,83 @@
 				<li>
 					<img src="{{ site.url }}/images/{{ site.owner.avatar }}" alt="{{ site.owner.name }} photo" class="author-photo">
 					<h4>{{ site.owner.name }}</h4>
-					<p>{{ site.owner.bio }}</p>
+					<p style="line-height: 1.5em; padding: 15px 15px 15px 20px; letter-spacing: 0.014rem;">{{ site.owner.bio }}<br/>
+					{{ site.owner.bio1 }}<br/>
+					{{ site.owner.bio2 }}<br/>
+					{{ site.owner.bio3 }}</p>
 				</li>
 				<li><a href="{{ site.url }}/about/">More About Me</a></li>
 				<li><p>Contact:</p></li>
 					<li style="display: inline-block!important; height: 8em; width: 1em; float: left;"></li>
 					{% if site.owner.email %}<li class="m_SocIconLi">
-						<a href="mailto:{{ site.owner.email }}" alt="Email"><i class="icon-envelope icon-2x"></i> </a>
+						<a href="mailto:{{ site.owner.email }}" alt="Email"><i class="icon-envelope icon-2x noPtrEvts"></i> </a>
 					</li>{% endif %}
 					{% if site.owner.bitbucket %}<li class="m_SocIconLi">
-						<a href="http://bitbucket.com/{{ site.owner.bitbucket }}" alt="Bitbucket"><i class="icon-bitbucket icon-2x"></i> </a>
+						<a href="http://bitbucket.com/{{ site.owner.bitbucket }}" alt="Bitbucket"><i class="icon-bitbucket icon-2x noPtrEvts"></i> </a>
 					</li>{% endif %}
 					{% if site.owner.github %}<li class="m_SocIconLi">
-						<a href="http://github.com/{{ site.owner.github }}" alt="GitHub"><i class="icon-github icon-2x"></i> </a>
+						<a href="http://github.com/{{ site.owner.github }}" alt="GitHub"><i class="icon-github icon-2x noPtrEvts"></i> </a>
 					</li>{% endif %}
 					{% if site.owner.twitter %}<li class="m_SocIconLi">
-						<a href="http://twitter.com/{{ site.owner.twitter }}" alt="Twitter"><i class="icon-twitter-sign icon-2x"></i> </a>
+						<a href="http://twitter.com/{{ site.owner.twitter }}" alt="Twitter"><i class="icon-twitter-sign icon-2x noPtrEvts"></i> </a>
 					</li>{% endif %}
 					{% if site.owner.linkedin %}<li class="m_SocIconLi">
-						<a href="http://linkedin.com/in/{{ site.owner.linkedin }}" alt="LinkedIn"><i class="icon-linkedin-sign icon-2x"></i> </a>
+						<a href="http://linkedin.com/in/{{ site.owner.linkedin }}" alt="LinkedIn"><i class="icon-linkedin-sign icon-2x noPtrEvts"></i> </a>
 					</li>{% endif %}
 					{% if site.owner.facebook %}<li>
-						<a href="http://facebook.com/{{ site.owner.facebook }}" alt="Facebook"><i class="icon-facebook icon-2x"></i> </a>
+						<a href="http://facebook.com/{{ site.owner.facebook }}" alt="Facebook"><i class="icon-facebook icon-2x noPtrEvts"></i> </a>
 					</li>{% endif %}
 					{% if site.owner.google_plus %}<li>
-						<a href="{{ site.owner.google_plus }}" alt="GooglePlus"><i class="icon-google-plus icon-2x"></i> </a>
+						<a href="{{ site.owner.google_plus }}" alt="GooglePlus"><i class="icon-google-plus icon-2x noPtrEvts"></i> </a>
 					</li>{% endif %}
 					{% if site.owner.stackexchange %}<li>
-						<a href="{{ site.owner.stackexchange }}" alt="StackExchange"><i class="icon-stackexchange icon-2x"></i> </a>
+						<a href="{{ site.owner.stackexchange }}" alt="StackExchange"><i class="icon-stackexchange icon-2x noPtrEvts"></i> </a>
 					</li>{% endif %}
 					{% if site.owner.instagram %}<li>
-						<a href="http://instagram.com/{{ site.owner.instagram }}" alt="Instagram"><i class="icon-instagram icon-2x"></i> </a>
+						<a href="http://instagram.com/{{ site.owner.instagram }}" alt="Instagram"><i class="icon-instagram icon-2x noPtrEvts"></i> </a>
 					</li>{% endif %}
 					{% if site.owner.flickr %}<li>
-						<a href="http://www.flickr.com/photos/{{ site.owner.flickr }}" alt="Flickr"><i class="icon-flickr icon-2x"></i> </a>
+						<a href="http://www.flickr.com/photos/{{ site.owner.flickr }}" alt="Flickr"><i class="icon-flickr icon-2x noPtrEvts"></i> </a>
 					</li>{% endif %}
 					{% if site.owner.tumblr %}<li>
-						<a href="http://{{ site.owner.tumblr }}.tumblr.com" alt="Tumblr"><i class="icon-tumblr icon-2x"></i> </a>
+						<a href="http://{{ site.owner.tumblr }}.tumblr.com" alt="Tumblr"><i class="icon-tumblr icon-2x noPtrEvts"></i> </a>
 					</li>{% endif %}
 				
 			</ul><!-- /.dl-submenu -->
 		</li>
-		<li>
+		<!--li>
 			<a href="#">Archive</a>
 			<ul class="dl-submenu">
 				<li><a href="{{ site.url }}/posts/">All Posts</a></li>
 				<li><a href="{{ site.url }}/tags/">All Tags</a></li>
 			</ul>
+		</li-->
+		<li>
+			<a href="{{ site.url }}/posts/">Archive</a>
 		</li>
 		{% for link in site.links %}<li>{% if link.external %}<a href="{{ link.url }}">{{ link.title }}</a>{% else %}<a href="{{ site.url }}{{ link.url }}">{{ link.title }}</a>{% endif %}</li>{% endfor %}
+		
+		<!-- blog/theme-setup -->
+		
+		<li>
+			<a href="{{ site.url }}/tags/">All Tags</a>
+		</li>
+		<li>
+		<ul class="entry-meta inline-list smallTags">
+		{% assign tags_list = site.tags %}  
+		  {% if tags_list.first[0] == null %}
+			{% for tag in tags_list %} 
+				<li><a href="tags/#{{ tag }}" class="tag">{{ tag }} <span>{{ site.tags[tag].size }}</span></a></li>
+			{% endfor %}
+		  {% else %}
+			{% for tag in tags_list %} 
+				<li><a href="tags/#{{ tag[0] }}" class="tag">{{ tag[0] }} <span>{{ tag[1].size }}</span></a></li>
+			{% endfor %}
+		  {% endif %}
+		{% assign tags_list = nil %}
+		</ul>
+		</li>
+		
 	</ul><!-- /.dl-menu -->
+	
 </nav><!-- /.dl-menuwrapper -->

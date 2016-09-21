@@ -5,6 +5,7 @@ $(function() {
   $( '#dl-menu' ).dlmenu({
     animationClasses : { classin : 'dl-animate-in', classout : 'dl-animate-out' }
   });
+  
 });
 
 // FitVids options
@@ -15,6 +16,7 @@ $(function() {
 $(".close-menu").click(function () {
   $(".menu").toggleClass("disabled");
   $(".links").toggleClass("enabled");
+  
 });
 
 $(".about").click(function () {

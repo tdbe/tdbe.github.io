@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /about/
-title: About the Theme
+title: More About Me
 tags: [Jekyll, theme, modern, minimal, responsive]
 image:
   feature: abstract-5.jpg
@@ -10,24 +10,64 @@ image:
 share: true
 ---
 
-They say three times the charm, so here is another free responsive Jekyll theme for you. I've learned a ton since open sourcing my first two themes [on Github](http://github.com/mmistakes), and wanted to try a few new things this time around. If you've used my previous themes most of this should be familiar territory...
+A few things about what I appreciate, do, or stand for.
+	
+Here are some things I find helpful: 
 
-## What HPSTR brings to the table:
+> reason, humour, imagination, talent, equal poise, flexible thinking.
 
-* Responsive templates for post, page, and post index `_layouts`. Looks great on mobile, tablet, and desktop devices.
-* Gracefully degrads in older browsers. Compatible with Internet Explorer 8+ and all modern browsers.  
-* Modern and minimal design.
-* Sweet animated menu.
-* Background image support.
-* Readable typography to make your words shine.
-* Support for large images to call out your favorite posts.
-* Comments powered by [Disqus](http://disqus.com) if you choose to enable.
-* Simple and clear permalink structure[^1].
-* [Open Graph](https://developers.facebook.com/docs/opengraph/) and [Twitter Cards](https://dev.twitter.com/docs/cards) support for a better social sharing experience.
-* Simple [custom 404 page]({{ site.url }}/404.html) to get you started.
-* Stylesheets for Pygments and Coderay [syntax highlighting]({{ site.url }}/code-highlighting-post/) to make your code examples look snazzy
-* [Grunt](http://gruntjs.com) build script for easy theme development
 
-<div markdown="0"><a href="{{ site.url }}/theme-setup" class="btn btn-info">Install the Theme</a></div>
+------------------
 
-[^1]: Example: *domain.com/category-name/post-title*
+Here's what I like:
+
+* clear but high-bandwidth input, 
+* juicy feedback / visuals, 
+* unique stimulus scapes through VR design 
+* liberating mechanics, 
+* emergent multiplayer shenanigans, 
+* fanbase meta social engagement, 
+* new ideas / approaches.
+
+
+------------------
+
+
+A few of the vidya I like:
+
+|:--------|:-------:|--------:|
+|Valve stuff,| Kamyia stuff, | Shadow of the Colossus,|Psychonauts, | System Shock 2, | Gish,| 
+|Carmack stuff,| Mirror's edge, | Guilty Gear, |Smash,| Legacy of Kain, | Echochrome, |
+|Kojima stuff, | SureAI (eg Skywind) |Katamari Damacy, |Majora's mask,| Thief 2, | N++, |
+|Jonathan Blow,| Riot stuff, |Jet Set Radio, | Metroid, | Gang Beasts,| AVGN Adventures, |
+|Warren Spector,| Overwatch, |Beyond Good & Evil, | Jazz Jackrabbit, | Lethal League, | Skullgirls. |
+
+###### Also, Titanfall 2, Watchdogs 2, Frog Fractions 2..
+
+------
+
+Here is a brief list of things I approve of: 
+
+* [Making Business Personal](https://hbr.org/2014/04/making-business-personal)
+* [Astronaut requirements == Job requirements](http://www.mars-one.com/faq/selection-and-preparation-of-the-astronauts/what-are-the-qualifications-to-apply)
+* [John Cleese on Creativity](https://github.com/tjluoma/John-Cleese-on-Creativity)
+* [Jonathan Blow on deep creativity](https://www.youtube.com/watch?v=d0m0jIzJfiQ)
+* [Gabe Newell: Reflections of a video game maker](https://www.youtube.com/watch?v=t8QEOBgLBQU)
+* [John Carmack and SMU LYLE School of Engineering](https://www.youtube.com/watch?v=EaN4wUii0T0)
+* [SIGGRAPH](http://blog.selfshadow.com/2014/08/14/siggraph-2014-links/)
+* [Octane Renderer for MRT light fields (VR)](https://www.youtube.com/watch?v=0LLHMpbIJNA)
+* [Art and Technology at Pixar](http://graphics.pixar.com/library/)
+* [Feng Zhu Design Cinema](http://fengzhudesign.com/tutorials.htm)
+* [Elon Musk](https://twitter.com/elonmusk)
+* [Ray Kurzweil](http://www.kurzweilai.net/)
+* [Jennifer Doudna](http://rna.berkeley.edu/)
+* [The Tek](https://www.youtube.com/user/razethew0rld)
+* [Super Best Friend Zaibatsu](http://superbestfriendsplay.com/), [Team FourStar](http://teamfourstar.com/), [AVGN](http://cinemassacre.com/)
+
+
+----
+ 
+You can notice me further at:
+
+* [spectraljump.deviantart](http://spectraljump.deviantart.com/)
+

@@ -1,9 +1,44 @@
-/*! 
+/*
 // ===========================================================
 // HPSTR Jekyll Theme
 // By: Michael Rose
 // ===========================================================
 */
+/*
+ *  Font Awesome 3.2.0
+ *  the iconic font designed for Bootstrap
+ *  ------------------------------------------------------------------------------
+ *  The full suite of pictographic icons, examples, and documentation can be
+ *  found at http://fontawesome.io.  Stay up to date on Twitter at
+ *  http://twitter.com/fontawesome.
+ *
+ *  License
+ *  ------------------------------------------------------------------------------
+ *  - The Font Awesome font is licensed under SIL OFL 1.1 -
+ *    http://scripts.sil.org/OFL
+ *  - Font Awesome CSS, LESS, and SASS files are licensed under MIT License -
+ *    http://opensource.org/licenses/mit-license.html
+ *  - Font Awesome documentation licensed under CC BY 3.0 -
+ *    http://creativecommons.org/licenses/by/3.0/
+ *  - Attribution is no longer required in Font Awesome 3.0, but much appreciated:
+ *    "Font Awesome by Dave Gandy - http://fontawesome.io"
+ *
+ *  Author - Dave Gandy
+ *  ------------------------------------------------------------------------------
+ *  Email: dave@fontawesome.io
+ *  Twitter: http://twitter.com/byscuits
+ *  Work: Lead Product Designer @ Kyruus - http://kyruus.com
+ */
+/*
+// ===========================================================
+// HPSTR Jekyll Theme
+// By: Michael Rose
+// ===========================================================
+*/
+
+
+
+
 
 *,
 *:after,
@@ -284,9 +319,14 @@ h1,
 h2,
 h3,
 h4,
-h5,
+h5
+{
+	font-family: 'Lato', Calibri, Arial, sans-serif;
+}
 h6 {
-  font-family: 'Lato', Calibri, Arial, sans-serif;
+  font-family: sans-serif, 'Lato', Calibri, Arial, sans-serif;
+  font-size: 0.699rem;
+  font-weight: normal;
 }
 
 h1 {
@@ -347,7 +387,8 @@ figcaption {
 
 blockquote {
   padding-left: 20px;
-  font-family: serif;
+  /*font-family: serif;*/
+  font-family: sans-serif;
   font-style: italic;
   border-left: 8px solid #bbbbbb;
 }
@@ -1560,6 +1601,9 @@ svg:not(:root) {
   width: 234px;
   max-width: 400px;
   max-height: 600px;
+  height: 300px;
+  overflow: visible!important;
+  
   margin: 0;
   overflow-y: auto;
   pointer-events: none;
@@ -1713,6 +1757,9 @@ All this is done for any sub-level being entered.
   -webkit-animation: SubMenuAnimIn 0.4s ease;
      -moz-animation: SubMenuAnimIn 0.4s ease;
           animation: SubMenuAnimIn 0.4s ease;
+	width: 234px;
+	margin-top: -1px;
+	padding-bottom: 4px;
 }
 
 @-webkit-keyframes SubMenuAnimIn {
@@ -1744,7 +1791,7 @@ All this is done for any sub-level being entered.
   }
   100% {
     opacity: 1;
-    transform: translateZ(0);
+    transform: translateZ(0);/* translate(20px, 80px) scale(1.3);*/
   }
 }
 
@@ -1892,7 +1939,9 @@ All this is done for any sub-level being entered.
 [class*=" icon-"]:before {
   display: inline-block;
   text-decoration: inherit;
-  cursor: default;
+  /*cursor: default;*/
+  cursor: pointer!important;
+  cursor: hand!important;
   speak: none;
 }
 
@@ -4404,3 +4453,48 @@ body {
 .m_SocIconLi a{
 	margin-left: -0.75em;
 }
+
+.noPtrEvts{
+	pointer-events:none;
+}
+
+.smallTags{
+	background: rgb(43, 43, 43)!important;
+	padding-top: 13px!important;
+	padding-left: 6px!important;
+	padding-bottom: 11px!important;
+
+	margin: 0!important;
+	text-align: left!important;
+	
+	-webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.smallTags li{
+	display: inline-block;
+	padding: 4px 0px 4px 0px;
+}
+
+.smallTags li a{
+	font-size: 14px;
+	text-transform: none!important;
+	line-height: 14px;
+	padding-bottom: 4px!important;
+    background-color: #3e3e3e!important;
+
+
+}
+
+.smallTags li a:hover{
+
+    /*background-color: #5d5d5d!important;*/
+    background-color: #4e4e4e!important;
+}
+
+td {
+	font-size: 0.699rem!important;
+	padding: 0px 6px 0px 6px!important;
+}
+

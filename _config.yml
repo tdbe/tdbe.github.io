@@ -1,5 +1,5 @@
 title:            Tudor's blog
-description:      Using SCIENCE to make art.
+description:      art and shenanigans with SCIENCE
 disqus_shortname: 
 #Your site's domain goes here. Leave localhost server or blank when working locally.
 url:              http://tdbe.github.io
@@ -9,7 +9,10 @@ url:              http://tdbe.github.io
 owner:
   name:           Tudor Berechet
   avatar:         avatar.png
-  bio:            "Your bio goes here. It shouldn't be super long but a good two sentences or three should suffice."
+  bio:            "Wants a Space Tavern."
+  bio1: 		  "Gamedev. Likes to use particles instead of voxels."
+  bio2:			  "Likes disruption and futurism."
+  bio3:           "Draws on different fields to make specific fun stuff."
   email:          this.tudor|at|gmail.com
   # Social networking links used in footer. Update and remove as you like.
   facebook:       
@@ -36,8 +39,8 @@ bing_verify:
 # Links to include in top navigation
 # For external links add external: true
 links:
-  - title: Theme Setup
-    url: /theme-setup
+#  - title: Theme Setup
+#    url: /theme-setup
   - title: Portfolio
     url: http://www.deferredreality.com
     external: true
