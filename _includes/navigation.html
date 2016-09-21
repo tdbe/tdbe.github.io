@@ -10,41 +10,47 @@
 					<h4>{{ site.owner.name }}</h4>
 					<p>{{ site.owner.bio }}</p>
 				</li>
-				<li><a href="{{ site.url }}/about/">Learn More</a></li>
-				{% if site.owner.email %}<li>
-					<a href="mailto:{{ site.owner.email }}"><i class="icon-envelope"></i> Email</a>
-				</li>{% endif %}
-				{% if site.owner.twitter %}<li>
-					<a href="http://twitter.com/{{ site.owner.twitter }}"><i class="icon-twitter"></i> Twitter</a>
-				</li>{% endif %}
-				{% if site.owner.facebook %}<li>
-					<a href="http://facebook.com/{{ site.owner.facebook }}"><i class="icon-facebook"></i> Facebook</a>
-				</li>{% endif %}
-				{% if site.owner.google_plus %}<li>
-					<a href="{{ site.owner.google_plus }}"><i class="icon-google-plus"></i> Google+</a>
-				</li>{% endif %}
-				{% if site.owner.linkedin %}<li>
-					<a href="http://linkedin.com/in/{{ site.owner.linkedin }}"><i class="icon-linkedin"></i> LinkedIn</a>
-				</li>{% endif %}
-				{% if site.owner.github %}<li>
-					<a href="http://github.com/{{ site.owner.github }}"><i class="icon-github"></i> GitHub</a>
-				</li>{% endif %}
-				{% if site.owner.stackexchange %}<li>
-					<a href="{{ site.owner.stackexchange }}"><i class="icon-stackexchange"></i> Stackexchange</a>
-				</li>{% endif %}
-				{% if site.owner.instagram %}<li>
-					<a href="http://instagram.com/{{ site.owner.instagram }}"><i class="icon-instagram"></i> Instagram</a>
-				</li>{% endif %}
-				{% if site.owner.flickr %}<li>
-					<a href="http://www.flickr.com/photos/{{ site.owner.flickr }}"><i class="icon-flickr"></i> Flickr</a>
-				</li>{% endif %}
-				{% if site.owner.tumblr %}<li>
-					<a href="http://{{ site.owner.tumblr }}.tumblr.com"><i class="icon-tumblr"></i> Tumblr</a>
-				</li>{% endif %}
+				<li><a href="{{ site.url }}/about/">More About Me</a></li>
+				<li><p>Contact:</p></li>
+					<li style="display: inline-block!important; height: 8em; width: 1em; float: left;"></li>
+					{% if site.owner.email %}<li class="m_SocIconLi">
+						<a href="mailto:{{ site.owner.email }}" alt="Email"><i class="icon-envelope icon-2x"></i> </a>
+					</li>{% endif %}
+					{% if site.owner.bitbucket %}<li class="m_SocIconLi">
+						<a href="http://bitbucket.com/{{ site.owner.bitbucket }}" alt="Bitbucket"><i class="icon-bitbucket icon-2x"></i> </a>
+					</li>{% endif %}
+					{% if site.owner.github %}<li class="m_SocIconLi">
+						<a href="http://github.com/{{ site.owner.github }}" alt="GitHub"><i class="icon-github icon-2x"></i> </a>
+					</li>{% endif %}
+					{% if site.owner.twitter %}<li class="m_SocIconLi">
+						<a href="http://twitter.com/{{ site.owner.twitter }}" alt="Twitter"><i class="icon-twitter-sign icon-2x"></i> </a>
+					</li>{% endif %}
+					{% if site.owner.linkedin %}<li class="m_SocIconLi">
+						<a href="http://linkedin.com/in/{{ site.owner.linkedin }}" alt="LinkedIn"><i class="icon-linkedin-sign icon-2x"></i> </a>
+					</li>{% endif %}
+					{% if site.owner.facebook %}<li>
+						<a href="http://facebook.com/{{ site.owner.facebook }}" alt="Facebook"><i class="icon-facebook icon-2x"></i> </a>
+					</li>{% endif %}
+					{% if site.owner.google_plus %}<li>
+						<a href="{{ site.owner.google_plus }}" alt="GooglePlus"><i class="icon-google-plus icon-2x"></i> </a>
+					</li>{% endif %}
+					{% if site.owner.stackexchange %}<li>
+						<a href="{{ site.owner.stackexchange }}" alt="StackExchange"><i class="icon-stackexchange icon-2x"></i> </a>
+					</li>{% endif %}
+					{% if site.owner.instagram %}<li>
+						<a href="http://instagram.com/{{ site.owner.instagram }}" alt="Instagram"><i class="icon-instagram icon-2x"></i> </a>
+					</li>{% endif %}
+					{% if site.owner.flickr %}<li>
+						<a href="http://www.flickr.com/photos/{{ site.owner.flickr }}" alt="Flickr"><i class="icon-flickr icon-2x"></i> </a>
+					</li>{% endif %}
+					{% if site.owner.tumblr %}<li>
+						<a href="http://{{ site.owner.tumblr }}.tumblr.com" alt="Tumblr"><i class="icon-tumblr icon-2x"></i> </a>
+					</li>{% endif %}
+				
 			</ul><!-- /.dl-submenu -->
 		</li>
 		<li>
-			<a href="#">Posts</a>
+			<a href="#">Archive</a>
 			<ul class="dl-submenu">
 				<li><a href="{{ site.url }}/posts/">All Posts</a></li>
 				<li><a href="{{ site.url }}/tags/">All Tags</a></li>

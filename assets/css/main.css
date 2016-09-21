@@ -1555,7 +1555,9 @@ svg:not(:root) {
 
 .dl-menuwrapper .dl-menu {
   position: absolute;
-  width: 100%;
+  /*width: 100%;*/
+  /*width: 230px;*/
+  width: 234px;
   max-width: 400px;
   max-height: 600px;
   margin: 0;
@@ -3824,6 +3826,10 @@ body {
   text-transform: uppercase;
 }
 
+.resetTxtTrans{
+	text-transform: none!important;
+}
+
 @media only screen and (min-width: 48em) {
   .header-title h2 {
     font-size: 30px;
@@ -3919,7 +3925,16 @@ body {
   font-size: 0.75rem;
   color: #ffffff;
   text-align: right;
-  background-color: rgba(34, 34, 34, 0.5);
+  /*background-color: rgba(34, 34, 34, 0.5);*/
+  background-color: none;
+  -webkit-text-shadow: 
+			-1px 1px 1px rgba(34, 34, 34, 0.5);
+  -moz-text-shadow: 
+			-1px 1px 1px rgba(34, 34, 34, 0.5);
+  -o-text-shadow:
+			-1px 1px 1px rgba(34, 34, 34, 0.5);
+  text-shadow: 
+			-1px 1px 1px rgba(34, 34, 34, 0.5);
   -webkit-border-top-right-radius: 3px;
           border-top-right-radius: 3px;
   -webkit-border-bottom-right-radius: 0;
@@ -4374,4 +4389,18 @@ body {
 #goog-wm-sb:hover {
   color: #222222;
   background-color: #ffffff;
+}
+
+
+
+.m_SocIconLi{
+	display:inline-block!important;
+	overflow:hidden;
+	width: 3em!important;.
+	padding-left: .25em;
+	padding-right: .25em;
+}
+
+.m_SocIconLi a{
+	margin-left: -0.75em;
 }

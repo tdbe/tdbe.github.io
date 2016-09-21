@@ -189,6 +189,7 @@
 			this.open = false;
 		},
 		openMenu : function() {
+			alert();
 			if( !this.open ) {
 				this._openMenu();
 			}
