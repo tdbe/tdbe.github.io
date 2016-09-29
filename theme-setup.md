@@ -19,6 +19,8 @@ share: true
 
 [https://tinypressco.github.io/](https://tinypressco.github.io/)
 
+[syntax highlighting](https://haisum.github.io/2014/11/07/jekyll-pygments-supported-highlighters/)
+
 ## What HPSTR brings to the table:
 
 * Responsive templates for post, page, and post index `_layouts`. Looks great on mobile, tablet, and desktop devices.
