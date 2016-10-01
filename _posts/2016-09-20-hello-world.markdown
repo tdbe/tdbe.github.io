@@ -2,7 +2,7 @@
 published: true
 layout: post
 title: It Lives!
-description: "my devblog is up"
+description: "The About page and devblog are up!"
 modified: 2016-09-24
 tags: [news]
 image:

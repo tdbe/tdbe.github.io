@@ -1,8 +1,8 @@
 ---
 published: true
 layout: post
-title: Pipeline and tricks for custom (Unity) Shaders
-description: "Unity shader writing tricks"
+title: Graphics Pipeline and Custom (Unity) Shader Tricks
+description: "Spaces, coordinates, matrices, and different types of vertex, geometry, and fragment shaders."
 modified: 2016-09-29
 tags: [graphics programming, command buffer, unity3d, matrix, shader, vertex, geometry, fragment, tutorial]
 image:
@@ -13,11 +13,13 @@ comments: true
 share: true
 ---
 
-In my graphics programming internets travels I noticed that a lot of people find it hard to grasp the pipeline of custom shaders and some of the tricks you can do.
+In my graphics programming internets travels I noticed that a lot of people find it hard to grasp (or clearly explain) the graphics pipeline and some of the tricks you can do.
 
-I'll explain the concepts behind how a mesh (or a data buffer) gets converted throughout the shader and on to the screen, and give some sample code for stuff like procedural geometry, reconstructing worldpsace position, or using custom data buffers.
+The general high level theory is simple, but the API naming or hidden math makes it tough in practice.
 
-This post assumes you've tinkered with shader code before, and know basic stuff like how there is triangle interpolation, and to set your variables, buffers, textures.
+I'll explain for-realsies how a mesh (or a data buffer) gets converted throughout the pipeline, and give some sample code for stuff like procedural geometry, reconstructing worldpsace position, or using custom data buffers.
+
+This post assumes you've tinkered with shader code before, and know basic concepts like how there's triangle interpolation.
 
 <br/>
 
@@ -25,7 +27,7 @@ This post assumes you've tinkered with shader code before, and know basic stuff 
 
 ##The Mesh
 
-First off, a Mesh is a class in that stores various coordinates in Object Space:
+First off, a Mesh is a class that stores various coordinate arrays in Object Space:
 
 * An array of vertices.
 	* ex: A quad can have least 4 verts: `{-1,1,0.5},{1,1,0.5},{1,-1,0.5},{-1,-1,0.5}` (clockwise notation, from top left)
@@ -54,30 +56,62 @@ First off, a Mesh is a class in that stores various coordinates in Object Space:
 
 Terminology here is loose with many synonyms. I'll throw all of them in and clarify.
 
-A mesh goes from **Object Space** (or Model Space) to **World Space** to **Camera Space** (or View Space or Eye Space) to **Clip Space** to **Screen Space** to **Window Space**.
+A mesh goes from **Object Space** (or Model Space) to **World Space** to **Camera Space** (or View Space or Eye Space) to **Projection Space** (**Clip Space**) to **Screen Space** (or Window Space).
 
-The following is how virtually any graphics pipeline works, but I'm specifically writing it in Unity CG terminology:
+The following is how virtually any graphics pipeline works, but I'm specifically writing it in CG terminology, with the UnityCG library in particular:
 
-*Note: these matrixes are used starting with the **Vertex program**. The first 3 are merged into `UNITY_MATRIX_MVP`*
+*Note: these matrixes are used starting with the **Vertex program**. The first 3 are merged into `UNITY_MATRIX_MVP`*.
 <br/>
 <br/>
 
 
 ###The Vertex Shader
 
-* Model->World is the World matrix (rotates, translates, scales vertices to their unity world position). Unity calls it the Model matrix... I know, a less sadistic engine would have unconfusingly named it `MATRIX_WVP` not `_MVP`.
+* **M**odel->World is the World matrix (rotates, translates, scales vertices to their unity world position). Unity and OpenGL call it the Model matrix... But a less sadistic way to name it, for newcomers, would have been `MATRIX_WVP` not `_MVP`.
 
-* World -> Camera is the View matrix (this is the square frustum, no clipping, no perspective divide; coords are in -1 to 1 (in unity coords), relative to camera)
+* World -> Camera is the **V**iew matrix. This just transforms coords so they are relative to the camera. They are in -1 (bottom-left) to 1 (top-right), with the camera at (0,0).
 
-* Camera -> Clip is the Projection Matrix. Well, actually it's the Clip matrix. (Here everything is clipped to those bounds ([Here's how the matrix looks](http://answers.unity3d.com/questions/1070406/difference-between-vertexz-and-posw-in-mvp-space.html)) ([check basics of the frustum here](http://http.developer.nvidia.com/CgTutorial/cg_tutorial_chapter04.html))). BTW This is another instance of sadistic naming since it's the Clip matrix not the Projection matrix. So the matrix should be called `UNITY_MATRIX_WVC`.
+* Camera -> Clip space is the Perspective (or Orthographic (isometric)) **P**rojection Matrix. The projection matrix doesn't really do anything now. It just builds up the vertex for the next (perspective divide) step.
 
+Here's how the Projection Matrix multiplication looks in Unity (it's the OpenGL standard):
+
+|:--------:|:-------:|:--------:|:--------:|:--------:|:--------:|
+| focalLength   | 0   | 0   | 0  |   		|	x		|
+| 0   | focalLength /<br/>aspectRatio   | 0   | 0  | * 		|	y		|
+| 0   | 0   | - (farPlane + nearPlane) /<br/>(farPlane - nearPlane)   |	-(2 * farPlane * nearPlane) /<br/>(farPlane - nearPlane)  |   		|	z		|
+| 0   | 0   | -1   | 0		|   		|	1		|
+
+The Projection Matrix above incorporates FoV, and the near and far planes.
+<br/>
+`focalLength = 1 / tan(FoV/2);`
+<br/>
+`aspectRatio = windowHeight / windowWidth;`
+
+Check out [slide #6 here](http://www.terathon.com/gdc07_lengyel.pdf) for a nice visualisation. 
+
+***Note:***
+<ul>
+	<ul style="margin-left: -2em; margin-top:-1em; font-style: italic;">
+	<li>Unity will convert the above matrix to the appropriate API it's using when it compiles the shaders (e.g. DirectX).</li>
+	
+	<li>You can see or set the projection matrix with <a href="https://dl.dropboxusercontent.com/u/7761356/UnityAnswers/Code/ProjectionMatrixEditorWindow.cs">this editor script</a>.</li>
+	
+	<li>If you set custom projection matrices from C#, use the <a href="https://docs.unity3d.com/550/Documentation/ScriptReference/GL.GetGPUProjectionMatrix.html">GL.GetCPUProjectionMatrix</a>.</li>
+	</ul>
+</ul>
+
+
+***Note:** Z is actually converted to 1/z (the inverse, or reciprocal of z). Z is not linear but 1/z is (this allows linear interpolation, and helps precision). <a style="border-bottom: 1px dotted #a2a2a2;" href="http://www.reedbeta.com/blog/2015/07/03/depth-precision-visualized/">Here's more</a> on why 1/z is used, and on the depth precision.*
+
+
+<br/>
 
 <figure class="half">
 	<img src="http://i950.photobucket.com/albums/ad341/jekylljuice85/lobe%20gallery/relaxovision.png" alt="Freakazoid">
 	<figcaption>Intermission</figcaption>
 </figure>
 
-Before we continue I must point out that up until now all the coords were in what is called **Homogenous** space or Homogenous coordinates (4D): point.xyzw. 
+Before we continue I must point out that up until now (and including Clip space (projection space)) all the coords were in what is called **Homogenous** space or Homogenous coordinates (4D): `vertex.xyz`w. 
 
 Normally w is 1 in a vector. We need it because GPUs work with matrix multiplications. But matrix transforms are rotation, scale, and **translation** -- which is addition. So if you know your matrix math you know you can get addition out of matrix multiplication if you add a dimension:
 
@@ -89,9 +123,9 @@ Normally w is 1 in a vector. We need it because GPUs work with matrix multiplica
 | 0   | 0   | 0   | 1			|   		|	1		|
 
 
-Above we have a simple Translation matrix, multiplied by our point.xyzw. See why w needs to be 1? Also, obviously you can combine multiple matrices into one (e.g. don't just have 1s and 0s in our matrix above, maybe also include rotation and/or scale, or, say a `UNITY_MATRIX_MVP`).
+Above we have a simple Translation matrix, multiplied by our `vertex.xyz`w. See why w needs to be 1? Also, obviously you can combine multiple matrices into one (e.g. don't just have 1s and 0s in our matrix above, maybe also include rotation and/or scale, or, say a `UNITY_MATRIX_MVP`).
 
-BUT, w at this point in the pipeline, will be hijacked for the perspective divide (explained below). Our w will become z with this matrix mult:
+After the Projection, w will be used for the perspective divide. The w will become z with this kind of matrix multiplication:
 
 |:--------:|:-------:|:--------:|:--------:|:--------:|:--------:|
 | 1   | 0   | 0   | 0  |   		|	x		|
@@ -99,19 +133,21 @@ BUT, w at this point in the pipeline, will be hijacked for the perspective divid
 | 0   | 0   | 1   |	0  |   		|	z		|
 | 0   | 0   | 1   | 0  |   		|	1		|
 
-<span style="display:none;">
-*Minor Note: [this wonderful chap](http://www.tomdalling.com/blog/modern-opengl/explaining-homogenous-coordinates-and-projective-geometry/) also points out that when w == 0, then an object is at infinity, and cannot be transformed from homogenous space coords to 3d space coords (divide by 0). And this is traditionally the way you check whether you're currently processing a point light (w=1) or a directional light (w=0).*
-</span>
-
+<br/>
 And we're back: 
 
-* Clip -> Screen is the actual Projection matrix. But it's something that happens automatically, on the GPU, immediately after the Vertex program. The frustum gets a perspective divide (distortion) (which is not [affine](https://en.wikipedia.org/wiki/Affine_transformation)), i.e is divided by w. Now the term we're at is we're in Normalized Device Coordinates. Then a couple of viewport and depth range tweaks are done and we're in Screen Space.
-	* Even though we still have a w, we're not in homogenous corrds any more. If you're confused why the vertex2frag out structure's `.pos` attribute is a vector4, it's because the perspective divide happens just after the vertex program, but the w is of no use in the fragment program.
+***Note**: The following 3 steps are something that happens automatically, on the GPU (OpenGL and DirectX), immediately after the Vertex program.*
+
+* Frustum Culling. This is not a matrix, it's a sampling operation. The vertex program outputs coordinates in Clip space. So the clip coordinates of `vertex.xyz` are each (x, y, and z) tested for beig within (`-vertex.w`, `vertex.w`). Basically if anything from is outside the frustum, it is not sampled (frustom culling).
+
+* Clip -> NDC space is the perspective divide (by `vertex.w`). The frustum gets a perspective divide (distortion) (which is not [affine](https://en.wikipedia.org/wiki/Affine_transformation)), i.e is divided by w. Now the term we're at is we're in Normalized Device Coordinates. Then a couple of viewport and depth range tweaks are done and we're in Screen Space.
+	* Even though we still have a w (and it's normalized to 1), we're not in homogenous corrds any more. If you were confused why the vertex2frag out structure's `.pos` attribute is a vector4, it's because the perspective divide happens just after the vertex program.
 	* In OpenGL Screen space's coordinates go between (-1,-1,-1) and (1,1,1). In Direct3D the z goes between 0 and 1.
 	* The Z coordinate here goes into the Depth buffer, and/or encoded into the DepthNormals buffer. The depth in buffers is [0,1].
-	* Since we've done our perspective projection, the Depth buffer **is not linear**. So you can't just do linear interpolation to fetch a depth point (I'll explain later).
-	
-* Screen -> Window: Still after the Vertex and before the fragment, the GPU converts coords to viewport pixels. In other words, it transforms from Normalized Device Coordinates (or NDC) to Window Coordinates. 
+	* Since we've done our perspective projection, the Depth buffer **is not linear**. So you can't just do linear interpolation to fetch a depth point (I'll explain later when I get to ray examples).
+<br/>
+<br/>
+* NDC space -> Screen space (Window space) (rasterization): Still after the Vertex and before the fragment, the GPU converts coords to viewport pixels. In other words, it transforms from Normalized Device Coordinates (or NDC) to Window Coordinates (raster pixels - fragments). 
 
 The formula is x = 0.5 * (x+1) * screenWidth, y = 0.5 * (x+1) * screenHeight. The z is still between 0 and 1 from before.
 
@@ -133,6 +169,7 @@ If you want extra coords passed to the fragment in Screen space, you need to do 
 	
 At this point our `o.pos` is converted to Clip space by `MVP`. So `ComputeScreenPos` is a cross-platform unityGC function that essentially takes the [-1,1] coordinates and converts them to [0,1] in screenspace (0 is bottom left).
 If you want `i.uv` to be the same as `i.pos`, you'd also need to multiply i.uv.xy by window width in pixels.
+
 
 <br/>
 
@@ -226,6 +263,48 @@ What I did above was I treated my `quad_vert` like it was in camera space not ob
 
 Now we've finally entered the **Fragment** program before which the GPU has also done linear and perspective-correct interpolation on the vertices (and on texcoords, color etc.) to give us the pixel positions for the triangles. 
 
-Keep in mind that here you shouldn't multiply any point by a matrix, unless you make it homogenous (w=1 and also reverse the perspective divide).
+Keep in mind that here you shouldn't multiply any point by a matrix, unless you make it homogenous (w=1 and also reverse the perspective divide (ie take it back to clip space)).
 
-*This is running rather long, but I'll come back with some fragment tricks soon*
+The classic fragment function is like this: <br/>
+`fixed4 frag(v2f_struct i) : COLOR //or SV_Target`<br/>
+This means this shader has 1 Render Target and it returns a rgba color.
+
+The render target can be changed from C# with the Graphics or CommandBuffer API. (I'll show that later)
+
+In the deferred renderer, you can actually have (the option to output to) multiple render targets (MRT). The function structure changes, we use (multiple) out parameters:
+{% highlight glsl %}
+void fragDeferred (
+	VertexOutputDeferred i,
+	out half4 outDiffuse : SV_Target0,// RT0: diffuse color (rgb), occlusion (a)
+	out half4 outSpecSmoothness : SV_Target1,// RT1: spec color (rgb), smoothness (a)
+	out half4 outNormal : SV_Target2,// RT2: normal (rgb), --unused, very low precision-- (a) 
+	out half4 outEmission : SV_Target3// RT3: emission (rgb), --unused-- (a)
+)
+{% endhighlight %}
+
+Now let's continue from my vertex shader snippet from further above where I wanted a screenspace ray and did: `o.uv = ComputeScreenPos(o.pos);`.
+<br/>Since it didn't get a perspective divide (because it couldn't have been interpolated to the fragment if it had), we need to do that now.
+<br/> Fragment:
+{% highlight glsl %}
+{
+//a screenspace uv ray:
+float2 uv = i.uv.xy / i.uv.w;
+
+//And now we can sample the color texture from what 
+//is already rendered to the screen under the current pixel
+float4 colBuff = tex2D(_CameraGBufferTexture0, uv);
+
+float depth = tex2D(_CameraDepthTexture, uv);
+
+//...
+}
+{% endhighlight %}
+
+This `_CameraGBufferTexture0` is from the deferred renderer, but you can set custom textures to a shader using the Graphics or CommandBuffer Blit function, even in the forward stage.
+
+
+*This is running rather nong. I will post some more shader shenanigans later. Soon.*.
+
+
+
+PS: There's a lot of in-depth stuff here. If I cocked anything up, let me know.
