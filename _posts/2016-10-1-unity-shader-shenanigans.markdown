@@ -158,9 +158,9 @@ Before we look at more advanced stuff like deferred lighting and post FX, let's 
  
 ***Note:** Notice that a CommandBuffer sends a program to the GPU that runs every frame, so unless you need to change the program or update the data structures from the C# side, you shouldn't clear and run the Draw or Blit commands every frame from C#.*
 
-The Command Buffer allows you to insert render materials and geometry at any stage or Unity's rendering pipeline. You set that with `CameraEvent.m_BeforeAlpha` etc.. To see what's going on, go to Window > Frame Debugger and visualise your changes as well as see the default pipeline at work.
+The Command Buffer allows you to insert render materials and geometry at any stage of Unity's rendering pipeline. You set that with `CameraEvent.m_BeforeAlpha` etc.. To see what's going on, go to Window > Frame Debugger and visualise your changes as well as see the default pipeline at work.
 
-***Note:** If you want any of your custom deferred shaders to write to the built in emission buffer, and do your own lights, you must use the `CameraEvent.AfterLighting` stage.*
+***Note:** Unity will hijack some (parts) of these render targets at certain points in the pipeline, and you won't have access. For ex if you want any of your custom deferred shaders to write to the built in emission buffer, and do your own lights, you must use the `CameraEvent.AfterLighting` stage.*
  
 ### Draw a mesh with the CB:
 
@@ -171,7 +171,7 @@ Matrix4x4 transMatrix = Matrix4x4.TRS(m_GO.transform.position, m_GO.transform.ro
 m_CB_arr[(int)CBs.BeforeAlpha].DrawMesh(m_CubeMesh, transMatrix, m_SomeMaterial, 0, 0);
 {% endhighlight %}
 
-This is also one of the ways to implement your own lighting. Draw a cube or a sphere, for each light, with your deferred lighting material. This is what unity does, and it draws spheres.
+This is also one of the ways to implement your own lighting. Draw a cube or a sphere, for each light, with your deferred lighting material. This is what unity does internally, and it draws spheres.
 It ain't the most efficient way to do deferred lighting, but it's easy because the mesh defines the volume and provides the matrix.
 
 ### Blit a texture with the CB:
@@ -192,7 +192,7 @@ sampler2D _FullscreenRT;
 float4 _FullscreenRT_ST;
 {% endhighlight %}
 
-This would be the pro way of doing deferred lighting. You'd have a list of lights, traverse these pixels once, and light them. A common AAA method is to use a "Tiled Frustum" where you divide this texture in a grid, and have each tile reference only the lights that affect it. And you also do this grid depth wise, so lights that are far away are drawn with simpler math. 
+This would also be the pro way of doing deferred lighting. You'd have a list of lights, you'd traverse these pixels once, and light them. A common AAA method is to use a "Tiled Frustum" where you divide this texture in a grid, and have each tile reference only the lights that affect it. And you also do this grid depth wise, so lights that are far away are drawn with simpler math. 
 
 
 ### DrawProcedural with the CB:
@@ -204,7 +204,7 @@ m_CB_arr[(int)CBs.BeforeAlpha].DrawProcedural(Matrix4x4.identity, customBillboar
 {% endhighlight %}
 
 Remember [back when I said](http://tdbe.github.io/graphics-pipeline-fundamentals/#customVertex) you can have custom DirectX11 vertex shaders that run on data buffers? (`FragInput vert (uint id : SV_VertexID, uint inst : SV_InstanceID)`)
-This is how you run them in Unity. In this case I defined a quad with 6 independent vertices, and the vertex shader will run 6 times for each particle in `particleCount`.
+This is how you run them in Unity with C#. In this case I defined a quad with 6 independent vertices, and the vertex shader will run 6 times for each particle in `particleCount`.
 
 <br/>
 

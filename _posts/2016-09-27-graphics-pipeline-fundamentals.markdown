@@ -19,7 +19,7 @@ The general high level theory is simple, but the API naming or hidden math makes
 
 In this and the [next post](http://tdbe.github.io/unity-shader-shenanigans/), I'll explain for-realsies how a mesh (or a data buffer) gets converted throughout the graphics pipeline, and give some sample code for stuff like procedural geometry, reconstructing worldpsace position, or using custom data buffers.
 
-This tutorial assumes you've tinkered with shader code before, and know basic concepts like how there's triangle interpolation.
+This tutorial has some advanced stuff but is still accessible to noobs. It however assumes you've tinkered with shader code before, and know basic concepts like how there's triangle interpolation.
 
 
 
