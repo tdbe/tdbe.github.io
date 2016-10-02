@@ -1,7 +1,7 @@
 ---
 published: true
 layout: post
-title: Graphics Pipeline fundamentals (Unity, openGL)
+title: Graphics Pipeline fundamentals (Unity, OpenGL)
 description: "Graphics Pipeline, spaces, coordinates, matrices, and different types of vertex, geometry, and fragment shaders."
 modified: 2016-10-2
 tags: [graphics programming, graphics pipeline, OpenGL, DirectX11, unity3d, matrix, shader, vertex, geometry, fragment, pcg, tutorial]
