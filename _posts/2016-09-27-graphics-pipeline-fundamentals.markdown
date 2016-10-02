@@ -174,7 +174,7 @@ At this point our `o.pos` is converted to Clip space by `MVP`. So `ComputeScreen
 
 This is the divide in the fragment: `float2 screenUV = i.uv.xy / i.uv.w;`.
 
-And if in the frag for some reason you would want `screenUV.uv` to be the same as `i.pos` (in pixels), you'd also need to multiply `screenUV.xy` by window width in pixels. But normally we do the opposite: we divide `i.pos.xy` by screen width and height to get (0,1) values.
+And if in the frag for some reason you would want `screenUV.uv` to be the same as `i.pos` (in pixels), you'd also need to multiply `screenUV.xy` by window width. But normally we do the opposite: we divide `i.pos.xy` by screen width and height to get (0,1) values.
 
 
 <br/>
