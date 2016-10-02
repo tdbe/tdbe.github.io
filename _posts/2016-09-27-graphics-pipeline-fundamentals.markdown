@@ -1,10 +1,10 @@
 ---
 published: true
 layout: post
-title: Graphics Pipeline and Custom (Unity) Shader Tricks
-description: "Spaces, coordinates, matrices, and different types of vertex, geometry, and fragment shaders."
-modified: 2016-09-29
-tags: [graphics programming, command buffer, unity3d, matrix, shader, vertex, geometry, fragment, tutorial]
+title: Graphics Pipeline fundamentals (unity, openGL)
+description: "Graphics Pipeline, spaces, coordinates, matrices, and different types of vertex, geometry, and fragment shaders."
+modified: 2016-10-2
+tags: [graphics programming, graphics pipeline, OpenGL, DirectX11, unity3d, matrix, shader, vertex, geometry, fragment, tutorial]
 image:
   feature: abstract-11.jpg
   credit: dargadgetz
@@ -15,15 +15,15 @@ share: true
 
 In my graphics programming internets travels I noticed that a lot of people find it hard to grasp (or clearly explain) the graphics pipeline and some of the tricks you can do.
 
-The general high level theory is simple, but the API naming or hidden math makes it tough in practice.
+The general high level theory is simple, but the API naming or hidden math makes it tough in practice. It's confusing or incomplete even in academic material or nvidia's GPU Gems.
 
-I'll explain for-realsies how a mesh (or a data buffer) gets converted throughout the pipeline, and give some sample code for stuff like procedural geometry, reconstructing worldpsace position, or using custom data buffers.
+In this and the [next post](http://tdbe.github.io/unity-shader-shenanigans/), I'll explain for-realsies how a mesh (or a data buffer) gets converted throughout the graphics pipeline, and give some sample code for stuff like procedural geometry, reconstructing worldpsace position, or using custom data buffers.
 
 This post assumes you've tinkered with shader code before, and know basic concepts like how there's triangle interpolation.
 
-<br/>
 
-------
+
+
 
 ##The Mesh
 
@@ -52,7 +52,7 @@ First off, a Mesh is a class that stores various coordinate arrays in Object Spa
 
 ------
 
-##Pipeline of a Shader
+##The Graphics Pipeline
 
 Terminology here is loose with many synonyms. I'll throw all of them in and clarify.
 
@@ -69,7 +69,7 @@ The following is how virtually any graphics pipeline works, but I'm specifically
 
 * **M**odel->World is the World matrix (rotates, translates, scales vertices to their unity world position). Unity and OpenGL call it the Model matrix... But a less sadistic way to name it, for newcomers, would have been `MATRIX_WVP` not `_MVP`.
 
-* World -> Camera is the **V**iew matrix. This just transforms coords so they are relative to the camera. They are in -1 (bottom-left) to 1 (top-right), with the camera at (0,0).
+* World -> Camera is the **V**iew matrix. This just transforms coords so they are relative to the camera. They are in -1 (bottom-left) to 1 (top-right), with the camera at (0,0) and z between (-1 (close) and 1 (far)).
 
 * Camera -> Clip space is the Perspective (or Orthographic (isometric)) **P**rojection Matrix. The projection matrix doesn't really do anything now. It just builds up the vertex for the next (perspective divide) step.
 
@@ -159,7 +159,10 @@ If you want extra coords passed to the fragment in Screen space, you need to do 
 		v2f o;
 
 		o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
+		//this will interpolate in the fragment to the up vector in world space for the geometry you are drawing:
 		o.orientation = mul ((float3x3)_Object2World, float3(0,1,0));
+		//this will interpolate in the fragment to the world position of the current geometry you're drawing:
+		o.position_ws = mul(_ObjectToWorld, v.vertex);
 		
 		//o.uv = v.texcoord;
 		//Say you want a screenspace ray instead of a TEXCOORD:
@@ -167,8 +170,11 @@ If you want extra coords passed to the fragment in Screen space, you need to do 
 	}
 {% endhighlight %}	
 	
-At this point our `o.pos` is converted to Clip space by `MVP`. So `ComputeScreenPos` is a cross-platform unityGC function that essentially takes the [-1,1] coordinates and converts them to [0,1] in screenspace (0 is bottom left).
-If you want `i.uv` to be the same as `i.pos`, you'd also need to multiply i.uv.xy by window width in pixels.
+At this point our `o.pos` is converted to Clip space by `MVP`. So `ComputeScreenPos` is a cross-platform unityGC function that essentially takes the [-1,1] coordinates of your vertex and preps them for interpolation, setting the right w param for you to divide with once you get to the fragment. Then your uv will be within [0,1] in screenspace (0 is bottom left).
+
+This is the divide in the fragment: `float2 screenUV = i.uv.xy / i.uv.w;`.
+
+And if in the frag for some reason you would want `screenUV.uv` to be the same as `i.pos` (in pixels), you'd also need to multiply `screenUV.xy` by window width in pixels. But normally we do the opposite: we divide `i.pos.xy` by screen width and height to get (0,1) values.
 
 
 <br/>
@@ -219,6 +225,9 @@ void GS_Main(point GS_INPUT p[1], inout TriangleStream<FS_INPUT> triStream)
 	//...
 }
 {% endhighlight %}	
+
+<span id="customVertex"></span>
+
 
 In DirectX11 you can actually do the points-to-quads conversion trick directly in the vertex program by manipulating custom data buffers.
 
@@ -289,6 +298,8 @@ Now let's continue from my vertex shader snippet from further above where I want
 {
 //a screenspace uv ray:
 float2 uv = i.uv.xy / i.uv.w;
+//as opposed to an object space uv ray (ie if you had done o.uv = v.texcoord; in the vertex):
+//here i.uv would have sampled from 0 to 1 for each face of your cube etc.
 
 //And now we can sample the color texture from what 
 //is already rendered to the screen under the current pixel
@@ -302,9 +313,14 @@ float depth = tex2D(_CameraDepthTexture, uv);
 
 This `_CameraGBufferTexture0` is from the deferred renderer, but you can set custom textures to a shader using the Graphics or CommandBuffer Blit function, even in the forward stage.
 
+<br/>
 
-*This is running rather nong. I will post some more shader shenanigans later. Soon.*.
+------
 
 
+[**My next post**](http://tdbe.github.io/unity-shader-shenanigans/) will apply some of this knowledge in some common but unconventional uses for shaders.
 
-PS: There's a lot of in-depth stuff here. If I cocked anything up, let me know.
+After this hopefully everyone can start researching and understanding more fun stuff like clouds, atmospheric scattering, light absorbtion, glass caustics, distance fields, fluid simulations, grass, hair, skin etc..
+
+
+<small>PS: There's quite a bit of in-depth pipeline stuff here. If anything's unclear, or I happened to cock anything up, let me know.</small>
