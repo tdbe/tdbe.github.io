@@ -33,12 +33,12 @@ Here's what I like:
 ------------------
 
 
-A few of the vidya I like:
+A few of the vidya I like, for reference:
 
 |:--------|:-------:|--------:|
 |Valve stuff,| Kamyia stuff, | Shadow of the Colossus,|Psychonauts, | System Shock 2, | Gish,| 
 |Carmack stuff,| Mirror's edge, | Guilty Gear, |Smash,| Legacy of Kain, | Echochrome, |
-|Kojima stuff, | SureAI (eg Skywind) |Katamari Damacy, |Majora's mask,| Thief 2, | N++, |
+|Kojima stuff, | SureAI (eg Skywind) |Katamari Damacy, |Majora's mask,| Thief 2, | N++ & Flat Heroes, |
 |Jonathan Blow,| Riot stuff, |Jet Set Radio, | Metroid, | Gang Beasts,| AVGN Adventures, |
 |Warren Spector,| Overwatch, |Beyond Good & Evil, | Jazz Jackrabbit, | Lethal League, | Skullgirls. |
 
