@@ -4,7 +4,7 @@ layout: post
 title: (Unity) Shader Tricks
 description: "Reconstructing world position, solid triplanar texturing, Command Buffers."
 modified: 2016-10-2
-tags: [graphics programming, OpenGL, DirectX11, command buffer, unity3d, shader, vertex, fragment, lighting, tutorial]
+tags: [graphics programming, OpenGL, DirectX11, command buffer, unity3d, shader, vertex, fragment, lighting, pcg, tutorial]
 image:
   feature: abstract-11.jpg
   credit: dargadgetz
