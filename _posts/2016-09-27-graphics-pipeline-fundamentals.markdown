@@ -25,7 +25,7 @@ This tutorial assumes you've tinkered with shader code before, and know basic co
 
 
 
-##The Mesh
+## The Mesh
 
 First off, a Mesh is a class that stores various coordinate arrays in Object Space:
 
@@ -52,7 +52,7 @@ First off, a Mesh is a class that stores various coordinate arrays in Object Spa
 
 ------
 
-##The Graphics Pipeline
+## The Graphics Pipeline
 
 Terminology here is loose with many synonyms. I'll throw all of them in and clarify.
 
@@ -65,7 +65,7 @@ The following is how virtually any graphics pipeline works, but I'm specifically
 <br/>
 
 
-###The Vertex Shader
+### The Vertex Shader
 
 * **M**odel->World is the World matrix (rotates, translates, scales vertices to their unity world position). Unity and OpenGL call it the Model matrix... But a less sadistic way to name it, for newcomers, would have been `MATRIX_WVP` not `_MVP`.
 
@@ -181,7 +181,7 @@ And if in the frag for some reason you would want `screenUV.uv` to be the same a
 
 
 
-###The Geometry Shader
+### The Geometry Shader
 
 There's actually one more thing between vert and frag (and before the interpolation): <br/>the **Geometry program**. This optional step is where you can use affine transformations to create more vertices within a triangle, to tessellate your mesh.
 
@@ -268,7 +268,7 @@ What I did above was I treated my `quad_vert` like it was in camera space not ob
 <br/>
 
 
-###The Fragment Shader
+### The Fragment Shader
 
 Now we've finally entered the **Fragment** program before which the GPU has also done linear and perspective-correct interpolation on the vertices (and on texcoords, color etc.) to give us the pixel positions for the triangles. 
 

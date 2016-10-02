@@ -91,7 +91,7 @@ The object space would be useful for example if you want to see if a pre-existin
 
 Since we also have our current geometry's Screen space position, we can convert that as well to view space and world space and object space. So you can compare or blend with the equivalent from the underlying pre-existing geometry we sampled.
 
-###Solid Texturing
+### Solid Texturing
 
 With the worldspace position (of either the pre-existing geometry's fragment or the current one) you we can do what is called Triplanar Texture Projection or Solid Texturing. This is what you most often find on procedural meshes you obtain from voxels, which don't have sensical UV coorinates, so you just say "everything on top is grass, everything on the sides is ground".
 
@@ -152,7 +152,7 @@ Now profit! You can similarly sample from a bumpmap and warp the normals for the
 You can find the [Simplex Noise (and other noises) on GitHub](https://github.com/simongeilfus/SimplexNoise).
 
 
-##Command Buffers
+## Command Buffers
 
 Before we look at more advanced stuff like deferred lighting and post FX, let's briefly look at the `CommandBuffer`. Unity made plenty of documentation and examples for it, so I'll just explain what the key points mean.
  
