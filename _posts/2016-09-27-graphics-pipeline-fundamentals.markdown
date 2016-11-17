@@ -142,7 +142,7 @@ And we're back:
 
 * Clip -> NDC space is the perspective divide (by `vertex.w`). The frustum gets a perspective divide (distortion) (which is not [affine](https://en.wikipedia.org/wiki/Affine_transformation)), i.e is divided by w. Now the term we're at is we're in Normalized Device Coordinates. Then a couple of viewport and depth range tweaks are done and we're in Screen Space.
 	* Even though we still have a w (and it's normalized to 1), we're not in homogenous corrds any more. If you were confused why the vertex2frag out structure's `.pos` attribute is a vector4, it's because the perspective divide happens just after the vertex program.
-	* In OpenGL Screen space's coordinates go between (-1,-1,-1) and (1,1,1). In Direct3D the z goes between 0 and 1.
+	* In OpenGL View and NDC space coordinates go between (-1,-1,-1) at bottom-left-back and (1,1,1) at top-right-forward. In Direct3D the z goes between 0 and 1 instead of -1 to 1.
 	* The Z coordinate here goes into the Depth buffer, and/or encoded into the DepthNormals buffer. The depth in buffers is [0,1].
 	* Since we've done our perspective projection, the Depth buffer **is not linear**. So you can't just do linear interpolation to fetch a depth point (I'll explain later when I get to ray examples).
 <br/>
