@@ -61,17 +61,19 @@ highlighter: rouge
 
 
 kramdown:
- # auto_ids: true
+  auto_ids: true
   footnote_nr: 1
   entity_output: as_char
   toc_levels: 1..6
-#  use_coderay: true
+  use_coderay: true
+  input: GFM
+  hard_wrap: false
   syntax_highlighter: rouge 
   syntax_highlighter_opts:
 #    default_lang: c
-    wrap: true
+ #   wrap: true
  #   block:
-       line_numbers: false
+       line_numbers: true
        start_line: 1
 #    inline_theme: colorful
        
