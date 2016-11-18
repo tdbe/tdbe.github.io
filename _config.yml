@@ -61,11 +61,11 @@ highlighter: rouge
 
 
 kramdown:
-  auto_ids: true
+ # auto_ids: true
   footnote_nr: 1
   entity_output: as_char
   toc_levels: 1..6
-  use_coderay: true
+#  use_coderay: true
   syntax_highlighter: rouge 
   syntax_highlighter_opts:
 #    default_lang: c
