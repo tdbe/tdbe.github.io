@@ -61,12 +61,35 @@ highlighter: rouge
 
 
 kramdown:
-syntax_highlighter: rouge
-syntax_highlighter_opts:
-block:
-line_numbers: true
+  input:          GFM
+  # https://github.com/jekyll/jekyll/pull/4090
+  syntax_highlighter: rouge
 
-
+  # Rouge Highlighter in Kramdown › http://kramdown.gettalong.org/syntax_highlighter/rouge.html
+  # span, block element options fall back to global
+  syntax_highlighter_opts:
+    # Rouge Options › https://github.com/jneen/rouge#full-options
+    css_class: 'highlight'
+    #line_numbers: true # bad idea, spans don't need linenos and would inherit this option
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1
+ # auto_ids: true
+#  footnote_nr: 1
+#  entity_output: as_char
+ # toc_levels: 1..6
+#  use_coderay: true
+ # syntax_highlighter: rouge 
+ # syntax_highlighter_opts:
+#    default_lang: c
+#    wrap: true
+ #   block:
+  #     line_numbers: true
+ #      start_line: 1
+#    inline_theme: colorful
+       
   
   coderay:
     coderay_line_numbers: nil
