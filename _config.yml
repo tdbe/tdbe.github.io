@@ -66,8 +66,8 @@ kramdown:
   entity_output: as_char
   toc_levels: 1..6
   use_coderay: true
-  #syntax_highlighter: rouge
-  highlighter: rouge
+  syntax_highlighter: rouge
+  #highlighter: rouge
     syntax_highlighter_opts:
         block:
             line_numbers: true
