@@ -61,14 +61,14 @@ highlighter: rouge
 
 
 kramdown:
-  auto_ids: true
-  footnote_nr: 1
-  entity_output: as_char
-  toc_levels: 1..6
-  use_coderay: true
+ # auto_ids: true
+#  footnote_nr: 1
+#  entity_output: as_char
+ # toc_levels: 1..6
+#  use_coderay: true
   syntax_highlighter: rouge
-  #highlighter: rouge
     syntax_highlighter_opts:
+    wrap: true
         block:
             line_numbers: true
 
