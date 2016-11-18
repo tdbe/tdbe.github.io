@@ -69,11 +69,12 @@ kramdown:
   syntax_highlighter: rouge 
   syntax_highlighter_opts:
     default_lang: c
+    wrap: true
     block:
        line_numbers: true
        start_line: 1
-    inline_theme: colorful
-       wrap: true
+#    inline_theme: colorful
+       
   
   coderay:
     coderay_line_numbers: nil
