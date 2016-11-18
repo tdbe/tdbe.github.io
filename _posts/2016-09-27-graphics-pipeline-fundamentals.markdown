@@ -153,7 +153,7 @@ The formula is x = 0.5 * (x+1) * screenWidth, y = 0.5 * (x+1) * screenHeight. Th
 
 If you want extra coords passed to the fragment in Screen space, you need to do the conversion to Screen space yourself in the vertex program (the auto conversion only applies to the `SV_POSITION`). Here's an example:
 
-{% highlight glsl %}
+{% highlight glsl linenos %}
 	v2f vert(vI v)
 	{
 		v2f o;
@@ -189,7 +189,7 @@ You can also for ex have a mesh with verts that are just points, and use a Geome
 
 Here's a subset of that shader. I'll explain the key points.
 
-{% highlight glsl %}
+{% highlight glsl linenos %}
 //GS_INPUT - is the data structure that the Vertex shader outputs. We are getting just one 
 //point at a time in this geometry shader, but we could get more (you'd need 3 for 
 //tessellation).
@@ -232,7 +232,7 @@ void GS_Main(point GS_INPUT p[1], inout TriangleStream<FS_INPUT> triStream)
 In DirectX11 you can actually do the points-to-quads conversion trick directly in the vertex program by manipulating custom data buffers.
 
 Here's how I did that for my [particle sculpter](http://www.deferredreality.com/?project=particles):
-{% highlight glsl %}
+{% highlight glsl linenos %}
 
 struct Particle
 {
@@ -281,7 +281,7 @@ This means this shader has 1 Render Target and it returns a rgba color.
 The render target can be changed from C# with the Graphics or CommandBuffer API. (I'll show that later)
 
 In the deferred renderer, you can actually have (the option to output to) multiple render targets (MRT). The function structure changes, we use (multiple) out parameters:
-{% highlight glsl %}
+{% highlight glsl linenos %}
 void fragDeferred (
 	VertexOutputDeferred i,
 	out half4 outDiffuse : SV_Target0,// RT0: diffuse color (rgb), occlusion (a)
@@ -294,7 +294,7 @@ void fragDeferred (
 Now let's continue from my vertex shader snippet from further above where I wanted a screenspace ray and did: `o.uv = ComputeScreenPos(o.pos);`.
 <br/>Since it didn't get a perspective divide (because it couldn't have been interpolated to the fragment if it had), we need to do that now.
 <br/> Fragment:
-{% highlight glsl %}
+{% highlight glsl linenos %}
 {
 //a screenspace uv ray:
 float2 uv = i.uv.xy / i.uv.w;

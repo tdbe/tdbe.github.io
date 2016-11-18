@@ -52,7 +52,7 @@ So far we've learned these 2 relevant tricks:
 	
 Now we'll learn how to make a ray that samples from the pre-existing rendered geometry, in View space. Then we'll convert it easily to World space and even back to Object space:
 
-{% highlight glsl %}
+{% highlight glsl linenos %}
 //Vertex shader
 {
 	//...
@@ -62,7 +62,7 @@ Now we'll learn how to make a ray that samples from the pre-existing rendered ge
 }
 {% endhighlight %}
 
-{% highlight glsl %}
+{% highlight glsl linenos %}
 //Fragment shader
 {
 	//...
@@ -107,7 +107,7 @@ With the worldspace position (of either the pre-existing geometry's fragment or 
 
 Here's how I did that:
 
-{% highlight glsl %}
+{% highlight glsl linenos %}
 //Fragment
 {
 	//Get your Normals either from the mesh, or from a GBuffer of the pre-existing stuff.
@@ -164,7 +164,7 @@ The Command Buffer allows you to insert render materials and geometry at any sta
  
 ### Draw a mesh with the CB:
 
-{% highlight csharp %}
+{% highlight csharp linenos %}
 //This is the Model to World space matrix that will be applied to our mesh in the vertex shader:
 Matrix4x4 transMatrix = Matrix4x4.TRS(m_GO.transform.position, m_GO.transform.rotation, m_GO.transform.scale);
 //Draw this mesh with our material
@@ -178,7 +178,7 @@ It ain't the most efficient way to do deferred lighting, but it's easy because t
 
 The `Blit` works by sending a fullscreen quad to the GPU, so that in the fragment you'll have one pixel for every Screen space pixel, so you can do post processing or deferred processing.
 
-{% highlight csharp %}
+{% highlight csharp linenos %}
 int fullscreenRT = Shader.PropertyToID("_FullscreenRT");
 m_CB_arr[(int)CBs.BeforeAlpha].GetTemporaryRT(fullscreenRT, mainCam.pixelWidth, mainCam.pixelHeight, 0,FilterMode.Trilinear, RenderTextureFormat.ARGB32);
 //This is where you run your material on that texture.
@@ -187,7 +187,7 @@ m_CB_arr[(int)CBs.BeforeAlpha].ReleaseTemporaryRT(fullscreenRT);
 {% endhighlight %}
 
 That `_FullscreenRT` is a texture defined in the shader of your `fullscreenMaterial`:
-{% highlight glsl %}
+{% highlight glsl linenos %}
 sampler2D _FullscreenRT;
 float4 _FullscreenRT_ST;
 {% endhighlight %}
@@ -199,7 +199,7 @@ This would also be the pro way of doing deferred lighting. You'd have a list of 
 
 This method draws custom data buffers with the vertex and triangles paradigm, or just with glPoints.
 
-{% highlight glsl %}
+{% highlight glsl linenos %}
 m_CB_arr[(int)CBs.BeforeAlpha].DrawProcedural(Matrix4x4.identity, customBillboardMaterial, 0, MeshTopology.Triangles, 6, particleCount);
 {% endhighlight %}
 
