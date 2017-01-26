@@ -945,18 +945,22 @@ figure a img:hover {
 
 @media only screen and (min-width: 62.5em) {
   figure.half img {
-    float: left;
+    /*float: left;*/
+	margin-left:auto;
+	margin-right:auto;
     width: 310px;
-    margin-right: 10px;
+    /*margin-right: 10px;*/
   }
   figure.half figcaption {
     clear: left;
 	text-align:center;
   }
   figure.fill img {
-    float: left;
+    /*float: left;*/
+	margin-left:auto;
+	margin-right:auto;
     width: 100%;
-    margin-right: 10px;
+    /*margin-right: 10px;*/
   }
   figure.fill figcaption {
     clear: left;
@@ -966,9 +970,11 @@ figure a img:hover {
 
 @media only screen and (min-width: 62.5em) {
   figure.third img {
-    float: left;
+    /*float: left;*/
+	margin-left:auto;
+	margin-right:auto;
     width: 200px;
-    margin-right: 10px;
+    /*margin-right: 10px;*/
   }
   figure.third figcaption {
     clear: left;

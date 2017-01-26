@@ -22,16 +22,22 @@ Among the prizes we got was a ham and [NGJ](https://nordicgamejam.org/) tickets!
 The theme was WAVES this year and we used your voice to make waves in the ground. Roughtly, your pitch (the frequency) is mapped to the screen from left to right (low pitch to high), and your loudness affects the amplitude. 
 
 
-It works so well we might refine the concept and go further.
 
-<blockquote class="twitter-video" data-lang="en-gb"><p lang="en" dir="ltr">A little more gameplay! It works surprisingly well! <a href="https://twitter.com/hashtag/GGJCPH?src=hash">#GGJCPH</a> <a href="https://t.co/cb4TJSTAjC">pic.twitter.com/cb4TJSTAjC</a></p>&mdash; Bjarke A. Larsen (@BjarkeAL) <a href="https://twitter.com/BjarkeAL/status/823185894144405506">22 January 2017</a></blockquote>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-video" data-lang="en-gb"><p lang="en" dir="ltr">A little more gameplay! It works surprisingly well! <a href="https://twitter.com/hashtag/GGJCPH?src=hash">#GGJCPH</a> <a href="https://t.co/cb4TJSTAjC">pic.twitter.com/cb4TJSTAjC</a>
+<figure class="">
+	<video controls="" muted="" autoplay="" loop="" class="">
+		<source src="../images/HOtuln-ggQ-gR634.mp4" type="video/mp4">
+		Your browser does not support the video tag.
+	</video>
+</figure>
+</p>&mdash; Bjarke A. Larsen (@BjarkeAL) <a href="https://twitter.com/BjarkeAL/status/823185894144405506">22 January 2017</a></blockquote>
+
 
 You're effectively controlling the rolling character via a winamp visualization. The cleaner your sound and the smoother your vocal range, the more effective you are.
 
 We used unity 2D tools, the Animator, a rigidbody pool, and sound basetones and overtones merged into a world position function.
 
-The [repo is here](https://github.com/tdbe/WAVES/tree/master), and the [GGJ submission page is here](http://globalgamejam.org/2017/games/voice-god).
+The [repo is here](https://github.com/tdbe/WAVES/tree/master), and the [GGJ submission's page is here](http://globalgamejam.org/2017/games/voice-god).
 
 
 <figure class="">
