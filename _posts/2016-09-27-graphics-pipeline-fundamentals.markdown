@@ -6,7 +6,7 @@ description: "Graphics Pipeline, spaces, coordinates, matrices, and different ty
 modified: 2016-10-2
 tags: [graphics programming, graphics pipeline, OpenGL, DirectX11, unity3d, matrix, shader, vertex, geometry, fragment, pcg, tutorial]
 image:
-  feature: abstract-11.jpg
+  feature: abstract-3.jpg
   credit: dargadgetz
   creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
 comments: true
@@ -106,7 +106,7 @@ Check out [slide #6 here](http://www.terathon.com/gdc07_lengyel.pdf) for a nice 
 
 <br/>
 
-<figure class="half">
+<figure class="fill">
 	<img src="http://i950.photobucket.com/albums/ad341/jekylljuice85/lobe%20gallery/relaxovision.png" alt="Freakazoid">
 	<figcaption>Intermission</figcaption>
 </figure>

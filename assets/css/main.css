@@ -951,6 +951,16 @@ figure a img:hover {
   }
   figure.half figcaption {
     clear: left;
+	text-align:center;
+  }
+  figure.fill img {
+    float: left;
+    width: 100%;
+    margin-right: 10px;
+  }
+  figure.fill figcaption {
+    clear: left;
+	text-align:center;
   }
 }
 
@@ -962,6 +972,7 @@ figure a img:hover {
   }
   figure.third figcaption {
     clear: left;
+	text-align:center;
   }
 }
 

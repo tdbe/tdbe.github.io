@@ -6,7 +6,7 @@ description: "Reconstructing world position, solid triplanar texturing, Command 
 modified: 2016-10-2
 tags: [graphics programming, OpenGL, DirectX11, command buffer, unity3d, shader, vertex, fragment, lighting, pcg, tutorial]
 image:
-  feature: abstract-11.jpg
+  feature: abstract-3.jpg
   credit: dargadgetz
   creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
 comments: true

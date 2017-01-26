@@ -2,17 +2,17 @@ title:            Tudor's blog
 description:      art and shenanigans with SCIENCE
 disqus_shortname: deferred
 #Your site's domain goes here. Leave localhost server or blank when working locally.
-url:              http://tdbe.github.io
-#url:              http://localhost/blog2
+#url:              http://tdbe.github.io
+url:              http://localhost:8080/blog2
 
 # Owner/author information
 owner:
   name:           Tudor Berechet
   avatar:         avatar.png
   bio:            "Wants a Space Tavern."
-  bio1: 		  "Gamedev. Likes particle volumes."
+  bio1: 		  "Gamedev, organic coder."
   bio2:			  "Likes disruption and futurism."
-  bio3:           "Likes design and the term organic coder."
+  bio3:           "Likes PCG and particle volumes."
   email:          this.tudor|at|gmail.com
   # Social networking links used in footer. Update and remove as you like.
   facebook:       
