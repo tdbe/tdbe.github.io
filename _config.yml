@@ -2,8 +2,8 @@ title:            Tudor's blog
 description:      art and shenanigans with SCIENCE
 disqus_shortname: deferred
 #Your site's domain goes here. Leave localhost server or blank when working locally.
-#url:              http://tdbe.github.io
-url:              http://localhost:8080/blog2
+url:              http://tdbe.github.io
+#url:              http://localhost:8080/blog2
 
 # Owner/author information
 owner:
