@@ -3817,7 +3817,10 @@ body {
 
 .entry,
 .hentry {
+	/*padding-left: 145px!important;
+    padding-right: 145px!important;*/
   *zoom: 1;
+    
 }
 
 .entry:before,
@@ -3834,12 +3837,20 @@ body {
   clear: both;
 }
 
+#post-index #main .hentry{
+  padding-left: 145px!important;
+  padding-right: 145px!important;
+}
+
 .entry-content {
   margin-bottom: 26px;
   margin-bottom: 1.625rem;
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.625;
+  /*
+  padding-left: 145px!important;
+  padding-right: 145px!important;*/
 }
 
 .entry-content p > a,
@@ -4087,6 +4098,8 @@ body {
 #post .entry-content,
 #page .entry-content {
   padding: 10px 15px;
+  padding-left: 145px!important;
+  padding-right: 145px!important;
   margin: 40px 2px 20px 2px;
   background-color: #ffffff;
   -webkit-border-radius: 3px;
@@ -4107,7 +4120,7 @@ body {
 @media only screen and (min-width: 62.5em) {
   #post .entry-content,
   #page .entry-content {
-    max-width: 800px;
+    max-width: 950px;
     padding: 50px 80px;
     margin: 50px auto 30px auto;
   }
@@ -4144,7 +4157,7 @@ body {
 @media only screen and (min-width: 62.5em) {
   #post #disqus_thread,
   #page #disqus_thread {
-    max-width: 800px;
+    max-width: 950px;
     padding: 50px 80px;
     margin: 0 auto 30px auto;
   }
@@ -4203,7 +4216,7 @@ body {
 
 @media only screen and (min-width: 62.5em) {
   .read-more {
-    max-width: 800px;
+    max-width: 950px;
     padding: 50px 80px;
     margin: 60px auto;
   }
@@ -4333,7 +4346,7 @@ body {
 
 @media only screen and (min-width: 62.5em) {
   #post-index #main {
-    max-width: 800px;
+    max-width: 950px;
     margin-top: 50px;
     margin-right: auto;
     margin-left: auto;

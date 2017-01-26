@@ -49,5 +49,5 @@ It was a lot of fun but punishing to our vocal chords after the 2 days of testin
 
 <figure class="">
 	<img src="../images/ggj-VoG_banner_01.jpg" alt="A good chunk of the level.">
-	<figcaption>A good chunk of the level.</figcaption>
+	<figcaption>A good chunk of the level. (4 screens wide)</figcaption>
 </figure>
