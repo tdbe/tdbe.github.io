@@ -64,6 +64,7 @@ section {
 audio,
 canvas,
 video {
+  max-width:100%;
   display: inline-block;
   *display: inline;
   *zoom: 1;
@@ -3817,8 +3818,8 @@ body {
 
 .entry,
 .hentry {
-	/*padding-left: 145px!important;
-    padding-right: 145px!important;*/
+	/*padding-left: 9.08em!important;
+    padding-right: 9.08em!important;*/
   *zoom: 1;
     
 }
@@ -3838,8 +3839,8 @@ body {
 }
 
 #post-index #main .hentry{
-  padding-left: 145px!important;
-  padding-right: 145px!important;
+  padding-left: 9.08em!important;
+  padding-right: 9.08em!important;
 }
 
 .entry-content {
@@ -3849,8 +3850,8 @@ body {
   font-size: 1rem;
   line-height: 1.625;
   /*
-  padding-left: 145px!important;
-  padding-right: 145px!important;*/
+  padding-left: 9.08em!important;
+  padding-right: 9.08em!important;*/
 }
 
 .entry-content p > a,
@@ -4098,8 +4099,8 @@ body {
 #post .entry-content,
 #page .entry-content {
   padding: 10px 15px;
-  padding-left: 145px!important;
-  padding-right: 145px!important;
+  padding-left: 9.08em!important;
+  padding-right: 9.08em!important;
   margin: 40px 2px 20px 2px;
   background-color: #ffffff;
   -webkit-border-radius: 3px;
