@@ -48,6 +48,10 @@
           box-sizing: border-box;
 }
 
+nav{
+	position:fixed!important;
+}
+
 article,
 aside,
 details,
@@ -3814,12 +3818,13 @@ body {
   padding: 0;
   margin: 0;
   background-color: #e8e8e8;
+  min-width:40em!important;
 }
 
 .entry,
 .hentry {
 	/*padding-left: 9.08em!important;*/
-    /*padding-right: 9.08em!important;*/
+    /*padding-right: 9.08em!important;    min-width: 40em!important;*/
   *zoom: 1;
 }
 
@@ -3839,7 +3844,7 @@ body {
 
 #post-index #main .hentry{
   padding-left: 9.08em!important;
-  padding-right: 9.08em!important;
+  padding-right: 9.08em!important;    min-width: 40em!important;
 }
 
 .entry-content {
@@ -3850,7 +3855,7 @@ body {
   line-height: 1.625;
   /*
   padding-left: 9.08em!important;
-  padding-right: 9.08em!important;*/
+  padding-right: 9.08em!important;    min-width: 40em!important;*/
 }
 
 .entry-content p > a,
@@ -3872,6 +3877,7 @@ body {
 .header-title {
   margin: 30px 0 0;
   text-align: center;
+  min-width:40em!important;
 }
 
 .header-title h1 {
@@ -3999,7 +4005,7 @@ body {
   max-width: 440px;
   padding: 10px 15px;
   padding-left: 9.08em!important;
-  padding-right: 9.08em!important;
+  padding-right: 9.08em!important;    min-width: 40em!important;
   margin: 0 auto;
   font-size: 12px;
   font-size: 0.75rem;
@@ -4101,7 +4107,7 @@ body {
 #page .entry-content {
   padding: 10px 15px;
   padding-left: 9.08em!important;
-  padding-right: 9.08em!important;
+  padding-right: 9.08em!important;    min-width: 40em!important;
   margin: 40px 2px 20px 2px;
   background-color: #ffffff;
   -webkit-border-radius: 3px;

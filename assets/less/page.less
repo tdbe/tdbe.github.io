@@ -1,8 +1,13 @@
+nav{
+	position:fixed!important;
+}
+
 body {
 	margin: 0;
 	padding: 0;
 	width: 100%;
 	background-color: @body-color;
+	min-width:40em!important;
 }
 
 // Main
@@ -31,6 +36,7 @@ body {
 	position: relative;
 }
 .header-title {
+	min-width:40em!important;
 	text-align: center;
 	margin: 30px 0 0;
 	h1 {
@@ -187,7 +193,7 @@ body {
 		margin: 40px 2px 20px 2px;
 		padding: 10px 15px;
 		padding-left: 9.08em!important;
-		padding-right: 9.08em!important;
+		padding-right: 9.08em!important;    min-width: 40em!important;
 		background-color: @white;
 		box-shadow: 0 0 0 0, 0 6px 12px fade(@black,10);
 		.rounded(3px);
