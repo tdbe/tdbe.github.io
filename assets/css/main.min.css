@@ -1565,16 +1565,16 @@ svg:not(:root) {
 .dl-menuwrapper li p {
   padding: 15px 20px;
   margin: 0;
-  font-size: 14px;
-  font-size: 0.875rem;
+  font-size: 16px;
+  font-size: 0.975rem;
   color: rgba(255, 255, 255, 0.8);
 }
 
 .dl-menuwrapper li p a {
   display: inline;
   padding: 0;
-  font-size: 14px;
-  font-size: 0.875rem;
+  font-size: 16px;
+  font-size: 0.975rem;
 }
 
 .dl-menuwrapper li i {
@@ -1586,8 +1586,8 @@ svg:not(:root) {
   position: relative;
   display: block;
   padding: 15px 20px;
-  font-size: 14px;
-  font-size: 0.875rem;
+  font-size: 16px;
+  font-size: 0.975rem;
   font-weight: 300;
   line-height: 20px;
   color: #ffffff;
