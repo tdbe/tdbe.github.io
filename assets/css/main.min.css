@@ -746,6 +746,10 @@ span.CodeRay {
   border: 0;
 }
 
+table{
+	line-height: 1.1em;
+}
+
 table.CodeRay {
   width: 100%;
   padding: 2px;
@@ -950,6 +954,18 @@ figure a img:hover {
           box-shadow: 0 0 10px rgba(34, 34, 34, 0.2);
 }
 
+figure.fill img {
+/*float: left;*/
+margin-left:auto;
+margin-right:auto;
+width: 100%;
+/*margin-right: 10px;*/
+}
+figure.fill figcaption {
+clear: left;
+text-align:center;
+}
+
 @media only screen and (min-width: 62.5em) {
   figure.half img {
     /*float: left;*/
@@ -959,17 +975,6 @@ figure a img:hover {
     /*margin-right: 10px;*/
   }
   figure.half figcaption {
-    clear: left;
-	text-align:center;
-  }
-  figure.fill img {
-    /*float: left;*/
-	margin-left:auto;
-	margin-right:auto;
-    width: 100%;
-    /*margin-right: 10px;*/
-  }
-  figure.fill figcaption {
     clear: left;
 	text-align:center;
   }
