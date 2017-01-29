@@ -14,7 +14,7 @@ A few things about what I appreciate, do, or stand for.
 	
 Here are some things I find helpful: 
 
-> reason, humour, imagination, talent, equal poise, flexible thinking.
+> reason, humour, imagination, talent, equal poise, flexible mindset.
 
 
 ------------------
@@ -22,7 +22,7 @@ Here are some things I find helpful:
 Here's what I like:
 
 * clear but high-bandwidth input, 
-* juicy feedback / visuals, 
+* [juicy feedback / visuals](https://twitter.com/martinpi/status/789392171791024128), 
 * unique stimulus scapes through VR design 
 * liberating mechanics, 
 * emergent multiplayer shenanigans, 

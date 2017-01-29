@@ -128,7 +128,7 @@ We need the `w` because GPUs work with matrix multiplications, but matrix transf
 | 0   | 0   | 0   | 1			|   		|	1		|
 
 
-Above we have a simple Translation matrix, multiplied by our `vertex.xyz`w. So normally `w` is 1 in a vector. Also, obviously you can combine multiple matrices into one (e.g. don't just have 1s and 0s in our matrix above, maybe also include rotation and/or scale, or, say a `UNITY_MATRIX_MVP`).
+Above we have a simple Translation matrix, multiplied by our `vertex.xyzw`. So normally `w` is 1 in a vector. Also, obviously you can combine multiple matrices into one (e.g. don't just have 1s and 0s in our matrix above, maybe also include rotation and/or scale, or, say a `UNITY_MATRIX_MVP`).
 
 After the Projection, w will be used for the perspective divide. The w will become z with this kind of matrix multiplication:
 
