@@ -156,16 +156,19 @@ And we're back:
 	* Since we've done our perspective projection, the Depth buffer **is not linear**. So you can't just do linear interpolation to fetch a depth point (I'll explain later when I get to ray examples).
 <br/>
 
-***Note:** Most literature garbles these last steps up into one and calls it the "Projection matrix" or the "Projection step", "where you map 3D coords to 2D", which doesn't help you understand much for graphics programming later.*
+***Note:** Most literature would have garbled these last steps up into one and called it the "Projection matrix" or the "Projection step", "where you map 3D coords to 2D", which would have really confused you later when you'd be programming.*
 
 * 6) NDC space -> Screen space (Window space) (rasterization): Still after the Vertex and before the fragment, the GPU converts coords to viewport pixels. In other words, it transforms from Normalized Device Coordinates (or NDC) to Window Coordinates (raster pixels (fragments)). The pixel coordinates are relative to the lower-left corner of the screen [0,0], growing towards the upper-right [1920,1080].
 
 The formula is:
+
 x<sub>screen</sub> = (x<sub>ndc</sub>+1) * (screenWidth/2)+x, 
+
 y<sub>screen</sub> = (y<sub>ndc</sub>+1) * (screenHeight/2)+y. 
+
 The z is still between 0 and 1 from before.
 
-So to clarify: the `o.pos` inside your vertex function is in Clip Space coordinates e.g. x:[-20,20], and "the same" `i.pos` in your fragment function is in Screen coordinates (ie pixels).
+So to clarify: the `o.pos` inside your vertex function is in Clip Space coordinates (e.g. {x:20, y:10, z:350}), and "the same" `i.pos` in your fragment function is in Screen coordinates (ie x and y in pixels and z in NDC).
 
 <br/>
 Now if you want extra coords passed to the fragment in Screen space, you need to do the conversion to Screen space yourself in the vertex program (the auto conversion only applies to the `SV_POSITION`). Here's an example:
