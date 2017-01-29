@@ -101,8 +101,8 @@ With the worldspace position (of either the pre-existing geometry's fragment or 
 		<source src="http://www.deferredreality.com/project/gpuMedley/images/holeDecal.webm" type="video/webm">
 		Your browser does not support the video tag.
 	</video>
-	<!--figcaption><a href="http://www.deferredreality.com/?project=gpgpu" style="border-bottom: 1px dotted #a2a2a2;">My procedural caves</a> with solid texturing (left), or my deferred decals (right).</figcaption-->
-	<figcaption>My procedural caves with solid texturing (left), or my deferred decals (right).</figcaption>
+	<!--figcaption><a href="http://www.deferredreality.com/?project=gpgpu" style="border-bottom: 1px dotted #a2a2a2;">My procedural caves</a> with solid texturing (left), or on my deferred decals (right).</figcaption-->
+	<figcaption>My procedural caves with solid texturing (left), or on my deferred decals (right).</figcaption>
 </figure>
 
 Here's how I did that:

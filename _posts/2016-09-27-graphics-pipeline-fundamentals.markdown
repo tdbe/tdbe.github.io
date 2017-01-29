@@ -13,7 +13,7 @@ comments: true
 share: true
 ---
 
-In my graphics programming internets travels I realized a lot of people find it hard either to understand or clearly explain the graphics pipeline and some of the tricks you can do.
+In my graphics programming internets travels I realized a lot of people find it hard either to understand or to clearly explain the graphics pipeline and some of the tricks you can do.
 
 The general high level theory is simple, but the API naming or hidden math makes it tough in practice. It's confusing or incomplete even in academic material or nvidia's GPU Gems etc.
 
