@@ -13,7 +13,7 @@ comments: true
 share: true
 ---
 
-It's called Voice of God and you shape the ground. And we won 3/5 awards in the ITU-Copenhagen site!
+It's called Voice of God, and the player shapes the ground. We won 3/5 awards in the ITU-Copenhagen site!
 
 ----
 
