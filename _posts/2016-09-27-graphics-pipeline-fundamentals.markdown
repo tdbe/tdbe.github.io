@@ -17,9 +17,9 @@ In my graphics programming internets travels I realized a lot of people find it 
 
 The general high level theory is simple, but the API naming or hidden math makes it tough in practice. It's confusing or incomplete even in academic material or nvidia's GPU Gems etc.
 
-So I'm going to explain what they don't tell you. To -actually- understand what they're saying.
+It's gonna take a moment, but I'm going to explain what the ominous <i>they</i> don't tell you and what they're confusing you with.
 
-In here and the [next post](http://tdbe.github.io/unity-shader-shenanigans/), I'll walk you through for-realsies how a mesh (or a data buffer) gets converted throughout the graphics pipeline. I'll also give some sample code for stuff like procedural geometry, reconstructing worldpsace position, or using custom data buffers.
+In here and the [next post](http://tdbe.github.io/unity-shader-shenanigans/), I'll walk you through for-realsies how a mesh (or a data buffer) gets converted throughout the graphics pipeline. And I'll give some sample code for stuff like procedural geometry, reconstructing worldspace position, or using custom data buffers.
 
 This tutorial has some advanced topics but is still accessible to newbs. It however assumes you've tinkered with shader code before, and know basic concepts like how renderers have triangle interpolation.
 
