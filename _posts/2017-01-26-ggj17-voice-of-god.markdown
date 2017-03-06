@@ -37,7 +37,7 @@ You're effectively controlling the rolling character via a winamp visualization.
 
 We used unity 2D tools, the Animator, a rigidbody pool, and sound basetones and overtones merged into a world position function.
 
-Get a build [HERE](https://github.com/tdbe/WAVES/releases/tag/win-x64) (github) or [HERE](https://github.com/MrHangover/WAVES/releases/tag/win-x64) (also github). And the original [GGJ submission's page is here](http://globalgamejam.org/2017/games/voice-god).
+Voice of God itch.io page [here](https://chronologist.itch.io/voice-of-god). Github repo with build [here](https://github.com/tdbe/WAVES/releases/tag/win-x64) or [here](https://github.com/MrHangover/WAVES/releases/tag/win-x64). And the original GGJ submission's page is [here](http://globalgamejam.org/2017/games/voice-god).
 
 
 <figure class="">
