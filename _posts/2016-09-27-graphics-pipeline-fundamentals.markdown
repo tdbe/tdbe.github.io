@@ -48,7 +48,7 @@ First off, a Mesh is a class or structure that stores various coordinate arrays 
 
 * An array of UVs (texture coords). These start at (0,0) for top left and end at (1,1) in bottom right.
 
-	* *Minor **Note**: If didn't know how to get your your shader to respond to the Unity Inspector's material texture Scale and Offset values, you need to declare a `float4 _MainTex_ST;` next to `sampler2D _MainTex`. `_MainTex_ST.xy` is Scale.xy, and `_MainTex_ST.zw` is Offset.xy.*
+	* *Minor **Note**: If you didn't know how to get your shader to respond to the Unity Inspector's material texture Scale and Offset values, you need to declare a `float4 _MainTex_ST;` next to `sampler2D _MainTex`.  The `_MainTex_ST.xy` is Scale.xy, and `_MainTex_ST.zw` is Offset.xy.*
 
 <br/>
 
