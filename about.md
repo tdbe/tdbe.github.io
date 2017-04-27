@@ -2,7 +2,7 @@
 layout: page
 permalink: /about/
 title: More About Me
-tags: [Jekyll, theme, modern, minimal, responsive]
+tags: [blog, gamedev, PCG, research, graphics programming, gameplay programming, simulations, game design, Jekyll]
 image:
   feature: abstract-5.jpg
   credit: dargadgetz
