@@ -3951,6 +3951,9 @@ body {
   font-weight: 700;
   color: #ffffff;
   text-shadow: 1px 1px 4px rgba(34, 34, 34, 0.6);
+  /*color: rgb(34,34,34);
+  text-shadow: 1px 1px 2px rgba(255,255,255,0.7), -1px 1px 2px rgba(255,255,255,0.7);*/
+  
 }
 
 .feature .header-title h1 a {
@@ -3964,6 +3967,8 @@ body {
 .feature .header-title h2 {
   margin: 0;
   color: #ffffff;
+  /*color: rgb(34,34,34);
+  text-shadow: 1px 1px 4px rgba(255,255,255,0.9);*/
   text-transform: uppercase;
 }
 
