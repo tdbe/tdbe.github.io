@@ -80,7 +80,7 @@ Now we'll learn how to make a ray that samples from the pre-existing rendered ge
 	float3 wpos = mul(unity_CameraToWorld, vpos).xyz;
 	//you can even get the object space if you want.
 	float3 opos = mul(unity_WorldToObject, float4(wpos,1)).xyz;
-	//these are builtin unity matrices which are the transpose of the M and V matrices.
+	//these are builtin unity matrices which are the inverse of the M and V matrices.
 	
 	//...
 }
