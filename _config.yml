@@ -10,10 +10,10 @@ url:              http://blog.deferredreality.com
 owner:
   name:           Tudor Berechet
   avatar:         avatar.png
-  bio: 		  "Gamedev & we live in a game. Organic coder."
-  bio1:			  "Likes immersion, disruption, futurism, VR, "
-  bio2:           "PCG, volumes of volumes."
-  bio3:            ""
+  bio: 		  "Gamedev & we live in a game."
+  bio1:            "Organic coder."
+  bio2:			  "Likes immersion, disruption, futurism, VR, "
+  bio3:           "PCG, volumes of volumes."
   # Social networking links used in footer. Update and remove as you like.
   facebook:       
   twitter:        CarnegieLemon
