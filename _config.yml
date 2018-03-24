@@ -10,16 +10,16 @@ url:              http://blog.deferredreality.com
 owner:
   name:           Tudor Berechet
   avatar:         avatar.png
-  bio: 		  "Gamedev, organic coder."
-  bio1:            "Wants a Space Tavern."
-  bio2:			  "Likes disruption and futurism."
-  bio3:           "Likes PCG and volumes of volumes."
-  email:           this.tudor at gmail dot com, this.tudor at protonmail dot com, openpGP4FPR:91BBA6E317B36E41FA3C816F9AE65B388317A22E
+  bio: 		  "Gamedev & we live in a game."
+  bio1:            "Organic coder."
+  bio2:			  "Likes immersion, disruption, futurism."
+  bio3:           "Likes VR, PCG, volumes of volumes."
   # Social networking links used in footer. Update and remove as you like.
   facebook:       
+  twitter:        CarnegieLemon
   bitbucket:      tdbe
   github:         tdbe
-  twitter:        CarnegieLemon
+  email:           http://www.deferredreality.com/#resume
   stackexchange:  
   linkedin:       tudorberechet
   instagram:      
