@@ -10,9 +10,13 @@ image:
 share: true
 ---
 
-A few things about what I appreciate, do, or stand for.
+This blog ain't super active because in short, time spent writing is time spent not doing.
+
+Check [my portfolio](http://www.deferredreality.com) for some projects.
+
+This page has a few things about what I encourage, do, or appreciate.
 	
-Here are some things I find helpful: 
+Here are some cool words: 
 
 > reason, humour, imagination, talent, equal poise, flexible mindset.
 
