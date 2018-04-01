@@ -954,6 +954,12 @@ figure a img:hover {
           box-shadow: 0 0 10px rgba(34, 34, 34, 0.2);
 }
 
+
+figure.half img {
+margin-left:25%;
+width: 50%;
+}
+
 figure.fill img {
 /*float: left;*/
 margin-left:auto;
@@ -961,7 +967,7 @@ margin-right:auto;
 width: 100%;
 /*margin-right: 10px;*/
 }
-figure.fill figcaption {
+figure.fill figcaption, figure.half figcaption  {
 clear: left;
 text-align:center;
 }
