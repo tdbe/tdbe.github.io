@@ -956,8 +956,8 @@ figure a img:hover {
 
 
 figure.half img {
-margin-left:25%;
-width: 50%;
+margin-left:25%!important;
+width: 50%!important;
 }
 
 figure.fill img {

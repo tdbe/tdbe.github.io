@@ -134,7 +134,7 @@ I said "ish" because it's not technically the proper way (it force-loads it it i
 <br/>
 
 ### Conclusion:
-Use `shader_feature`, use the Resources folder, or a shader preload collection, and multi-compile sparingly.
+Use `shader_feature`, use the Resources folder or a Shader Preload Collection, and only use `multi_compile` sparingly.
 
 
 ***Note:** Protip: "[ShaderVariantCollection](https://docs.unity3d.com/ScriptReference/ShaderVariantCollection.html) records which shader variants are actually used in each shader."*
