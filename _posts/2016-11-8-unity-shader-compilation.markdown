@@ -4,7 +4,7 @@ layout: post
 title: Unity Shader Compiling
 description: "How shader programs are created and invoked under the hood."
 modified: 2016-11-8
-tags: [graphics programming, hlsl, cg, unity3d, shader, tutorial]
+tags: [tutorial, graphics programming, hlsl, cg, unity3d, shader]
 image:
   feature: abstract-3.jpg
   credit: dargadgetz
