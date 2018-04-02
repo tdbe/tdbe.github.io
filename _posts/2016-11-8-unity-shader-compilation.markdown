@@ -18,14 +18,14 @@ I'm gonna briefly explain the standard for Shader variant compilation (with spec
 
 ### Here's a few high  level scenarios you'd experience:
 
-* You have a material with like 5 textures, what happens if you remove some of them at runtime? Is it more efficient?
+* You have a material with like 5 textures, what happens if you remove some of them at runtime? Does it become more efficient?
 
 * You want to switch a shader from Opaque to Transparent at runtime.
 
 * You want to create a material with any specific shader variant, programatically.
 
 
-And here's how it all works:
+### And here's how things actually work:
 
 If you examine `StandardShaderGUI.cs` ([get it here](https://unity3d.com/get-unity/download/archive)), you see that a whole bunch of shit happens when you change a material setting. Things to look for: `SetKeyword`, `MaterialChanged`, `SetupMaterialWithBlendMode`, `Shader.EnableKeyword()`, `Shader.DisableKeyword()`.
 	
