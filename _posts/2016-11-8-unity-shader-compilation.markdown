@@ -13,7 +13,7 @@ comments: true
 share: true
 ---
 
-I'm gonna briefly explain the standard for (Standard / Uber / Custom) Shader variant compilation (with specifics for unity3d).
+I'm gonna briefly explain the standard for Shader variant compilation (with specifics for unity3d and Standard / Uber / Custom shaders).
 
 
 ### Here's a few high  level scenarios you'd experience:
@@ -138,7 +138,6 @@ I said "ish" because it's not technically the proper way (it force-loads it in a
 
 2). "Multi Compile" means that every possible combination of the keywords you defined in the `#pragma`, will be generated in shader variant files and actually included in the build. This can explode to a big number! (unless it's just a small custom shader you've made)
 
-<br/>
 
 ### Conclusion:
 Use `shader_feature`, use the Resources folder or a Shader Preload Collection, and only use `multi_compile` sparingly.
