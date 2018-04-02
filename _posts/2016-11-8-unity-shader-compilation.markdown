@@ -53,13 +53,13 @@ ENDCG
 	
 When you build the game, the engine goes through all your Materials and figures out what combination of settings they use, and parse and compile shader programs for each combination necessary. 
 
-***Note:** Normally the HLSL or CG you write in an engine is interpreted and compiled through a bunch of internal engine compiler layers and frameworks before it becomes "real" HLSL or "real" GLSL, Vulkan etc., according to the platform the build is for (pc/console etc). This is why for example Unity shaders have "Surface Shaders" (which is latin for "fake-shader"), or `CGPROGRAM` - that's just an interpreted keyword, and CG is used as a middle language.*
+***Note:** Normally the HLSL or CG you write in an engine is interpreted and compiled through a bunch of internal engine compiler layers and frameworks before it becomes "real" HLSL or "real" GLSL, Vulkan etc., according to the platform the build is for (pc/console etc). This is why for example Unity shaders have "Surface Shaders" (which is Latin for "fake-shader"), and the CG in `CGPROGRAM` is used as a middle language.*
 	
-This means if in your scene you have a material with the standard shader with a `_NormalMap` texture, and one without, 2 shader variants get created and are available at runtime.
+This means that if in your scene you have a material with the Standard Shader with a `_NormalMap` texture, and one without, 2 shader variants get created and are available at runtime.
 	
 HOWEVER. When you remove a texture at runtime from C#, you simply tell the shader it has values of 0 when it samples that textue. So you will need to also tell the Standard Shader or Uber Shader etc. to actually be  swaped out on the GPU for another variant:  `myMaterial.EnableKeyword("_NORMALMAP");`, or globally for every material: `Shader.EnableKeyword("_NORMALMAP");`.
 
-Same if you made a copy `newMat.CopyPropertiesFromMaterial(oldMat);`, or just a `newMat = new Material(Shader.Find("Standard"));` programatically. By default all keywords are disabled. Or rather, if you see the multiple keywords on the `#pragma`, the first one is the one used by default, and usually it would be a wildcard `__` or a `_NORMALMAP_OFF` before the `_NORMALMAP` or `_NORMALMAP_ON`. If you're dealing with an `_OFF` `_ON` setup, then in addition to enabling, you also should `DisableKeyword()` for the `_OFF` one.
+Same if you made a copy `newMat.CopyPropertiesFromMaterial(oldMat);`, or just a `newMat = new Material(Shader.Find("Standard"));` programatically. By default all keywords are disabled. Or rather, if you see the multiple keywords on the `#pragma`, the first one is the one used by default, and usually it would be a wildcard `__` or a `_NORMALMAP_OFF`, before the `_NORMALMAP` or `_NORMALMAP_ON`. If you're dealing with an `_OFF` `_ON` setup, then in addition to enabling, you also should `DisableKeyword()` for the `_OFF` one.
 
 ### Solution 1:
 
@@ -67,7 +67,7 @@ So one not-so-great strat would be to include in your scene the material variati
 
 ### Changing Shader Modes:
 
-An artist once pointed out to me that she can animate the shader type of a material, from Opaque to Transparent. That's funny, Unity, because you can't do that (that easily). Again, if you look at `StandardShaderGUI.cs`, there's a lot of shit going on for switching modes:
+An artist once pointed out to me that she can animate the shader type of a material, from Opaque to Transparent. That's funny, Unity, because you can't do that (that easily)! Again, if you look at `StandardShaderGUI.cs`, there's a lot of shit going on for switching modes:
 {% highlight glsl linenos %}
 switch (blendMode)
 {
@@ -117,8 +117,8 @@ This code also works for the Uber shader BTW.
 <br/>
 
 <figure class="half">
-	<img src="https://vignette.wikia.nocookie.net/legendsofthemultiuniverse/images/b/b7/Uncle1.jpg" alt="JAckie Chan Adventures - Uncle 'One more thing'">
-	<figcaption>One more thing</figcaption>
+	<img src="https://vignette.wikia.nocookie.net/legendsofthemultiuniverse/images/b/b7/Uncle1.jpg" alt="JAckie Chan Adventures - Uncle 'One more thing!'">
+	<figcaption>One more thing!</figcaption>
 </figure>
 
 There are actually 2 ways to compile different shader versions. When I wrote `compile_type` in `#pragma compile_type __ _NORMALMAP`, I lied. I meant: 
@@ -136,7 +136,7 @@ The proper-ish way to include other variants for `shader_feature` shaders is to 
 
 I said "ish" because it's not technically the proper way (it force-loads it in all scenes), but Unity isn't clear on what else to do [[details here](https://answers.unity.com/questions/1286653/best-practice-for-shaders-with-variants-and-asset.html)] (they probably don't have a proper solution implemented, it's Unity after all ;) - the engine where one unaffiliated programmer can do a better job at an entire rendering pipeline than an entire multinational corporation, in less time.. but years of bottled-up unity-frustrations aside...).
 
-2). "Multi Compile" means that every possible combination of the keywords you defined in the `#pragma`, will be generated in shader variant files and actually included in the build. This can explode to a big number! (unless it's just a small custom shader you've made)
+2). "Multi Compile" means that every possible combination of the keywords you defined in the `#pragma`, will be generated in shader variant files and actually included in the build. This can explode to a big number! (unless it's on purpose, or just a small custom shader you've made)
 
 
 ### Conclusion:
