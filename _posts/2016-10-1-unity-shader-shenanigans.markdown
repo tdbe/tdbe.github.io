@@ -13,7 +13,7 @@ comments: true
 share: true
 ---
 
-This is a continuation of [**my previous post**](http://tdbe.github.io/graphics-pipeline-fundamentals/) on the graphics pipeline and some fundamental tricks.
+This is a continuation of [**my previous post**](http://tdbe.github.io/graphics-pipeline-fundamentals/) **on the graphics pipeline** and some fundamental tricks.
 
 Now that we've totally mastered how shaders work, let's use them in some non-traditional ways.
 
@@ -25,7 +25,7 @@ Now that we've totally mastered how shaders work, let's use them in some non-tra
 
 
 
-So far we've learned these 2 relevant tricks:
+Previously we've learned these 2 relevant things:
 
 
 * Getting a Screen space (0,1) uv to sample from a screen buffer (like color, depth, normals, your own RT etc.): 

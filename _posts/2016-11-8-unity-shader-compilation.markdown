@@ -1,10 +1,10 @@
 ---
 published: true
 layout: post
-title: Unity Shader Compiling
+title: (Unity) Shader Compiling
 description: "How shader programs are created and invoked under the hood."
 modified: 2016-11-8
-tags: [tutorial, graphics programming, hlsl, cg, unity3d, shader]
+tags: [tutorial, graphics programming, graphics pipeline, hlsl, cg, unity3d, shader]
 image:
   feature: abstract-3.jpg
   credit: dargadgetz
@@ -13,7 +13,7 @@ comments: true
 share: true
 ---
 
-I'm gonna briefly explain the standard for Shader variant compilation (with specifics for unity3d and Standard / Uber / Custom shaders).
+I'm gonna briefly explain how shader programs are created and invoked under the hood, with shader variant compilation (with specifics for unity3d and Standard / Uber / Custom shaders).
 
 
 ### Here's a few high  level scenarios you'd experience:
