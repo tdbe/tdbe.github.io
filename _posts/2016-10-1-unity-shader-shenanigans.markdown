@@ -96,8 +96,8 @@ Since we also have our current geometry's Screen space position, we can convert 
 With the worldspace position (of either the pre-existing geometry's fragment or the current one) you we can do what is called Triplanar Texture Projection or Solid Texturing. This is what you most often find on procedural meshes you obtain from voxels, which don't have sensical UV coorinates, so you just say "everything on top is grass, everything on the sides is ground".
 
 <figure class="fill">
-	<img src="http://www.deferredreality.com/project/gpgpu/images/cShaderGif438.gif" alt="procedural caves" style="float:left; width: 50%;"/>
-	<video controls="" autoplay="" loop="" class="" style="float:right; width: 50%;">
+	<img src="http://www.deferredreality.com/project/gpgpu/images/cShaderGif438.gif" alt="procedural caves" style="float:left; width: 50%; margin-left:-1px;"/>
+	<video controls="" autoplay="" loop="" class="" style="float:right; width: 50%;margin-right:-1px;">
 		<source src="http://www.deferredreality.com/project/gpuMedley/images/holeDecal.webm" type="video/webm">
 		Your browser does not support the video tag.
 	</video>
