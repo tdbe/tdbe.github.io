@@ -13,7 +13,9 @@ comments: true
 share: true
 ---
 
-I'm gonna briefly explain how shader programs are created and invoked under the hood, with shader variant compilation.<br/>(with specifics for unity3d and Standard / Uber / Custom shaders)
+I'm gonna briefly explain how shader programs are created and invoked under the hood, with shader variant compilation.
+
+(with specifics for unity3d and Standard / Uber / Custom shaders)
 
 
 ### Here's a few high  level scenarios you'd experience:
