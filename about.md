@@ -18,7 +18,7 @@ This page has a few things about what I encourage, do, or appreciate.
 	
 Here are some cool words: 
 
-> reason, humour, imagination, talent, equal poise, flexible mindset.
+> reason, humour, imagination, talent, equal poise, flexible mindset, exponential mindset.
 
 
 ------------------
