@@ -13,7 +13,7 @@ comments: true
 share: true
 ---
 
-This is a continuation of **[my previous post](http://tdbe.github.io/graphics-pipeline-fundamentals/)** on the graphics pipeline and some fundamental tricks.
+This is a continuation of [**my previous post**](http://tdbe.github.io/graphics-pipeline-fundamentals/) on the graphics pipeline and some fundamental tricks.
 
 Now that we've totally mastered how shaders work, let's use them in some non-traditional ways.
 
