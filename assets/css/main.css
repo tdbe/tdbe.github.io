@@ -3896,7 +3896,7 @@ body {
 .header-title h1 {
   margin: 10px 20px;
   font-size: 28px;
-  font-size: 1.75rem;
+  font-size: 5.75rem;
   font-weight: 700;
   color: #555555;
 }
@@ -3904,14 +3904,14 @@ body {
 @media only screen and (min-width: 48em) {
   .header-title h1 {
     font-size: 48px;
-    font-size: 3rem;
+    font-size: 4rem;
   }
 }
 
 @media only screen and (min-width: 62.5em) {
   .header-title h1 {
     font-size: 60px;
-    font-size: 3.75rem;
+    font-size: 5.75rem;
   }
 }
 

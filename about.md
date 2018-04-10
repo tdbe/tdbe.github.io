@@ -10,7 +10,7 @@ image:
 share: true
 ---
 
-This blog ain't super active because in short, time spent writing is time spent not doing.
+This blog ain't super active because, in short, time spent writing is time spent not doing.
 
 Check [my portfolio](http://www.deferredreality.com) for some projects.
 
