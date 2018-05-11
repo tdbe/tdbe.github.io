@@ -3957,7 +3957,7 @@ body {
   font-weight: 500;
   /*700;*/
   color: #ffffff;
-  text-shadow: -1px 0px 1px rgb(255, 255, 255), 1px 1px 1px rgb(255, 255, 255), 2px 3px 1px hsl(0, 0%, 35%);
+  text-shadow: -1px 0px 1px rgb(148, 70, 70), 1px 1px 1px rgb(0, 97, 93), 2px 3px 1px hsl(0, 0%, 35%);
   /*
    1px 1px 4px rgba(34, 34, 34, 0.6);
   color: rgb(34,34,34);
@@ -3979,7 +3979,7 @@ body {
   /*color: rgb(34,34,34);
   text-shadow: 1px 1px 4px rgba(255,255,255,0.9);*/
   text-transform: uppercase;
-  text-shadow: -1px 0px 1px rgb(255, 255, 255), 1px 0px 1px rgb(255, 255, 255), 2px 2px 1px hsl(0, 0%, 35%);
+  text-shadow: -1px 0px 1px rgb(148, 70, 70), 1px 0px 1px rgb(0, 97, 93), 2px 2px 1px hsl(0, 0%, 35%);
   /*text-shadow: 1px 1px 4px rgba(34, 34, 34, 0.6);*/
   /*letter-spacing: 1px;*/
   font-weight:500;
