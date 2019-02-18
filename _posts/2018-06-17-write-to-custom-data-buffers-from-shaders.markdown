@@ -1,7 +1,7 @@
 ---
 published: true
 layout: post
-title: Write to custom data structures from within shaders
+title: Write to custom data buffers from within shaders
 description: "Bake to rendertextures & write to structured buffers."
 modified: 2018-06-17
 tags: [tutorial, graphics programming, RenderTexture, RWStructuredBuffer, buffers, hlsl, cg, unity3d, shader]
