@@ -204,15 +204,15 @@ And if in the frag for some reason you would want `screenUV.uv` to be the same a
 ### The Tessellation and the Geometry Shaders
 
 There's actually more things between vert and frag (and before the interpolation that the frag is run on): 
-* the Hull program: is run once every vertex but it requites as input the entire triangle or quad or line or point (whatever type of weird geometry data you use).
-* the **Tessellation program**: here you write how the GPU should subdivide your geometry using a number of techniques. The best is usually a fractal one, then to also fade it by distance to camera. This function does not actually subdivide anything, it calculates positive barycentric coordinates.
-	* **Note:** that you can technically subdivide triangles in the Geometry function below, but that's a more general purpose function that can't process/subdivide as much/fast as here.
+* the Hull program: is run once every vertex and it requites as input the entire triangle or quad or line or point (whatever type of weird geometry data you use). It does some data structure conversions and some [magic](https://docs.microsoft.com/en-us/windows/desktop/direct3d11/direct3d-11-advanced-stages-tessellation#hull-shader-stage).
+* the **Tessellation program**: here you write what technique the GPU should use to subdivide your geometry. The best is usually a fractal one, then to also fade it by distance to camera. This function does not actually subdivide anything, it calculates positive barycentric coordinates.
+	* **Note:** you can technically subdivide triangles in the Geometry function below, but that's a more general purpose function that can't process/subdivide as much and as fast as here.
 * the Domain program: Domain means triangle (or quad etc). It takes the 3 vertices of your triangle, and the one barycentric coordinate for the tessellation. It is run once for each barycentric point and actually spits out new vertex data.
 * the **Geometry program**. This optional step is where you can use affine transformations to manipulate vertices or create more vertices within a triangle.
 
-[UPDATE:] I don't have to get any deeper into Tessellation because it seems since I wrote this article, [Jasper Flick of CatlikeCoding]( https://catlikecoding.com/unity/tutorials/advanced-rendering/tessellation/) has done a very nice patreon'd writeup. Check it out.
+[UPDATE:] Luckily I don't have to get any deeper into Tessellation because it seems since I wrote this article, [Jasper Flick of CatlikeCoding]( https://catlikecoding.com/unity/tutorials/advanced-rendering/tessellation/) has done a very nice patreon'd writeup. Check it out because there's some magic to understand about how to link each stage so they all get what they expect.
 
-With the geometry program you can also for ex have a mesh with verts that are just points, and use a Geometry program to spawn 4 quad verts around those points/vertices and make billboards out of them. [Here is an example](http://forum.unity3d.com/threads/geometry-shaders.156553/) of just that.
+With the geometry program you can also for ex have a mesh with verts that are just points, and use a Geometry program to spawn 4 quad verts around and instead of those points/vertices and generate billboards. [Here is an example](http://forum.unity3d.com/threads/geometry-shaders.156553/) of just that.
 
 Here's a subset of that shader. I'll explain the key points.
 
@@ -290,7 +290,7 @@ FragInput vert (uint id : SV_VertexID, uint inst : SV_InstanceID)
 {% endhighlight %}	
 
 The geometry shader example was calculating the camera space directions and then creating the new offsetted vertex point's position based on those.
-What I did above was I treated my `quad_vert` like it was in camera space not object space (thus automatically aligning it to the camera), and then converting it from Camera (or View) to World space, and then from World to Object space. (even though the C# struct was of a stantard object space quad). Just another way to do it.
+What I did above was I treated my `quad_vert` as if it was in camera space (instead of object space) thus automatically aligning it to the camera, and then converting it with the matrix from Camera (or View) to World space, and then from World to Object space. (even though the C# struct was of a stantard object space quad). So don't be afraid to play with the space matrixes kids!
 
 <br/>
 
