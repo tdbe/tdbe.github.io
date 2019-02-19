@@ -112,7 +112,7 @@ void ConstructDataBuffers()
 }
 {% endhighlight %}
 
-If y'all know how to iterate through memory and whatnot, you know what that memalloc value is for. It's the size of the struct in bytes. A float3 is 12 bytes, and the structure I created in the shader has 2 half3's which equal to 1x float3 :) In the C# side, we don't have half3s but we can define it as Vector3 which is resolved to float3 and is bound as a half3 on the GPU in our case.
+If y'all know how to iterate through memory, you know what that memalloc value is for. It's the size of the struct in bytes. A float3 is 12 bytes, and the structure I created in the shader has 2 half3's which equal to 1x float3 :) In the C# side, we don't have half3s but we can define it as Vector3 which is resolved to float3 and is bound as a half3 on the GPU in our case. If you're worried about conversion, there's a `Mathf.FloatToHalf()` function.
 
 
 Now to do stuff with the data of this struct from C#. Do this in `Update()` if you want/need, it's fine.
@@ -145,11 +145,11 @@ Done! Now go do cool stuff. And show me.
 
 <iframe width="560" height="315" src="//www.youtube.com/embed/NVLIyvMUsTs" frameborder="0"> </iframe>
 
-One of the things I did with this technique was a mesh painter where I have a custom SDF (signed distance field) volume to represent a 3D spray volume function intersecting with the world position on the fragment of the mesh I'm drawing on (both front and back so it can pierce through objects if I need to etc). You can also use an atlassed UV (like the lightmap UV) so you can have your RT as a global atlas and paint on multiple objects.
+One of the things I did with this technique was a VR mesh painter where I have a custom SDF (signed distance field) volume to represent a 3D spray volume function intersecting with the world position on the fragment of the mesh I'm drawing on. You can also atlas your UVs so that you can have your RT as a global atlas and paint multiple objects to the same RT without overlaps.
 
-But you need to keep in mind that the object will be rendered from the PoV of the camera, and so it might not hit fragments/pixels that are at grazing angles, resulting in grainy incomplete results depending on the mesh and angle. But you can fix that either by doing the rendering with a different camera, or by unwrapping the mesh in a hidden pass, or just using compute shaders.
+You also need to realize that the objects are painted from the PoV of the camera, and so it might not hit fragments/pixels that are at grazing angles if you use say a VR controller, and you're not aiming down the camera's view direction. This results in sometimes grainy incomplete results depending on the mesh and angle. But you can fix that by doing the rendering with a different camera mounted to your hand and so you can render the painting passes of your obects only, with `ColorMask 0`, invisibly, to that camera. (or just using compute shaders isntead).
 
-You can also do this whole thing but with Command Buffers and DrawMesh instead of Graphics.Set... I've done this a couple of times using Compute Shaders, but with the 5.0 vert frag shaders I [had issues](https://forum.unity.com/threads/using-rwtexture2d-float4-in-vertex-fragment-shaders.531872/) getting unity's API to work last I tried.
+You can also do this whole thing but with Command Buffers and DrawMesh instead of Graphics.Set... I've done this a couple of times using Compute Shaders, but with the 5.0 vert frag shaders I [had issues](https://forum.unity.com/threads/using-rwtexture2d-float4-in-vertex-fragment-shaders.531872/) tricking unity's API to work last I tried.
 
 So perhaps another blog post should be about how to set up command buffers and compute shaders, and how to do something cool like turn a mesh into a pointcloud and do cool ungodly things to it :)
 
