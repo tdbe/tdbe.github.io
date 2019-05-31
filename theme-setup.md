@@ -589,10 +589,10 @@ Apply the `half` class like so to display two images side by side that share the
 And you'll get something that looks like this:
 
 <figure class="half">
-	<a href="http://placehold.it/1200x600.jpg"><img src="http://placehold.it/600x300.jpg" alt=""></a>
-	<a href="http://placehold.it/1200x600.jpg"><img src="http://placehold.it/600x300.jpg" alt=""></a>
-	<img src="http://placehold.it/600x300.jpg" alt="">
-	<img src="http://placehold.it/600x300.jpg" alt="">
+	<a href="https://placeholder.com/1200x600.jpg"><img src="https://placeholder.com/600x300.jpg" alt=""></a>
+	<a href="https://placeholder.com/1200x600.jpg"><img src="https://placeholder.com/600x300.jpg" alt=""></a>
+	<img src="https://placeholder.com/600x300.jpg" alt="">
+	<img src="https://placeholder.com/600x300.jpg" alt="">
 	<figcaption>Two images.</figcaption>
 </figure>
 
@@ -602,9 +602,9 @@ Apply the `third` class like so to display three images side by side that share 
 
 {% highlight html %}
 <figure class="third">
-	<a href="http://placehold.it/1200x600.jpg"><img src="http://placehold.it/600x300.jpg" alt=""></a>
-	<a href="http://placehold.it/1200x600.jpg"><img src="http://placehold.it/600x300.jpg" alt=""></a>
-	<a href="http://placehold.it/1200x600.jpg"><img src="http://placehold.it/600x300.jpg" alt=""></a>
+	<a href="https://placeholder.com/1200x600.jpg"><img src="https://placeholder.com/600x300.jpg" alt=""></a>
+	<a href="https://placeholder.com/1200x600.jpg"><img src="https://placeholder.com/600x300.jpg" alt=""></a>
+	<a href="https://placeholder.com/1200x600.jpg"><img src="https://placeholder.com/600x300.jpg" alt=""></a>
 	<figcaption>Caption describing these three images.</figcaption>
 </figure>
 {% endhighlight %}
@@ -612,12 +612,12 @@ Apply the `third` class like so to display three images side by side that share 
 And you'll get something that looks like this:
 
 <figure class="third">
-	<a href="http://placehold.it/1200x600.jpg"><img src="http://placehold.it/600x300.jpg" alt=""></a>
-	<a href="http://placehold.it/1200x600.jpg"><img src="http://placehold.it/600x300.jpg" alt=""></a>
-	<a href="http://placehold.it/1200x600.jpg"><img src="http://placehold.it/600x300.jpg" alt=""></a>
-	<a href="http://placehold.it/1200x600.jpg"><img src="http://placehold.it/600x300.jpg" alt=""></a>
-	<a href="http://placehold.it/1200x600.jpg"><img src="http://placehold.it/600x300.jpg" alt=""></a>
-	<a href="http://placehold.it/1200x600.jpg"><img src="http://placehold.it/600x300.jpg" alt=""></a>
+	<a href="https://placeholder.com/1200x600.jpg"><img src="https://placeholder.com/600x300.jpg" alt=""></a>
+	<a href="https://placeholder.com/1200x600.jpg"><img src="https://placeholder.com/600x300.jpg" alt=""></a>
+	<a href="https://placeholder.com/1200x600.jpg"><img src="https://placeholder.com/600x300.jpg" alt=""></a>
+	<a href="https://placeholder.com/1200x600.jpg"><img src="https://placeholder.com/600x300.jpg" alt=""></a>
+	<a href="https://placeholder.com/1200x600.jpg"><img src="https://placeholder.com/600x300.jpg" alt=""></a>
+	<a href="https://placeholder.com/1200x600.jpg"><img src="https://placeholder.com/600x300.jpg" alt=""></a>
 	<figcaption>Three images.</figcaption>
 </figure>
 
