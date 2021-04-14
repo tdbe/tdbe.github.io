@@ -34,7 +34,7 @@ Here are some cool words:
 
 > reason, humour, imagination, talent, equal poise, flexible mindset, exponential mindset.
 
-also
+also, I understand base principles of many types of human work dynamics, and the Dunning Krueger Effect. TL;DR It's like this:
 
 
 <iframe width="560" height="315" src="//www.youtube.com/embed/5qcfdBL3QqM?t=1m7s" frameborder="0"> </iframe>
