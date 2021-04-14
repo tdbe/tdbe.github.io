@@ -10,9 +10,9 @@ image:
 share: true
 ---
 
-This blog is super out of date because, in short, time spent writing is time spent not doing.
+This blog is super out of date because, in short, time spent writing is time spent not doing. I've leveled up many times.
 
-* Here's a 2021 list of excellent dumb things that describe or rhyme with what I am:
+Here's a 2021 list of excellent dumb things that describe or rhyme with what I am:
 * Chaotic-pensive computer scientist.
 * Amazing visual designer who's mediocre at drawing.
 * Fake game director.
@@ -51,7 +51,7 @@ Here's what I like:
 * emergent multiplayer shenanigans, 
 * fanbase meta social engagement, 
 * new ideas / approaches.
-* game feel.
+* game feel. mouth feel. (taste)
 
 
 ------------------
