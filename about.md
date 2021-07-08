@@ -18,13 +18,13 @@ Here's a 2021 list of excellent dumb things that describe or rhyme with what I a
 * Fake game director.
 * Business-aware enough for the base rules and principles but impatient about it.
 * Feelings-fueled storyteller.
-* My DnD character has a ton of charisma in short and very specific sporadic circumstances.
-* Can visualize n-dimensional arrays, and comfortably deal with complexity.
+* My DnD character has a ton of charisma in short and very specific circumstances.
+* Can totally visualize n-dimensional space, and comfortably deal with complexity.
 * Confidence comes from base principles understanding, and doing. Not from surface level faking.
 * Half hotblooded, half coldblooded anime protagonist.
 * Would-be anarchistic CEO of something small.
 * Hyper awareness - is just another way to say you get overwhelmed in social situations.
-* Protopian futures lover, and pessimist futurist - those are the true optimists.
+* Protopian futures lover; also pessimist futurist - those are the true optimists.
 
 Check [my portfolio](http://www.deferredreality.com) for some projects and game-y things.
 
