@@ -14,10 +14,10 @@ This blog is super out of date because, in short, time spent writing is time spe
 
 Here's a 2021 list of excellent dumb things that describe or rhyme with what I am:
 * Chaotic-pensive computer scientist.
-* Amazing designer who's mediocre at drawing.
-* Game director depending on the mood.
+* Amazing designer but mediocre sketcher.
+* Indie director depending on the mood.
 * Business-principles-aware but impatiently so.
-* 50-50 facts and feelings fueled storyteller.
+* 50-50 logic and feelings fueled storyteller.
 * My DnD character has a ton of charisma in short and specific circumstances.
 * Can totally visualize n-dimensional space, and comfortably deal with complexity.
 * Confidence comes from base principles understanding, and doing. Not from surface level pretending.
