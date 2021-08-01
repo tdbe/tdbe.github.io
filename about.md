@@ -15,7 +15,7 @@ This blog is super out of date because, in short, time spent writing is time spe
 Here's a 2021 list of excellent dumb things that describe or rhyme with what I am:
 * Chaotic-pensive computer scientist.
 * Confidence comes from base principles understanding, and doing. Not from surface level pretending.
-* Amazing designer but mediocre sketcher.
+* Soul and style engineer.
 * Indie director depending on the mood.
 * Business-principles-aware but impatiently so.
 * 50-50 logic and feelings fueled storyteller.
