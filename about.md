@@ -14,17 +14,17 @@ This blog is super out of date because, in short, time spent writing is time spe
 
 Here's a 2021 list of excellent dumb things that describe or rhyme with what I am:
 * Chaotic-pensive computer scientist.
-* Confidence comes from base principles understanding, and doing. Not surface level pretending.
+* Confidence comes from base principles understanding, and doing. Not surface level shortcuts.
 * Engineer of soul & style.
 * Indie director depending on the mood.
 * Business-principles-aware but impatiently so.
-* 50-50 logic and feelings fueled storyteller.
+50-50 logic and feelings fueled storyteller.
 * My DnD character has a ton of charisma in short & specific circumstances.
 * Comfortable with complexity and n-dimensional space.
 * Proponent of egoless individuality, awareness, and interestedness.
 * Half hotblooded half coldblooded anime protagonist.
 * Would-be CEO of something small and wisely disruptive.
-* Having hyper awareness. - means you're the opposite of not numb to social stimulus & subtlety.
+* Hyper awareness. - means you can get overwhelmed, but you're the opposite of numb to social stimulus & subtlety.
 * Protopian futures lover; also pessimist futurist - those are the true optimists.
 
 Check [my portfolio](http://www.deferredreality.com) for some projects and game-y things.
