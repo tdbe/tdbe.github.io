@@ -8,12 +8,12 @@ tags: [tutorial, graphics programming, opengl, directx11, cg, hlsl, command buff
 image:
   feature: abstract-3.jpg
   credit: dargadgetz
-  creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
+  creditlink: https://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
 comments: true
 share: true
 ---
 
-This is a continuation of [**my previous post**](http://tdbe.github.io/graphics-pipeline-fundamentals/) **on the graphics pipeline** and some fundamental tricks.
+This is a continuation of [**my previous post**](https://tdbe.github.io/graphics-pipeline-fundamentals/) **on the graphics pipeline** and some fundamental tricks.
 
 Now that we've totally mastered how shaders work, let's use them in some non-traditional ways.
 
@@ -96,12 +96,12 @@ Since we also have our current geometry's Screen space position, we can convert 
 With the worldspace position (of either the pre-existing geometry's fragment or the current one) you we can do what is called Triplanar Texture Projection or Solid Texturing. This is what you most often find on procedural meshes you obtain from voxels, which don't have sensical UV coorinates, so you just say "everything on top is grass, everything on the sides is ground".
 
 <figure class="fill">
-	<img src="http://www.deferredreality.com/project/gpgpu/images/cShaderGif438.gif" alt="procedural caves" style="float:left; width: 50%; margin-left:-1px;"/>
+	<img src="https://www.deferredreality.com/project/gpgpu/images/cShaderGif438.gif" alt="procedural caves" style="float:left; width: 50%; margin-left:-1px;"/>
 	<video controls="" autoplay="" loop="" class="" style="float:right; width: 50%;margin-right:-1px;">
-		<source src="http://www.deferredreality.com/project/gpuMedley/images/holeDecal.webm" type="video/webm">
+		<source src="https://www.deferredreality.com/project/gpuMedley/images/holeDecal.webm" type="video/webm">
 		Your browser does not support the video tag.
 	</video>
-	<!--figcaption><a href="http://www.deferredreality.com/?project=gpgpu" style="border-bottom: 1px dotted #a2a2a2;">My procedural caves</a> with solid texturing (left), or on my deferred decals (right).</figcaption-->
+	<!--figcaption><a href="https://www.deferredreality.com/?project=gpgpu" style="border-bottom: 1px dotted #a2a2a2;">My procedural caves</a> with solid texturing (left), or on my deferred decals (right).</figcaption-->
 	<figcaption>My procedural caves with solid texturing (left), or on my deferred decals (right).</figcaption>
 </figure>
 
@@ -203,7 +203,7 @@ This method draws custom data buffers with the vertex and triangles paradigm, or
 m_CB_arr[(int)CBs.BeforeAlpha].DrawProcedural(Matrix4x4.identity, customBillboardMaterial, 0, MeshTopology.Triangles, 6, particleCount);
 {% endhighlight %}
 
-Remember [back when I said](http://tdbe.github.io/graphics-pipeline-fundamentals/#customVertex) you can have custom DirectX11 vertex shaders that run on data buffers? (`FragInput vert (uint id : SV_VertexID, uint inst : SV_InstanceID)`)
+Remember [back when I said](https://tdbe.github.io/graphics-pipeline-fundamentals/#customVertex) you can have custom DirectX11 vertex shaders that run on data buffers? (`FragInput vert (uint id : SV_VertexID, uint inst : SV_InstanceID)`)
 This is how you run them in Unity with C#. In this case I defined a quad with 6 independent vertices, and the vertex shader will run 6 times for each particle in `particleCount`.
 
 <br/>

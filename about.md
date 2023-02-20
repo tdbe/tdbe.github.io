@@ -6,7 +6,7 @@ tags: [blog, gamedev, PCG, research, graphics programming, gameplay programming,
 image:
   feature: abstract-5.jpg
   credit: dargadgetz
-  creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
+  creditlink: https://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
 share: true
 ---
 
@@ -27,7 +27,7 @@ Here's a 2021 list of excellent dumb things that describe or rhyme with what I a
 * Hyper awareness. - means you can get overwhelmed, but you're the opposite of numb to social stimulus & subtlety.
 * Protopian futures lover; also pessimist futurist - those are the true optimists.
 
-Check [my portfolio](http://www.deferredreality.com) for some projects and game-y things.
+Check [my portfolio](https://www.deferredreality.com) for some projects and game-y things.
 
 This page has a few things about what I encourage, do, or appreciate.
 	
@@ -74,25 +74,25 @@ A few of the vidya I like, for reference:
 Here is a brief list of things I approve of: 
 
 * [Making Business Personal](https://hbr.org/2014/04/making-business-personal)
-* [Astronaut requirements == Job requirements](http://www.mars-one.com/faq/selection-and-preparation-of-the-astronauts/what-are-the-qualifications-to-apply)
+* [Astronaut requirements == Job requirements](https://www.mars-one.com/faq/selection-and-preparation-of-the-astronauts/what-are-the-qualifications-to-apply)
 * [John Cleese on Creativity](https://github.com/tjluoma/John-Cleese-on-Creativity)
 * [Jonathan Blow on deep creativity](https://www.youtube.com/watch?v=d0m0jIzJfiQ)
 * [Gabe Newell: Reflections of a video game maker](https://www.youtube.com/watch?v=t8QEOBgLBQU)
 * [John Carmack and SMU LYLE School of Engineering](https://www.youtube.com/watch?v=EaN4wUii0T0)
-* [SIGGRAPH](http://blog.selfshadow.com/2014/08/14/siggraph-2014-links/)
+* [SIGGRAPH](https://blog.selfshadow.com/2014/08/14/siggraph-2014-links/)
 * [Octane Renderer for MRT light fields (VR)](https://www.youtube.com/watch?v=0LLHMpbIJNA)
-* [Art and Technology at Pixar](http://graphics.pixar.com/library/)
-* [Feng Zhu Design Cinema](http://fengzhudesign.com/tutorials.htm)
+* [Art and Technology at Pixar](https://graphics.pixar.com/library/)
+* [Feng Zhu Design Cinema](https://fengzhudesign.com/tutorials.htm)
 * [Elon Musk](https://twitter.com/elonmusk)
-* [Ray Kurzweil](http://www.kurzweilai.net/)
-* [Jennifer Doudna](http://rna.berkeley.edu/)
+* [Ray Kurzweil](https://www.kurzweilai.net/)
+* [Jennifer Doudna](https://rna.berkeley.edu/)
 * [The Tek](https://www.youtube.com/user/razethew0rld)
-* [Super Best Friend Zaibatsu](http://superbestfriendsplay.com/), [Team FourStar](http://teamfourstar.com/), [AVGN](http://cinemassacre.com/)
+* [Super Best Friend Zaibatsu](https://superbestfriendsplay.com/), [Team FourStar](https://teamfourstar.com/), [AVGN](https://cinemassacre.com/)
 
 
 ----
  
 You can notice me further at:
 
-* [spectraljump.deviantart](http://spectraljump.deviantart.com/)
+* [spectraljump.deviantart](https://spectraljump.deviantart.com/)
 

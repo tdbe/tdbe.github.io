@@ -8,7 +8,7 @@ tags: [GGJ,game jam,unity3d,sound]
 image:
   feature: ggj-VoG_banner_03.jpg
   credit: GGJCph17 Team Godspeed
-  creditlink: http://globalgamejam.org/2017/games/voice-god
+  creditlink: https://globalgamejam.org/2017/games/voice-god
 comments: true
 share: true
 ---
@@ -37,7 +37,7 @@ You're effectively controlling the rolling character via a winamp visualization.
 
 We used unity 2D tools, the Animator, a rigidbody pool, and sound basetones and overtones merged into a world position function.
 
-Voice of God itch.io page [here](https://chronologist.itch.io/voice-of-god). Github repo with build [here](https://github.com/tdbe/WAVES/releases/tag/win-x64) or [here](https://github.com/MrHangover/WAVES/releases/tag/win-x64). And the original GGJ submission's page is [here](http://globalgamejam.org/2017/games/voice-god).
+Voice of God itch.io page [here](https://chronologist.itch.io/voice-of-god). Github repo with build [here](https://github.com/tdbe/WAVES/releases/tag/win-x64) or [here](https://github.com/MrHangover/WAVES/releases/tag/win-x64). And the original GGJ submission's page is [here](https://globalgamejam.org/2017/games/voice-god).
 
 
 <figure class="">

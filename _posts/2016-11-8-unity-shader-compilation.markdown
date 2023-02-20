@@ -8,7 +8,7 @@ tags: [tutorial, graphics programming, graphics pipeline, hlsl, cg, unity3d, sha
 image:
   feature: abstract-3.jpg
   credit: dargadgetz
-  creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
+  creditlink: https://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
 comments: true
 share: true
 ---

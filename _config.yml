@@ -2,9 +2,9 @@ title:            Tudor's blog
 description:      (gamedev) curiosities <br/>with SCIENCE
 disqus_shortname: deferred
 #Your site's domain goes here. Leave localhost server or blank when working locally.
-url:              http://blog.deferredreality.com
-#url:              http://tdbe.github.io
-#url:              http://localhost:8080/blog2
+url:              https://blog.deferredreality.com
+#url:              https://tdbe.github.io
+#url:              https://localhost:8080/blog2
 
 # Owner/author information
 owner:
@@ -19,7 +19,7 @@ owner:
   twitter:        CarnegieLemon
   bitbucket:      tdbe
   github:         tdbe
-  email:           http://www.deferredreality.com/#resume
+  email:           https://www.deferredreality.com/#resume
   stackexchange:  
   linkedin:       tudorberechet
   youtube:      https://www.youtube.com/channel/UCuZX7zGt0g51-TbmCGbECtA
@@ -44,10 +44,10 @@ links:
 #  - title: Theme Setup
 #    url: /theme-setup
   - title: Portfolio
-    url: http://www.deferredreality.com
+    url: https://www.deferredreality.com
     external: true
 
-# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+# https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone:    Europe/Berlin
 future:      true
 pygments:    true
@@ -67,7 +67,7 @@ kramdown:
   # https://github.com/jekyll/jekyll/pull/4090
   syntax_highlighter: rouge
 
-  # Rouge Highlighter in Kramdown › http://kramdown.gettalong.org/syntax_highlighter/rouge.html
+  # Rouge Highlighter in Kramdown › https://kramdown.gettalong.org/syntax_highlighter/rouge.html
   # span, block element options fall back to global
   syntax_highlighter_opts:
     # Rouge Options › https://github.com/jneen/rouge#full-options

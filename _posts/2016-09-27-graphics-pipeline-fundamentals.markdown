@@ -8,7 +8,7 @@ tags: [tutorial, graphics programming, graphics pipeline, opengl, directx11, cg,
 image:
   feature: abstract-3.jpg
   credit: dargadgetz
-  creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
+  creditlink: https://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
 comments: true
 share: true
 ---
@@ -19,7 +19,7 @@ The general high level theory is simple, but the API naming or hidden math makes
 
 It's gonna take a minute, but I'm going to explain what the ominous <i>they</i> don't tell you and what they're confusing you with.
 
-In here and the [next post](http://tdbe.github.io/unity-shader-shenanigans/), I'll walk you through for-realsies how a mesh (or a data buffer) gets converted throughout the graphics pipeline. And I'll give some sample code for stuff like procedural geometry, reconstructing worldspace position, or using custom data buffers.
+In here and the [next post](https://tdbe.github.io/unity-shader-shenanigans/), I'll walk you through for-realsies how a mesh (or a data buffer) gets converted throughout the graphics pipeline. And I'll give some sample code for stuff like procedural geometry, reconstructing worldspace position, or using custom data buffers.
 
 This tutorial has some advanced topics but is still accessible to newbs. It however assumes you've tinkered with shader code before, and know of basic concepts like how renderers have triangle interpolation.
 
@@ -90,7 +90,7 @@ The Projection Matrix above incorporates FoV, and the near and far planes.
 <br/>
 `aspectRatio = windowHeight / windowWidth;`
 <br/>
-Check out [slide #6 here](http://www.terathon.com/gdc07_lengyel.pdf) for a nice visual representation.
+Check out [slide #6 here](https://www.terathon.com/gdc07_lengyel.pdf) for a nice visual representation.
 
 So the `o.pos` in your vertex function does not hold values between 0 and 1 or -1 and 1. It's actually the result of the above matrix multiplication. [0,0] is at the centre of the camera (unless you have a fancy off-centre perspective matrix), but the values beyond that depend on the near/far plane and the camera size / aspect ratio. 
 
@@ -106,13 +106,13 @@ So the `o.pos` in your vertex function does not hold values between 0 and 1 or -
 </ul>
 
 
-***Note:** Z is actually converted to 1/z (the inverse, or reciprocal of z). Z is not linear but 1/z is (this allows linear interpolation, and helps precision). <a style="border-bottom: 1px dotted #a2a2a2;" href="http://www.reedbeta.com/blog/2015/07/03/depth-precision-visualized/">Here's more</a> on why 1/z is used, and on the depth precision.*
+***Note:** Z is actually converted to 1/z (the inverse, or reciprocal of z). Z is not linear but 1/z is (this allows linear interpolation, and helps precision). <a style="border-bottom: 1px dotted #a2a2a2;" href="https://www.reedbeta.com/blog/2015/07/03/depth-precision-visualized/">Here's more</a> on why 1/z is used, and on the depth precision.*
 
 
 <br/>
 
 <figure class="half">
-	<img src="http://i950.photobucket.com/albums/ad341/jekylljuice85/lobe%20gallery/relaxovision.png" alt="Freakazoid">
+	<img src="https://i950.photobucket.com/albums/ad341/jekylljuice85/lobe%20gallery/relaxovision.png" alt="Freakazoid">
 	<figcaption>Intermission</figcaption>
 </figure>
 
@@ -212,7 +212,7 @@ There's actually more things between vert and frag (and before the interpolation
 
 [UPDATE:] Luckily I don't have to get any deeper into Tessellation because it seems since I wrote this article, [Jasper Flick of CatlikeCoding]( https://catlikecoding.com/unity/tutorials/advanced-rendering/tessellation/) has done a very nice patreon'd writeup. Check it out because there's some magic to understand about how to link each stage so they all get what they expect.
 
-With the geometry program you can also for ex have a mesh with verts that are just points, and use a Geometry program to spawn 4 quad verts around and instead of those points/vertices and generate billboards. [Here is an example](http://forum.unity3d.com/threads/geometry-shaders.156553/) of just that.
+With the geometry program you can also for ex have a mesh with verts that are just points, and use a Geometry program to spawn 4 quad verts around and instead of those points/vertices and generate billboards. [Here is an example](https://forum.unity3d.com/threads/geometry-shaders.156553/) of just that.
 
 Here's a subset of that shader. I'll explain the key points.
 
@@ -258,7 +258,7 @@ void GS_Main(point GS_INPUT p[1], inout TriangleStream<FS_INPUT> triStream)
 
 In DirectX11 you can actually do the points-to-quads conversion trick directly in the vertex program by manipulating custom data buffers.
 
-Here's how I did that for my [particle sculpter](http://www.deferredreality.com/?project=particles):
+Here's how I did that for my [particle sculpter](https://www.deferredreality.com/?project=particles):
 {% highlight glsl linenos %}
 
 struct Particle
@@ -345,7 +345,7 @@ This `_CameraGBufferTexture0` is from the deferred renderer, but you can set cus
 ------
 
 
-[**My next post**](http://tdbe.github.io/unity-shader-shenanigans/) will apply some of this knowledge in some common but unconventional uses for shaders.
+[**My next post**](https://tdbe.github.io/unity-shader-shenanigans/) will apply some of this knowledge in some common but unconventional uses for shaders.
 
 After this hopefully everyone can start researching and understanding more fun stuff like clouds, atmospheric scattering, light absorbtion, glass caustics, distance fields, fluid simulations, grass, hair, skin etc..
 
