@@ -10,22 +10,22 @@ image:
 share: true
 ---
 
-This blog is super out of date because, in short, time spent writing is time spent not doing. I've leveled up many times.
+This blog is super out of date; I blame it on work and also trying to live.
 
 Here's a 2021 list of excellent dumb things that describe or rhyme with what I am:
-* Chaotic-pensive computer scientist.
-* Confidence comes from base principles understanding, and doing. Not surface level shortcuts.
-* Engineer of soul & style.
-* Indie director depending on the mood.
-* Business-principles-aware but impatiently so.
-50-50 logic and feelings fueled storyteller.
-* My DnD character has a ton of charisma in short & specific circumstances.
-* Comfortable with complexity and n-dimensional space.
-* Proponent of egoless individuality, awareness, and interestedness.
-* Half hotblooded half coldblooded anime protagonist.
-* Would-be CEO of something small and wisely disruptive.
-* Hyper awareness. - means you can get overwhelmed, but you're the opposite of numb to social stimulus & subtlety.
-* Protopian futures lover; also pessimist futurist - those are the true optimists.
+* Chaotic-pensive computer scientist
+* Confidence comes from base principles understanding, & doing. Not surface level shortcuts.
+* Engineer of soul & style
+* Indie director depending on the mood
+* Business-principles-aware but impatiently so
+* Proponent of egoless individuality, awareness, interestedness
+* 50-50 logic & feelings fueled storyteller
+* My DnD character has a ton of charisma in short & specific circumstances
+* Half hotblooded half coldblooded anime protagonist
+* Comfortable with complexity & n-dimensional space
+* Would-be CEO of something small & wisely disruptive
+* Hyperawareness. - means you can get overwhelmed, but have a large & nuanced bandwidth
+* Protopian futures lover; also pessimist futurist - those are the true optimists
 
 Check [my portfolio](https://www.deferredreality.com) for some projects and game-y things.
 
@@ -83,11 +83,9 @@ Here is a brief list of things I approve of:
 * [Octane Renderer for MRT light fields (VR)](https://www.youtube.com/watch?v=0LLHMpbIJNA)
 * [Art and Technology at Pixar](https://graphics.pixar.com/library/)
 * [Feng Zhu Design Cinema](https://fengzhudesign.com/tutorials.htm)
-* [Elon Musk](https://twitter.com/elonmusk)
 * [Ray Kurzweil](https://www.kurzweilai.net/)
 * [Jennifer Doudna](https://rna.berkeley.edu/)
-* [The Tek](https://www.youtube.com/user/razethew0rld)
-* [Super Best Friend Zaibatsu](https://superbestfriendsplay.com/), [Team FourStar](https://teamfourstar.com/), [AVGN](https://cinemassacre.com/)
+* [Super Best Friend Zaibatsu](https://superbestfriendsplay.com/)
 
 
 ----
