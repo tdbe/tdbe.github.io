@@ -1,0 +1,208 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!-- Consider adding a manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" xmlns="http://www.w3.org/1999/html"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+
+  <!-- Use the .htaccess and remove these lines to avoid edge case issues.
+       More info: h5bp.com/i/378 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>AWESOME RENDERER</title>
+  <meta name="description" content="SOFTWARE RENDERER THAT IS AWESOME">
+
+  <!-- Mobile viewport optimized: h5bp.com/viewport -->
+  <meta name="viewport" content="width=device-width">
+
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
+
+  <!-- All JavaScript at the bottom, except this Modernizr build.
+       Modernizr enables HTML5 elements & feature detects for optimal performance.
+       Create your own custom Modernizr build: www.modernizr.com/download/ -->
+  <script src="js/libs/modernizr-2.5.3.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script>
+  <script src="js/plugins.js"></script>
+
+
+    <!--script src="js/libs/corbanbrook-webgl-2d/webgl-2d.js"></script-->
+    <!--script src="js/webGL/html5rocks-webgl-utils.js"></script-->
+    <script src="js/data.js"></script>
+    <script src="js/cube.js"></script>
+    <script src="js/icosahedron.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/Renderer.js"></script>
+    <script src="js/SurfaceRenderer.js"></script>
+    <script src="js/zBufferLogic.js"></script>
+    <script src="js/LightsAndBumps.js"></script>
+
+    <script type="text/javascript">
+
+    </script>
+
+</head>
+
+
+
+<body onload="main();" >
+  <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
+       chromium.org/developers/how-tos/chrome-frame-getting-started -->
+  <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+  <header>
+            <h4 id="header">Project 2: a software renderer from scratch.</h4>
+            <p style="font-size: 12px; margin-left: 8px; font-style: italic;"><br/>
+                Now these points of data make a beautiful line.
+                <br/>And we're out of beta.
+                <br/>&gt;We're releasing on time.
+                </p>
+            <hr/>
+            <hr/>
+  </header>
+  <div role="main" id="main">
+      <span id="msg">LOADING... Please wait for the canvas.<br/>Also, if you're using Internet Explorer, I've got some bad news for you...</span>
+
+
+
+
+      <div id="radio">
+          <div id="mode" >Select rendering mode:</div><br/>
+          <form name="changeRendererParamForm" action="" style="text-align: left; padding-left: 16px;">
+              <div style="text-align: left; font-size: 14px;">
+                  <input type="radio" name="cube.type" id="a" value="1" onchange='object3d.type = cube.type = icosahedron.type = ($(this).val());' />
+                  <label for="a" id="aL">1. Wireframe, Painter's alg.</label><br/>
+                  <input type="radio" name="cube.type" id="b" value="2" onchange='object3d.type = cube.type = icosahedron.type = parseInt($(this).val());'/>
+                  <label for="b">2. ^ + Mesh (w/ ctx.lineTo()).</label><br/>
+                  <input type="radio" name="cube.type" id="c" value="3" onchange='object3d.type = cube.type = icosahedron.type = parseInt($(this).val());' />
+                  <label for="c">3. ^ + ScanLine (w/ ctx.lineTo()).</label><br/>
+                  <input type="radio" name="cube.type" id="d" value="4" onchange='object3d.type = cube.type = icosahedron.type = parseInt($(this).val());' checked/>
+                  <label for="d">4. ^ + ScanLine (w/ "pixels").</label><br/>
+                  <input type="radio" name="cube.type" id="e" value="5" onchange='object3d.type = cube.type = icosahedron.type = parseInt($(this).val());' />
+                  <label for="e">5. ^ + Z-Buffered (actual px)</label><br/>
+                  <input class="group" type="radio" name="cube.type" id="f" value="6" onchange='object3d.type = cube.type = icosahedron.type = parseInt($(this).val());'/>
+                  <label class="group" for="f">6. ^ + Diffuse Lighting.</label><br/><!--span style="position: absolute; z-index: -10; top: 125px; left: 18px;">│</span--><span style="position: absolute; z-index: -10; top: 139px; left: 18px;">│</span>
+                  <input class="group" type="radio" name="cube.type" id="g" value="7" onchange='object3d.type = cube.type = icosahedron.type = parseInt($(this).val());' />
+                  <label class="group" for="g">7. ^ + PerspectiveCorrect Texture.</label><br/><span style="margin-left:1px;">└──</span>
+                  <input class="group" type="checkbox" name="targetArg" value="" onchange='handleBump(this);' id="bmp" style="margin-left:-5px;"> <label class="group" for="bmp" >8. Toggle per pixel shading<br/><span style=" float:right; background-color: rgba(255, 28, 40, 0.3);">(Diffuse+Gouraud)/2.</span></label><br/>
+                  <span style="position: absolute; z-index: -10; top: 168px; left: 49px;">│</span>
+                  <span style="position: absolute; z-index: -10; top: 184px; left: 49px;">│</span>
+                  <input class="group" type="checkbox" name="targetArg" value="" onchange='handleBump2(this);' id="bmp2" style="margin-left:30px; margin-top:2px;"> <label class="group" for="bmp2" >9. Toggle BumpMap.</label><br/>
+                  <span style="position: absolute; z-index: -10; top: 194px; left: 49px;">│</span>
+                  <span style="position: absolute; z-index: -10; top: 210px; left: 48px;">└──</span>
+                  <input class="group" type="checkbox" name="targetArg" value="" onchange='handleBump3(this);' id="bmp3" style="margin-left:60px;" checked> <label class="group" for="bmp3" >Enable <span style="color: rgba(0, 255, 25, 0.6);">Green</span><span style="color: rgba(212, 81, 255, 1);">Magenta</span><br/><span style=" float:right; background-color: rgba(255, 28, 40, 0.3);">Bump Normals display.</span></label><br/>
+
+                  <span style="display: block; margin-top:2px; background-color: rgba(255, 28, 40, 0.1); color: rgba(255, 255, 255, 0.3);"> * Reds also have Backface Culling.</span>
+              </div>
+          </form>
+
+      </div>
+
+      <div id="cvsContainer">
+            <canvas id="cvs" style='border: 2px solid;' width="480" height="312"></canvas>
+      </div>
+
+      <div id="radioRight">
+          <div id="object" >Select 3d object:</div>
+          <form name="changeRendererParamForm" action="" style="text-align: left; padding-left: 0px; top: 0px;">
+              <div style="text-align: left; font-size: 14px;">
+                  <input class="rR" type="radio" name="cube.type" id="cube" value="1" onchange='obj.type = parseInt($(this).val()); object3d = cube; obj.fixedVertexNormalWeights = false;' />
+                  <label class="rR" for="cube" id="cubeL">1. Cube.</label><br/>
+                  <input class="rR" type="radio" name="cube.type" id="cube2" value="1" onchange='obj.type = parseInt($(this).val()); object3d = cube; obj.fixedVertexNormalWeights = true;' />
+                  <label class="rR" for="cube2" id="cubeL2">1.+ fixedVertexNormalWeights.</label><br/>
+                  <input class="rR" type="radio" name="cube.type" id="icos" value="2" onchange='obj.type = parseInt($(this).val()); object3d = icosahedron; obj.fixedVertexNormalWeights = false;' checked/>
+                  <label class="rR" for="icos" id="icosL">2. Icosahedron.</label><br/>
+              </div>
+          </form>
+          <div class="group" >
+              <div id="object2" >Change parameters:</div>
+              <form action="" id="form1">
+                  <input type="checkbox" name="targetArg" value="" onchange='handleLight(this);' class="radio" id="c0"> <label for="c0"> Toggle dragging of the Light.</label><br/>
+                  <input type="checkbox" name="targetArg" value="" onchange='handleNormals(this);' class="radio" id="c1"> <label for="c1"> Display normals +wireframe.</label><br/>
+                  <input id="n1" type="number" min="0.0" max="1" value="1" step="0.1" onchange='handleTransparency(this);' style="width:40px;height:16px;margin-bottom:3px;"/><label for="n1"> Transparency (0.1<->1).</label><br/>
+              </form>
+              <div id="object3" >(<b>7</b>) Change the Texture:</div>
+              <form name="changeTextureParamForm" action="" style="text-align: left; padding-left: 0px; top: 0px;">
+                  <div style="text-align: left; font-size: 14px;">
+                      <input class="rR" type="radio" name="cube.texture" id="color" value="0" onchange='obj.txt = parseInt($(this).val());' />
+                      <label class="rR" for="color" id="colorL">1. Solid Color. (useful for <b>8.</b>)</label><br/>
+                      <input class="rR" type="radio" name="cube.texture" id="text1" value="1" onchange='obj.txt = parseInt($(this).val());' checked/>
+                      <label class="rR" for="text1" id="text1L">2. Red Green crosshatch.</label><br/>
+                      <input class="rR" type="radio" name="cube.texture" id="text2" value="2" onchange='obj.txt = parseInt($(this).val());'/>
+                      <label class="rR" for="text2" id="text2L">3. Checkers.</label><br/>
+                  </div>
+              </form>
+          </div>
+      </div>
+
+
+
+  </div>
+  <footer>
+            <hr/>
+            <hr/>
+            <div style="padding: 8px; padding-bottom: 75px;"><!--img src="img/test_texture1.jpg"/-->
+                Here is my implementation of a 3D software renderer / rasterizer, in js.
+                <br/>
+                <br/>The end result is a movable (draggable) z-buffered, backface-culled object, with perspective correct texture, lighting(gouraud, diffuse), shading and bump mapping.
+                <br/>
+                Up until mode 5 I use Painter's Algorithm at the triangle level.
+                <br>It's done in a super hurry so it could be written better / faster.
+                But it should render anything as long as it has coordinates for vertexes, triangles, and UVs. ATM, you have to paste your coords in data.js...
+                <br>
+                <br>I am <a href="http://i291.photobucket.com/albums/ll300/MRCTechOne/Deal-with-it-Shepard.jpg">not</a> handling antialiasing after the z-buffering.
+                <br>I could implement some mouse rotation if I had some extra time. -Hah.. extra time...
+                
+                <div style="font-family: 'Consolas';">
+                    <br> <b>ChangeLog:</b>
+                    <br>28-09:\&gt; Added a canvas with a 3dsmax/c4d style background.
+                    <br>28-09:\&gt; Created point drawing and line drawing functions for a cube.
+                    <br>29-09:\&gt; Can draw a wireframe, with perspective and a "camera": projectionTransform(translatePoint(rotatePoint(x, y, z))).
+                    <br>29-09:\&gt; Can rotate the camera (actually, the object).
+                    <br>30-09:\&gt; Implemented rendering a cube as triangle wireframes.
+                    <br>30-09:\&gt; Implemented scanline triangle filling with a trippy &lt;canvas&gt; antialiasing-related transparency/flickering "problem".
+                    <br>30-09:\&gt; Added a few radio buttons which change a global flag to 1 2 or 3, which is read in the game loop.
+                    <br>01-10:\&gt; Wrote an efficient triangle fill function that fills using large pixels instead of lineTo. This is for an eventual z-Buffering mode.
+                    <br>01-10:\&gt; Implemented the Painter's Algorithm to order the triangles for now. Though there seems to be a problem with triangles at funny angles. Which happens because of the average distance calculation of this algorithm.
+                    <br>04-10:\&gt; Implemented (fixed) my z-buffer with the interpolation of my z values. Note: As of now, modes 5 and up are no longer low res. I'm actually drawing 1/1 px instead of 1/4. (so it is slow as hell)
+                    <br>06-10:\&gt; Calculating vertice normals.
+                    <br>07-10:\&gt; Calculated averaged vertice normals (keeping in mind adjacent triangles sharing a vertice)
+                    <br>08-10:\&gt; Finally implemented diffuse lighting by interpolating the right stuff. :&gt; ..It does look shite though. Or does it?
+                    <br>10-10:\&gt; Fixed a bunch of stuff and I should be done. I've also added mode 7, which is a diffuse lighting exploit that simulates reflections from some imaginary tiny lights.
+
+                </div>
+                <br> You know, this thing is fully supported on any device with a good browser. So try it on your phone, see how many fps you get. :)
+            
+                <br/>
+            </div>
+  </footer>
+
+
+  <!-- JavaScript at the bottom for fast page loading -->
+
+  <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+
+
+
+  <!-- scripts concatenated and minified via build script -->
+
+
+  <!-- end scripts -->
+
+  <!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.
+       mathiasbynens.be/notes/async-analytics-snippet -->
+  <script>
+    var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));
+  </script>
+</body>
+</html>
