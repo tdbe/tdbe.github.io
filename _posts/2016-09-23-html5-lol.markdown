@@ -1,0 +1,28 @@
+---
+published: true
+layout: post
+title: Funny gamedev homework from 2012
+description: "1-week assignments from 2012!"
+modified: 2016-09-24
+tags: [news]
+image:
+  feature: abstract-11.jpg
+  credit: dargadgetz
+  creditlink: https://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
+comments: true
+share: true
+---
+
+A a 2d-platformer game engine from scratch, with unbreakable™ collision. Play it right here! :P
+<br/>
+<iframe width="560" height="315" src="../sandbox/sandbox_1/index.html" frameborder="0"> </iframe>
+<br/>
+<br/>
+And an A* (A star) search with diagonals, weights, obstacles, and a dynamic chase scene. Play it right here!
+<br/>
+<iframe width="560" height="315" src="../sandbox/sandbox_3/index.html" frameborder="0"> </iframe>
+<br/>
+<br/>[&nbsp;]({{site.url}}/theme-setup)
+
+
+

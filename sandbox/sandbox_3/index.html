@@ -1,0 +1,146 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!-- Consider adding a manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" xmlns="http://www.w3.org/1999/html"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+
+  <!-- Use the .htaccess and remove these lines to avoid edge case issues.
+       More info: h5bp.com/i/378 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>AWESOME PATHFINDER</title>
+  <meta name="description" content="PATHFINDER THAT IS AWESOME">
+
+  <!-- Mobile viewport optimized: h5bp.com/viewport -->
+  <meta name="viewport" content="width=device-width">
+
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
+
+  <!-- All JavaScript at the bottom, except this Modernizr build.
+       Modernizr enables HTML5 elements & feature detects for optimal performance.
+       Create your own custom Modernizr build: www.modernizr.com/download/ -->
+  <script src="js/libs/modernizr-2.5.3.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script>
+  <script src="js/plugins.js"></script>
+
+
+
+    <!--script src="js/libs/corbanbrook-webgl-2d/webgl-2d.js"></script-->
+    <!--script src="js/webGL/html5rocks-webgl-utils.js"></script-->
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/helperFunctions.js"></script>
+    <script src="js/A-Star_ManhattanDiagonal.js"></script>
+    <script src="js/webgl-2d/webgl-2d.js"></script>
+
+    <script type="text/javascript">
+
+    </script>
+
+</head>
+
+
+
+<body onload="main();" >
+  <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
+       chromium.org/developers/how-tos/chrome-frame-getting-started -->
+  <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+  <header>
+            <h4 id="header">Here lies project 3 of the Game Engines Class, Games Tech 1st semester.</h4>
+            <p style="font-size: 12px; margin-left: 8px; font-style: italic;">But there's no sense<br/>crying over every mistake.<br/>
+                You just keep on trying<br/>till you run out of cake.<br/>
+                </p>
+            <hr/>
+            <hr/>
+  </header>
+  <div role="main" id="main" unselectable="on">
+      <span id="msg" class = 'msg'>LOADING... Please wait for the canvas.<br/>Also, if you're using Internet Explorer, I've got some bad news for you...</span>
+
+      <canvas id="cvsBg" style="position: absolute; z-index: 2;" width="660" height="480"></canvas>
+      <canvas id="cvsMouse" style="position: absolute; z-index: 4;" width="660" height="480"></canvas>
+      <canvas id="cvsCat" style="position: absolute; z-index: 6;" width="660" height="480"></canvas>
+
+
+      <div id="btns">
+          <a id="1" class="cyan_btn" onclick="toggle_btns(event, 1);">Position the Chaser.</a> <br/>
+          <a id="2" class="yellow_btn" onclick="toggle_btns(event, 2);">Position the Target.</a> <br/>
+          <a id="3" class="magenta_btn" onclick="toggle_btns(event, 3);">Draw the Obstacles.</a> <br/>
+          <a id="4" class="white_btn" onclick="toggle_btns(event, 4);">Start A*!</a> <br/>
+          <a id="5" class="black_btn" onclick="toggle_btns(event, 5);">Stop A*.</a> <br/>
+          <a id="6" class="black_btn" onclick="toggle_btns(event, 6);">Stop and Clear!</a> <br/>
+          <div id="c">You must add both:<br/>- Chaser<br/>- Target</div>
+
+          <form action="" id="form1">
+              <input type="checkbox" name="targetArg" value="" onchange='handlePatrol(this);' class="radio" id="c1"> <label for="c1"> Does Target patrol?</label><br/>
+              <input type="checkbox" name="targetArg" value="" onchange='handleTrail(this);' class="radio" checked="checked" id="c2"> <label for="c2"> Enable Target trail.</label><br/>
+              <input id="n1" type="number" min="1" max="9" value="3" onchange='handleRadar(this);'/><label for="n1"> Target radar.</label><br/>
+          </form>
+      </div>
+
+      <span id="gameOver" class = 'msg'><span id="problem">Problem?</span><br/>[game over]</span>
+      <span id="gameOver2" class = 'msg'><span id="problem2">Isolated.</span><br/>[cannot reach target]</span>
+
+
+  </div>
+  <footer>
+            <hr/>
+            <hr/>
+            <div style="padding: 8px; padding-bottom: 75px;">This is my happy fun time implementation of the A* algorithm. The trollface uses it to chase the other guy around.
+                <br/>Click the cyan, yellow and magenta buttons and click/drag on the canvas to move the characters or to paint holes in the ground. Then start the scene.
+                <br/>Keep in mind that characters can move diagonally.
+                <div style="font-family: 'Consolas';">
+                    <br/> <b>ChangeLog:</b>
+                    <br/>26-10:\> Set up the canvas, the grid and the interface.
+                    <br/>26-10:\> Set up the functionality of customizing the scene before the chase.
+                    <br/>27-10:\> Implemented the finite state machine reactions of the target.
+                    <br/>28-10:\> Added visuals for character radar, trail and possible steps. Helps a lot with debugging, and it looks neat.
+                    <br/>28-10:\> Added options to tweak the Target: patrol, trail, radar range.
+                    <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;These <b>can be changed dynamically during the chase</b>.
+                    <br/>29-10:\> Set up some helper functions for A* and some visual assets.
+                    <br/>30-10:\> Started working on A*.
+                    <br/>1-11:\> Sick :C
+                    <br/>2-11:\> Sick :C
+                    <br/>3-11:\> Sick :C
+                    <br/>3-11:\> Finished A*.
+                    <br/>4-11:\> Allowed Target to randomly patrol while Chaser looks for it.
+                    <br/>4-11:\> Just discovered that JQuery's .animate works for any variable not just CSS.
+                    <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Which means: added MOTION TWEENS ALL AROUND! :D
+
+                </div>
+                <br/> All done.
+                <br/> Note: you'll find more information if you open a <b>javascript console</b> while running this.
+            </div>
+  </footer>
+
+
+  <!-- JavaScript at the bottom for fast page loading -->
+
+  <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+
+
+
+  <!-- scripts concatenated and minified via build script -->
+
+
+  <!-- end scripts -->
+
+  <!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.
+       mathiasbynens.be/notes/async-analytics-snippet -->
+  <script>
+    var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));
+  </script>
+</body>
+</html>

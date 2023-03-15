@@ -1,0 +1,175 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!-- Consider adding a manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+
+  <!-- Use the .htaccess and remove these lines to avoid edge case issues.
+       More info: h5bp.com/i/378 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>AWESOME GAME</title>
+  <meta name="description" content="GAME THAT IS AWESOME">
+
+  <!-- Mobile viewport optimized: h5bp.com/viewport -->
+  <meta name="viewport" content="width=device-width">
+
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
+
+  <!-- All JavaScript at the bottom, except this Modernizr build.
+       Modernizr enables HTML5 elements & feature detects for optimal performance.
+       Create your own custom Modernizr build: www.modernizr.com/download/ -->
+  <script src="js/libs/modernizr-2.5.3.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script>
+  <script src="js/plugins.js"></script>
+  <!--script src="js\mrdoob-three.js\build\three.min.js"></script-->
+
+
+    <!--script type="text/javascript" src="js/webGL/glMatrix-0.9.5.min.js"></script-->
+
+
+    <!--script id="shader-vs" type="x-shader/x-vertex">
+        //
+        attribute vec3 aVertexPosition;
+
+        uniform mat4 uMVMatrix;
+        uniform mat4 uPMatrix;
+
+        void main(void) {
+        gl_Position = uPMatrix * uMVMatrix * vec4(aVertexPosition, 1.0);
+        }
+    </script-->
+
+    <!--script id="2d-vertex-shader" type="x-shader/x-vertex">
+        attribute vec2 a_position;
+        attribute vec2 a_texCoord;
+
+        uniform vec2 u_resolution;
+
+        varying vec2 v_texCoord;
+
+        void main() {
+            // convert the rectangle from pixels to 0.0 to 1.0
+            vec2 zeroToOne = a_position / u_resolution;
+
+            // convert from 0->1 to 0->2
+            vec2 zeroToTwo = zeroToOne * 2.0;
+
+            // convert from 0->2 to -1->+1 (clipspace)
+            vec2 clipSpace = zeroToTwo - 1.0;
+
+            gl_Position = vec4(clipSpace * vec2(1, - 1), 0, 1);
+
+            // pass the texCoord to the fragment shader
+            // The GPU will interpolate this value between points.
+            v_texCoord = a_texCoord;
+        }
+    </script>
+
+    <script id="2d-fragment-shader" type="x-shader/x-fragment">
+        //we need to tell WebGL which place in the texture each point in the rectangle corresponds to. We'll pass this information from the vertex shader to the fragment shader using a special kind of variable called a 'varying'.
+        //a fragment shader to look up colors from the texture
+
+        precision mediump float;
+
+        // our texture
+        uniform sampler2D u_image;
+
+        // the texCoords passed in from the vertex shader.
+        varying vec2 v_texCoord;
+
+        void main() {
+            gl_FragColor = texture2D(u_image, v_texCoord);
+        }
+    </script-->
+
+    <script src="js/libs/corbanbrook-webgl-2d/webgl-2d.js"></script>
+    <!--script src="js/webGL/html5rocks-webgl-utils.js"></script-->
+    <script src="js/game/Stage.js"></script>
+    <script src="js/game/Game.js"></script>
+    <script src="js/script.js"></script>
+    <script type="text/javascript">
+
+
+    </script>
+
+</head>
+
+
+
+<body onload="main();" >
+  <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
+       chromium.org/developers/how-tos/chrome-frame-getting-started -->
+  <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+  <header>
+            <h4 id="header">Here lies project 1 of the Game Engines Class, Games Tech 1st semester.</h4>
+            <p style="font-size: 12px; margin-left: 8px; font-style: italic;">This was a triumph.</br>
+            I'm making a note here:</br>
+            HUGE SUCCESS.</p>
+            <hr/>
+            <hr/>
+  </header>
+  <div role="main" id="main">
+      <span id="msg">LOADING... Please wait for the sprites.</br>Also, if you're not using Chrome or Firefox, I've got some bad news for you...</span>
+      <canvas id="cvs" style='border: 2px solid;' width="800" height="480"></canvas>
+
+  </div>
+  <footer>
+            <hr/>
+            <hr/>
+            <div style="padding: 8px; padding-bottom: 75px;">Use the arrow keys (← ↑ →) to navigate the character. <br/>You can also double jump!<br/>"The gaps in the bricks seem to change when you're not looking!"
+
+                <div style="font-family: 'Consolas';">
+                    <br/> <b>ChangeLog:</b>
+                    <br/>__-__:\> lotsofstuffuntilnow...
+                    <br/>13-09:\> You can now change direction when doubleJumping.
+                    <br/>13-09:\> Game now pauses when website looses focus.
+                    <br/>13-09:\> DisabledPropagation (preventedDefault) for arrow key events to stop browser's arrow scrolling.
+                    <br/>17-09:\> Added "procedurally" (randomly) generated content and platforms.
+                    <br/>17-09:\> Implemented a tile grid system (16x16px) and a very early-stage collision detection method (outputs to javascript console).
+                    <br/>22-09:\> Finished the physics and the gravity and navigation system. Sort of.
+                    <br/>23-09:\> Fixed most bugs.
+                    <br/>23-09:\> Spent an hour photoshopping this ridiculous spritesheet animation for the character.
+                    <br/>24-09:\> Added sprite animation.
+                    <br/>24-09:\> Added a crude "Loading..." text. Very ugly. There should be a proper client check.
+                    <br/>24-09:\> Whipped up a crab real quick. (BTW, the crab and the background image, are or originate from stock images.)
+                    <br/>24-09:\> Made enemy move, along with it's tile hitbox. Fixed some platform generation bugs.
+                    <br/>24-09:\> There's more stuff I wanna add/fix (like a camera that affords slight adjustments), but for now I am done with this. Seriously, I'm behind on those wretched readings.
+
+                </div>
+                <br/> I would very much still call this "game engine" a beta. Many things can be added and there most likely still are bugs. Protip: open up a javascript console to see some extra event responses.
+                <br/> It does work in Firefox on yor Android phone though. ;) (but it will probably be rendered by your CPU -> will be slow)
+            </div>
+  </footer>
+
+
+  <!-- JavaScript at the bottom for fast page loading -->
+
+  <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+
+
+
+  <!-- scripts concatenated and minified via build script -->
+
+
+  <!-- end scripts -->
+
+  <!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.
+       mathiasbynens.be/notes/async-analytics-snippet -->
+  <script>
+    var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));
+  </script>
+</body>
+</html>
