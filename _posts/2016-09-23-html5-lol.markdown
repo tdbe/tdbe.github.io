@@ -7,13 +7,13 @@ modified: 2016-09-24
 tags: [news]
 image:
   feature: game-island-bg.gif
-  credit: me
-  creditlink: me
+  credit: 
+  creditlink: 
 comments: true
 share: true
 ---
 
-1st semester 1-week assignments
+I found a couple of my 1st semester 1-week assignments, from 2012, and they still work!
 
 ### 1. A 2d-platformer game engine from scratch, with unbreakable™ collision, procedural level, and crab bouncing. Play it right here! :P
 <br/>
@@ -23,7 +23,7 @@ share: true
 ### 2. A* (A star) search pathfinding with diagonals, weights, obstacles, and a dynamic chase scene. Play it right here!
 <br/>
 <iframe width="960px" height="1110px" style="margin-left: -134px;" src="../sandbox/sandbox_3/index.html" frameborder="0"> </iframe>
-<br/>
+
 <br/>[&nbsp;]({{site.url}}/theme-setup)
 
 
