@@ -81,6 +81,7 @@ function Game (canvas, contextGL, images) {
                 //e.stopPropagation();
                 //e.stopImmediatePropagation();
         });
+        $(window).click(resume);
         $(window).focus(resume);
         $(window).blur(pause);
     });
@@ -105,6 +106,7 @@ function Game (canvas, contextGL, images) {
 
     var stage;
     var delta, current, previous = 0;
+	var frameCount = 0;
 
     var player, enemy, sun, camera, debug;
     var floor = new Array(0, 0);
@@ -169,7 +171,7 @@ function Game (canvas, contextGL, images) {
 
         setTimeout(function(){element = document.getElementById("msg");
         element.parentNode.removeChild(element);}, 1000);
-
+		
         gameLoop();
     };
 
@@ -1194,12 +1196,12 @@ function Game (canvas, contextGL, images) {
     }
 
     function gameLoop(){// TODO: How do you do sprite animation? L4 SpriteSheet library.
-
+		
         current = Date.now();
         delta = current - previous;
         previous = current;
 
-        //This is a dirty fix for extremely slow systems (<10fps) (like my phone), otherwise the character would fall through the ground. The tradeoff is slowmo.
+        //This is a dirty physics tick fix for extremely slow systems (<10fps) (like my phone), otherwise the character would fall through the ground. The tradeoff is old school game slowmo.
         delta = (delta > 100 ? 100 : delta );//0.100
 
         if(!isPaused){
@@ -1230,6 +1232,11 @@ function Game (canvas, contextGL, images) {
 
             //TODO: make a fps counter (make a browser animation frame based one) and total Sprite Count
         }
+		
+		if(frameCount==0){
+			pause();
+		}
+		frameCount+=1;
     }
 
 /*

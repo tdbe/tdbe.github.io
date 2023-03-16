@@ -16,16 +16,16 @@ share: true
 I found 3 of my 1st semester 1-week assignments, from 2012, and they still work! An angine, a pathfinding alg, and a renderer!
 
 ### 3. A js software renderer / rasterizer that I later upgraded in c++. Play it right here!
-<br/>
+
 <iframe width="960px" height="1110px" style="margin-left: -134px;" src="../sandbox/sandbox_2/index.html" frameborder="0"> </iframe>
 
 ### 2. A* (A star) search pathfinding with diagonals, weights, obstacles, and a dynamic chase scene. Play it right here!
-<br/>
+
 <iframe width="960px" height="1110px" style="margin-left: -134px;" src="../sandbox/sandbox_3/index.html" frameborder="0"> </iframe>
 <br/>
 
 ### 1. A 2d-platformer game engine from scratch, with unbreakable™ collision, procedural level, and crab bouncing. Play it right here! :P
-<br/>
+
 <iframe width="960" height="1150" style="margin-left: -134px;" src="../sandbox/sandbox_1/index.html" frameborder="0"> </iframe>
 <br/>
 
