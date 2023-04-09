@@ -13,7 +13,7 @@ comments: true
 share: true
 ---
 
-I found 3 of my 1st semester 1-week assignments, from 2012, and they still work! An angine, a pathfinding alg, and a renderer!
+I found 3 of my 1st semester 1-week assignments, from 2012, and they still work! An engine, a pathfinding alg, and a renderer!
 
 ### 3. A js software renderer / rasterizer that I later upgraded in c++. Play it right here!
 

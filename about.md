@@ -33,7 +33,7 @@ This page has a few things about what I encourage, do, or appreciate.
 	
 Here are some cool words: 
 
-> reason, humour, imagination, talent, equal poise, flexible mindset, exponential mindset.
+> reason, humour, imagination, nerdiness, talent, equal poise, flexible mindset, exponential mindset.
 
 also, I understand base principles of many types of human work dynamics, and the Dunning Krueger Effect. TL;DR It's like this:
 
