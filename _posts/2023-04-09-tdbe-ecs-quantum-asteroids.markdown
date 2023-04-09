@@ -3,7 +3,7 @@ published: true
 layout: post
 title: Performant Unmanaged ECS
 description: "Open source multithreaded Burst compiled ECS DOTS 1.0 2023. Full game loop, diagram, documentation."
-modified: 2018-06-17
+modified: 2023-04-09
 tags: [tutorial, ECS, multithreading, burst compiler, Data Oriented, DOTS, C/C++, C#, gamedev, unity3d]
 image:
   feature: tdbe-ecs-quantum-asteroids-230787051-743b08a1-a4f0-4d21-baec-015b44767a75.jpg
@@ -18,17 +18,13 @@ share: true
 Documented here, and source code at: <a href="https://github.com/tdbe/Tdbe-2023-URP-DOTS-ECS-Graphics-Physics">https://github.com/tdbe/Tdbe-2023-URP-DOTS-ECS-Graphics-Physics</a>.
 
 <figure class="half">
-	<video controls="" autoplay="" loop="" class="" style="">
+	<video playsinline="" muted="" controls="" autoplay="" loop="" class="" style="">
 		<source src="https://www.deferredreality.com/images/tdbe_ecs10_quantum_asteroids_01.webm" type="video/webm">
 		Your browser does not support the video tag.
 	</video>
 	<figcaption>Quick gameplay video.</figcaption>
 </figure>
 
-<video playsinline="" muted="" controls="" autoplay="" loop="" class="scalableImg" style="height: 11.075em;">
-										<source src="./images/tdbe_ecs10_quantum_asteroids_01.webm" type="video/mp4">
-										Your browser does not support the video tag.
-									</video>
 
 ![image](https://user-images.githubusercontent.com/1399607/229624241-bfa26a77-4a56-41a4-a14a-e5c4d359378e.png)
 

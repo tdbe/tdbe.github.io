@@ -97,7 +97,7 @@ With the worldspace position (of either the pre-existing geometry's fragment or 
 
 <figure class="fill">
 	<img src="https://www.deferredreality.com/project/gpgpu/images/cShaderGif438.gif" alt="procedural caves" style="float:left; width: 50%; margin-left:-1px;"/>
-	<video controls="" autoplay="" loop="" class="" style="float:right; width: 50%;margin-right:-1px;">
+	<video playsinline="" muted="" controls="" autoplay="" loop="" class="" style="float:right; width: 50%;margin-right:-1px;">
 		<source src="https://www.deferredreality.com/project/gpuMedley/images/holeDecal.webm" type="video/webm">
 		Your browser does not support the video tag.
 	</video>
