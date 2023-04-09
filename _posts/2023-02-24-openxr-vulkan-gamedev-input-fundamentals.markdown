@@ -8,7 +8,7 @@ tags: [vulkan, openxr, input, gamedev, khronos, C/C++, graphics programming, gra
 image:
   feature: abstract-10.jpg
   credit: dargadgetz
-  creditlink: creditlink: https://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
+  creditlink: https://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
 comments: true
 share: true
 ---
