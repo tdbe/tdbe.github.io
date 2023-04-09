@@ -13,8 +13,22 @@ comments: true
 share: true
 ---
 
-# Tdbe-2023-DOTS-ECS-Graphics-Physics
-Quick gameplay video: https://www.deferredreality.com/images/tdbe_ecs10_quantum_asteroids_01.webm
+# Open Source ECS Project 
+
+Documented here, and source code at: <a href="https://github.com/tdbe/Tdbe-2023-URP-DOTS-ECS-Graphics-Physics">https://github.com/tdbe/Tdbe-2023-URP-DOTS-ECS-Graphics-Physics</a>.
+
+<figure class="half">
+	<video controls="" autoplay="" loop="" class="" style="">
+		<source src="https://www.deferredreality.com/images/tdbe_ecs10_quantum_asteroids_01.webm" type="video/webm">
+		Your browser does not support the video tag.
+	</video>
+	<figcaption>Quick gameplay video.</figcaption>
+</figure>
+
+<video playsinline="" muted="" controls="" autoplay="" loop="" class="scalableImg" style="height: 11.075em;">
+										<source src="./images/tdbe_ecs10_quantum_asteroids_01.webm" type="video/mp4">
+										Your browser does not support the video tag.
+									</video>
 
 ![image](https://user-images.githubusercontent.com/1399607/229624241-bfa26a77-4a56-41a4-a14a-e5c4d359378e.png)
 
