@@ -10,47 +10,43 @@ image:
 share: true
 ---
 
-This blog is super out of date; I blame it on work and also trying to live.
+This blog is sparse on writing; I blame it on doing and then also trying to life.
 
 Here's a 2021 list of excellent dumb things that describe or rhyme with what I am:
-* Chaotic-pensive computer scientist
-* Confidence comes from base principles understanding, & doing. Not surface level shortcuts.
-* Engineer of soul & style
-* Indie director depending on the mood
-* Business-principles-aware but impatiently so
 * Proponent of egoless individuality, awareness, interestedness
-* 50-50 logic & feelings fueled storyteller
-* My DnD character has a ton of charisma in short & specific circumstances
-* Half hotblooded half coldblooded anime protagonist
+* Computer scientist chaotic-pensively converging to the ground truth
+* Confidence comes from deconstruction, understanding, doing. Not surface level shortcuts.
+* Engineer of feeling, soul, style
+* Indie director in some circumstances
+* Business-principles-aware but impatiently so
+* 50-50 logic & feelings fuelled storyteller
+* My DnD character has a ton of charisma and a lot of situational debuffs to it
 * Comfortable with complexity & n-dimensional space
-* Would-be CEO of something small & wisely disruptive
-* Hyperawareness. - means you can get overwhelmed, but have a large & nuanced bandwidth
-* Protopian futures lover; also pessimist futurist - those are the true optimists
+* CEO of wise, loving, and benign disruption
+* Hyperawareness, hyperfocus, hyperplayfulness is the opposite of being comfortably numb to the signal.
+* Protopian futures lover, bitter optimist.
 
 Check [my portfolio](https://www.deferredreality.com) for some projects and game-y things.
 
-This page has a few things about what I encourage, do, or appreciate.
-	
-Here are some cool words: 
+Some words about what I encourage, do, or appreciate:
 
-> reason, humour, imagination, nerdiness, talent, equal poise, flexible mindset, exponential mindset.
+> reason, humour, imagination, nerdiness, talent, equal poise, flexible mindset, exponentiality.
 
-also, I understand base principles of many types of human work dynamics, and the Dunning Krueger Effect. TL;DR It's like this:
-
+And Dunny krugs vs ego.
 
 <iframe width="560" height="315" src="//www.youtube.com/embed/5qcfdBL3QqM?t=1m7s" frameborder="0"> </iframe>
 
 
 ------------------
 
-Here's what I like:
+Here's what I like in gamedev:
 
 * clear but high-bandwidth input, 
 * [juicy feedback / visuals](https://twitter.com/martinpi/status/789392171791024128), 
-* unique stimulus scapes through VR design 
+* unique stimulus scapes,
 * liberating mechanics, 
 * emergent multiplayer shenanigans, 
-* fanbase meta social engagement, 
+* fanbase meta and/or para social engagement, 
 * new ideas / approaches.
 * game feel. mouth feel. (taste)
 
@@ -58,7 +54,7 @@ Here's what I like:
 ------------------
 
 
-A few of the vidya I like, for reference:
+Old list of vidya I like, for reference:
 
 |:--------|:-------:|--------:|
 |Valve stuff,| Kamyia stuff, | Shadow of the Colossus,|Psychonauts, | System Shock 2, | Gish,| 
