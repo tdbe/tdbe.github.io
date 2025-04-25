@@ -1610,11 +1610,11 @@ svg:not(:root) {
 .dl-menuwrapper li > a:not(:only-child):after {
   position: absolute;
   top: 0;
-  font-family: 'FontAwesomeRegular';
+  /*font-family: 'FontAwesomeRegular';*/
   -webkit-font-smoothing: antialiased;
   line-height: 50px;
   color: #ffffff;
-  content: "\f054";/*f105*/
+  content: "\203A";/*"\f054";*//*f105*/
   speak: none;
 }
 
@@ -2380,8 +2380,8 @@ a .icon-flip-vertical:before {
 }
 
 .icon-envelope-alt:before {
-  font-family: 'FontAwesomeRegular';
-  content: "\f0e0";
+  /*font-family: 'FontAwesomeRegular';*/
+  content:"\2709";/*"\f0e0"*/
 }
 
 .icon-heart:before {
@@ -3182,8 +3182,8 @@ a .icon-flip-vertical:before {
 }
 
 .icon-envelope:before {
-  font-family: 'FontAwesomeRegular';
-  content: "\f0e0";
+  /*font-family: 'FontAwesomeRegular';*/
+  content:"\2709";/*"\f0e0"*/
 }
 
 .icon-linkedin:before {
