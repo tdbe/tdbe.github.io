@@ -2,7 +2,7 @@
 published: true
 layout: post
 title: OpenXR Vulkan Gamedev Fundamentals
-description: "Open source multithreaded Burst compiled ECS DOTS 1.0 2023. Full game loop, diagram, documentation."
+description: "OpenXR/Vulkan/C++ boilerplating single-pass Rendering, Input, and Gameplay fundamentals."
 modified: 2023-02-24
 tags: [vulkan, openxr, input, gamedev, khronos, C/C++, graphics programming, graphics pipeline, shader, geometry]
 image:
