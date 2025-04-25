@@ -1610,7 +1610,7 @@ svg:not(:root) {
 .dl-menuwrapper li > a:not(:only-child):after {
   position: absolute;
   top: 0;
-  font-family: 'fontawesome';
+  font-family: 'FontAwesomeRegular';
   -webkit-font-smoothing: antialiased;
   line-height: 50px;
   color: #ffffff;
@@ -2380,6 +2380,7 @@ a .icon-flip-vertical:before {
 }
 
 .icon-envelope-alt:before {
+  font-family: 'FontAwesomeRegular';
   content: "\f0e0";
 }
 
@@ -3181,6 +3182,7 @@ a .icon-flip-vertical:before {
 }
 
 .icon-envelope:before {
+  font-family: 'FontAwesomeRegular';
   content: "\f0e0";
 }
 
