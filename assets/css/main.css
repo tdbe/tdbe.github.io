@@ -1605,6 +1605,7 @@ svg:not(:root) {
   background: rgba(0, 0, 0, 0.2);
 }
 
+/* fa-angle-right fa-chevron-right */
 .dl-menuwrapper li .dl-back:after,
 .dl-menuwrapper li > a:not(:only-child):after {
   position: absolute;
@@ -1613,7 +1614,7 @@ svg:not(:root) {
   -webkit-font-smoothing: antialiased;
   line-height: 50px;
   color: #ffffff;
-  content: "\f105";
+  content: "\f054";/*f105*/
   speak: none;
 }
 
