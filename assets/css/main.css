@@ -4578,3 +4578,10 @@ td {
 	padding: 0px 6px 0px 6px!important;
 }
 
+.hideOnMobile{
+	display: none!important;
+}
+
+.hideOnDesktop{
+	display: none!important;
+}
