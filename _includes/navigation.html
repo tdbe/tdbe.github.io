@@ -18,18 +18,26 @@
 				<li><a href="{{ site.url }}/about/"><span style="border-bottom: 1px dotted #a2a2a2;">More About Me</span></a></li>
 				<li><p>Contact:</p></li>
 					<li style="display: inline-block!important; height: 8em; width: 1em; float: left;"></li>
-					{% if site.owner.email %}<li class="m_SocIconLi">
-						<a href="mailto:{{ site.owner.email }}" alt="Email"><i class="icon-envelope icon-2x noPtrEvts"></i> </a>
+					{% if site.owner.contact %}<li class="m_SocIconLi">
+						<a href="{{ site.owner.contact }}" alt="Contact info"><i class="icon-envelope icon-2x noPtrEvts"></i> </a>
 					</li>{% endif %}
-					{% if site.owner.bitbucket %}<li class="m_SocIconLi">
-						<a href="https://bitbucket.com/{{ site.owner.bitbucket }}" alt="Bitbucket"><i class="icon-bitbucket icon-2x noPtrEvts"></i> </a>
-					</li>{% endif %}
+					
 					{% if site.owner.github %}<li class="m_SocIconLi">
 						<a href="https://github.com/{{ site.owner.github }}" alt="GitHub"><i class="icon-github icon-2x noPtrEvts"></i> </a>
 					</li>{% endif %}
+					
+					{% if site.owner.bitbucket %}<li class="m_SocIconLi">
+						<a href="https://bitbucket.com/{{ site.owner.bitbucket }}" alt="Bitbucket"><i class="icon-bitbucket icon-2x noPtrEvts"></i> </a>
+					</li>{% endif %}
+					
+					{% if site.owner.bluesky %}<li class="m_SocIconLi">
+						<a href="https://bsky.app/profile/{{ site.owner.bluesky }}" alt="Bluesky"><i class="icon-twitter-sign fa-square-bluesky icon-2x noPtrEvts"></i> </a>
+					</li>{% endif %}
+					
 					{% if site.owner.twitter %}<li class="m_SocIconLi">
 						<a href="https://twitter.com/{{ site.owner.twitter }}" alt="Twitter"><i class="icon-twitter-sign icon-2x noPtrEvts"></i> </a>
 					</li>{% endif %}
+					
 					{% if site.owner.linkedin %}<li class="m_SocIconLi">
 						<a href="https://linkedin.com/in/{{ site.owner.linkedin }}" alt="LinkedIn"><i class="icon-linkedin-sign icon-2x noPtrEvts"></i> </a>
 					</li>{% endif %}
