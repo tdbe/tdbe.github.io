@@ -2382,6 +2382,7 @@ a .icon-flip-vertical:before {
 .icon-envelope-alt:before {
   /*font-family: 'FontAwesomeRegular';*/
   content:"\2709";/*"\f0e0"*/
+  font-weight: bold;
 }
 
 .icon-heart:before {
@@ -3184,6 +3185,7 @@ a .icon-flip-vertical:before {
 .icon-envelope:before {
   /*font-family: 'FontAwesomeRegular';*/
   content:"\2709";/*"\f0e0"*/
+  font-weight: bold;
 }
 
 .icon-linkedin:before {
