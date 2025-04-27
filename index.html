@@ -37,13 +37,13 @@ image:
         <span class="author vcard"><span class="fn"><a href="{{ site.url }}/about/" title="About {{ site.owner.name }}">{{ site.owner.name }}</a></span></span>
         {% if post.share %}<div class="social-share">
 		
-          <ul class="socialcount socialcount-small inline-list hideOnDesktop">
+          <ul class="socialcount socialcount-small inline-list hidableDesktop">
 			<li class="twitter"><a href="https://bsky.app/intent/compose?text={{ site.url }}{{ post.url }}" title="Share on Bluesky"><span class="count"><i class="icon-twitter-sign fa-square-bluesky"></i> Skeet</span></a></li> 
 			<li class="twitter"><a href="https://twitter.com/intent/tweet?text={{ site.url }}{{ post.url }}" title="Share on Twitter"><span class="count"><i class="icon-twitter-sign"></i> Tweet</span></a></li>
 			<li class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ post.url }}" title="Share on Facebook"><span class="count"><i class="icon-facebook-sign"></i> Like</span></a></li>
           </ul>
 		  
-		  <ul class="socialcount socialcount-small inline-list hideOnMobile">
+		  <ul class="socialcount socialcount-small inline-list hidableMobile hide">
 			<li class="twitter"><a href="bluesky://intent/compose?text={{ site.url }}{{ post.url }}" title="Share on Bluesky"><span class="count"><i class="icon-twitter-sign fa-square-bluesky"></i> Skeet</span></a></li> 
 			
 			<!--li class="twitter"><a href="twitter://intent/tweet?text={{ site.url }}{{ post.url }}" title="Share on Twitter"><span class="count"><i class="icon-twitter-sign"></i> Tweet</span></a></li-->
