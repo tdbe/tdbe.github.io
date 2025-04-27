@@ -4590,3 +4590,7 @@ td {
 .hideOnDesktop{
 	display: none!important;
 }
+
+.giscus{
+	text-align: center;
+}
