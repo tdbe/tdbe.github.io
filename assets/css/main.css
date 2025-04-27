@@ -4586,3 +4586,8 @@ td {
 .hide{
 	display: none!important;
 }
+
+.giscus_widget_index::part(iframe){
+	max-height: 370px;
+	overflow-y: scroll;
+}
