@@ -56,7 +56,21 @@ image:
         </div><!-- /.social-share -->{% endif %}
 	</footer>
 
-    <p class="entry-title" style="text-align:center;"><a href="{{ site.url }}{{ post.url }}" rel="bookmark" title="{{ post.title }}"><i class="icon-double-angle-right"></i></a> <a href="{{ post.link }}">(click to view comments)</a></p>
+    <!--p class="entry-title" style="text-align:center;"><a href="{{ site.url }}{{ post.url }}" rel="bookmark" title="{{ post.title }}"><i class="icon-double-angle-right"></i></a> <a href="{{ post.link }}">(click to view comments)</a></p-->
+	<script src="https://giscus.app/client.js"
+			data-repo="tdbe/tdbe.github.io"
+			data-repo-id="MDEwOlJlcG9zaXRvcnk2ODczOTc5Mg=="
+			data-category-id="DIC_kwDOBBji0M4CphZ2"
+			data-mapping="specific"
+			data-strict="{{ site.url }}{{ post.url }}"
+			data-reactions-enabled="1"
+			data-emit-metadata="0"
+			data-input-position="top"
+			data-theme="gruvbox"
+			data-lang="en"
+			crossorigin="anonymous"
+			async>
+	</script>
 
   </div><!-- /.entry-content -->
 </article><!-- /.hentry -->
