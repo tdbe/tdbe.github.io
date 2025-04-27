@@ -1,7 +1,7 @@
 ---
 published: true
 layout: post
-title: OpenXR/Vulkan/C++ Boilerplate Fundamentals
+title: OpenXR/Vulkan/C++ Boilerplate Gamedev
 description: "OpenXR/Vulkan/C++ boilerplating single-pass Rendering, Input, and Gameplay fundamentals."
 modified: 2023-02-24
 tags: [vulkan, openxr, input, gamedev, khronos, C/C++, graphics programming, graphics pipeline, shader, geometry]
@@ -13,7 +13,7 @@ comments: true
 share: true
 ---
 
-# Open Source Boilerplate Project 
+# Open Source Boilerplate 
 
 Still WIP
 
