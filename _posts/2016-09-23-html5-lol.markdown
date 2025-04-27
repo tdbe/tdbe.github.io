@@ -30,7 +30,5 @@ These were later finished as teaching demos but unfortunately I left them on the
 
 <iframe width="960" height="1150" style="margin-left: -134px;" src="../sandbox/sandbox_1/index.html" frameborder="0"> </iframe>
 
-<br/>[&nbsp;]({{site.url}}/theme-setup)
-
 
 
