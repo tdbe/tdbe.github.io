@@ -61,7 +61,21 @@
         </div><!-- /.social-share -->{% endif %}
       </footer>
     </div><!-- /.entry-content -->
-    {% if site.disqus_shortname and page.comments %}<section id="disqus_thread"></section><!-- /#disqus_thread -->{% endif %}
+    <!-- {% if site.disqus_shortname and page.comments %}<section id="disqus_thread"></section><! -- /#disqus_thread -- >{% endif %}-->
+	<script src="https://giscus.app/client.js"
+        data-repo="tdbe/tdbe.github.io"
+        data-repo-id="MDEwOlJlcG9zaXRvcnk2ODczOTc5Mg=="
+        data-category-id="DIC_kwDOBBji0M4CphZ2"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+	</script>
     {% if site.related_posts.size %}
     <div class="read-more">
       {% for post in site.related_posts limit:1 %}
