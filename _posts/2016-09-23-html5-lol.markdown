@@ -29,9 +29,6 @@ These were later finished as teaching demos but unfortunately I left them on the
 ### 1. A 2d-platformer game engine from scratch, with unbreakable™ collision, procedural level, and crab bouncing. Play it right here! :P
 
 <iframe width="960" height="1150" style="margin-left: -134px;" src="../sandbox/sandbox_1/index.html" frameborder="0"> </iframe>
-<br/>
-
-
 
 <br/>[&nbsp;]({{site.url}}/theme-setup)
 
