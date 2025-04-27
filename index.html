@@ -55,9 +55,9 @@ image:
 		  
         </div><!-- /.social-share -->{% endif %}
 	</footer>
-	{% if post.link %}
-	  <p class="entry-title"><a href="{{ site.url }}{{ post.url }}" rel="bookmark" title="{{ post.title }}"><i class="icon-double-angle-right"></i></a> <a href="{{ post.link }}">(click to view comments)</a></p>
-	{% endif %}
+
+    <p class="entry-title"><a href="{{ site.url }}{{ post.url }}" rel="bookmark" title="{{ post.title }}"><i class="icon-double-angle-right"></i></a> <a href="{{ post.link }}">(click to view comments)</a></p>
+
   </div><!-- /.entry-content -->
 </article><!-- /.hentry -->
 {% endfor %}
