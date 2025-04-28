@@ -467,7 +467,7 @@ pre::-webkit-scrollbar-thumb:horizontal {
   line-height: 2.1667;
   color: #d0d0d0;
   background-color: #272822;
-  border: 1px solid #dbdbdb;
+  /*border: 1px solid #dbdbdb;*/
   /*
   -webkit-border-radius: 3px;
      -moz-border-radius: 3px;
@@ -4109,12 +4109,18 @@ body {
 .entry-meta {
   font-size: 12px;
   font-size: 0.75rem;
-  color: #bbbbbb;
+  /*color: #bbbbbb;*/
+  color: #757575;
   text-transform: uppercase;
 }
 
 .entry-meta a {
-  color: #bbbbbb;
+  /*color: #bbbbbb;*/
+  color:#735e54;
+}
+
+.entry-meta a:hover {
+  color:#8e775a;
 }
 
 .entry-meta .vcard:before {
@@ -4125,12 +4131,17 @@ body {
   display: inline-block;
   padding: 2px 6px;
   margin: 4px;
-  color: #ffffff;
+  /*color: #ffffff;*/
+  color: #a4a984;
   /*background-color: #bbbbbb;*/
   background-color: #b7b7b7;
   -webkit-border-radius: 3px;
      -moz-border-radius: 3px;
           border-radius: 3px;
+}
+
+.entry-meta .tag:hover {
+	color: #b8bb26;
 }
 
 .entry-meta .tag span {
@@ -4598,12 +4609,13 @@ td {
 }
 
 .giscus_widget_index::part(iframe){
-	max-height: 420px;
-	min-height: 420px;
+	max-height: 450px;
+	min-height: 450px;
 	overflow-y: scroll;
 	background-color: hsl(195 4% 10% / 1);
 	border-left: 20px solid hsl(195 4% 10% / 1);
 	border-right: 20px solid hsl(195 4% 10% / 1);
+	padding-top: 0.4em;
     border-radius: 10px;
 	margin-left: -20px;
 }
