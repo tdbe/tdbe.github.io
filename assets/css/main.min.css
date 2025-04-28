@@ -60,6 +60,9 @@
 .hide{
 	display: none!important;
 }
+.giscus_widget::part(iframe){
+	padding-bottom: 1em;
+}
 .giscus_widget_index::part(iframe){
 	max-height: 420px;
 	min-height: 420px;

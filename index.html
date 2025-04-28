@@ -12,7 +12,10 @@ image:
 {% for post in paginator.posts %}
 <article class="hentry">
   <header>
-    <div class="entry-meta"><span class="entry-date date published updated"><time datetime="{{ post.date | date_to_xmlschema }}"><a href="{{ site.url }}{{ post.url }}">{{ post.date | date: "%B %d, %Y" }}</a></time></span><span class="author vcard"><span class="fn"><a href="{{ site.url }}/about/" title="About {{ site.owner.name }}">{{ site.owner.name }}</a></span></span>
+    <div class="entry-meta">
+		<span class="entry-date date published updated" style="padding-top: 3em; display: inline-flex;"><time datetime="{{ post.date | date_to_xmlschema }}"><a href="{{ site.url }}{{ post.url }}">{{ post.date | date: "%B %d, %Y" }}</a></time></span>
+		
+		<span class="author vcard"><span class="fn"><a href="{{ site.url }}/about/" title="About {{ site.owner.name }}">{{ site.owner.name }}</a></span></span>
 	
 	<!--
 	{% if site.disqus_shortname and post.comments %}
