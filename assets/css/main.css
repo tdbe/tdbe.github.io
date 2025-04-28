@@ -4593,5 +4593,6 @@ td {
 
 .giscus_widget_index::part(iframe){
 	max-height: 420px;
+	min-height: 420px;
 	overflow-y: scroll;
 }
