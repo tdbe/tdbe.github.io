@@ -1880,7 +1880,8 @@ All this is done for any sub-level being entered.
 /* No Touch Fallback */
 
 .no-touch .dl-menuwrapper li a:hover {
-  background: rgba(255, 248, 213, 0.1);
+  /*background: rgba(255, 248, 213, 0.1);*/
+  background: #3098b7;
 }
 
 /* No JS Fallback */
@@ -4557,7 +4558,7 @@ body {
 }
 
 .m_SocIconLi a{
-	margin-left: -0.75em;
+	margin-left: -0.64em;
 }
 
 .noPtrEvts{
