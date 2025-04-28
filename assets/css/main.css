@@ -468,9 +468,15 @@ pre::-webkit-scrollbar-thumb:horizontal {
   color: #d0d0d0;
   background-color: #272822;
   border: 1px solid #dbdbdb;
+  /*
   -webkit-border-radius: 3px;
      -moz-border-radius: 3px;
-          border-radius: 3px;
+          border-radius: 3px;*/
+  border-radius: 8px;
+  margin-left: -20px;
+  padding-left: 8px;
+  margin-right: -20px;
+  padding-right: 8px;
 }
 
 .highlight pre {
@@ -4595,4 +4601,9 @@ td {
 	max-height: 420px;
 	min-height: 420px;
 	overflow-y: scroll;
+	background-color: hsl(195 4% 10% / 1);
+	border-left: 20px solid hsl(195 4% 10% / 1);
+	border-right: 20px solid hsl(195 4% 10% / 1);
+    border-radius: 10px;
+	margin-left: -20px;
 }
