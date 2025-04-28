@@ -1549,7 +1549,7 @@ svg:not(:root) {
   height: 5px;
   background: #3098b7;/*#ffffff;*/
   content: '';
-  box-shadow: 0 10px 0 #b8bb26, 0 20px 0 #b8186a;
+  box-shadow: 0 10px 0 #b8bb26, 0 20px 0 #b4266f;
 }
 
 .dl-menuwrapper button.dl-active {
@@ -3899,7 +3899,9 @@ body {
 
 .entry-content p > a,
 .entry-content li > a {
-  border-bottom: 1px dotted #a2a2a2;
+  /*border-bottom: 1px dotted #a2a2a2;*/
+  border-bottom: 0.15em dotted rgba(184, 24, 106,.5);
+  background-color: rgb(235, 225, 235);
 }
 
 .entry-content p > a:hover,
@@ -4618,6 +4620,7 @@ td {
 	border-left: 20px solid hsl(195 4% 10% / 1);
 	border-right: 20px solid hsl(195 4% 10% / 1);
 	padding-top: 0.4em;
+	padding-bottom: 0.4em;
     border-radius: 10px;
 	margin-left: -20px;
 }
