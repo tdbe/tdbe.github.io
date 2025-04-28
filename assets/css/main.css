@@ -1547,7 +1547,7 @@ svg:not(:root) {
   left: 16%;
   width: 68%;
   height: 5px;
-  background: #ffffff;
+  background: #67c6e2;/*#ffffff;*/
   content: '';
   box-shadow: 0 10px 0 #ffffff, 0 20px 0 #ffffff;
 }
@@ -4131,17 +4131,16 @@ body {
   display: inline-block;
   padding: 2px 6px;
   margin: 4px;
-  /*color: #ffffff;*/
-  color: #a4a984;
+  color: #ffffff;
   /*background-color: #bbbbbb;*/
-  background-color: #b7b7b7;
+  background-color: #a4a984;
   -webkit-border-radius: 3px;
      -moz-border-radius: 3px;
           border-radius: 3px;
 }
 
 .entry-meta .tag:hover {
-	color: #b8bb26;
+	background-color: #b8bb26;
 }
 
 .entry-meta .tag span {
