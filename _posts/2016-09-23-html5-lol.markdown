@@ -19,16 +19,16 @@ These were later finished as teaching demos but unfortunately I left them on the
 
 ### 3. A js software renderer / rasterizer that I later upgraded in c++. Play it right here!
 
-<iframe width="960px" height="1110px" style="margin-left: -134px;" src="../sandbox/sandbox_2/index.html" frameborder="0"> </iframe>
+<iframe width="940px" height="1110px" style="margin-left: -140px;" src="../sandbox/sandbox_2/index.html" frameborder="0"> </iframe>
 
 ### 2. A* (A star) search pathfinding with diagonals, weights, obstacles, and a dynamic chase scene. Play it right here!
 
-<iframe width="960px" height="1110px" style="margin-left: -134px;" src="../sandbox/sandbox_3/index.html" frameborder="0"> </iframe>
+<iframe width="940px" height="1110px" style="margin-left: -140px;" src="../sandbox/sandbox_3/index.html" frameborder="0"> </iframe>
 <br/>
 
 ### 1. A 2d-platformer game engine from scratch, with unbreakable™ collision, procedural level, and crab bouncing. Play it right here! :P
 
-<iframe width="960" height="1150" style="margin-left: -134px;" src="../sandbox/sandbox_1/index.html" frameborder="0"> </iframe>
+<iframe width="940" height="1150" style="margin-left: -140px;" src="../sandbox/sandbox_1/index.html" frameborder="0"> </iframe>
 
 
 
