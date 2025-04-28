@@ -1549,7 +1549,7 @@ svg:not(:root) {
   height: 5px;
   background: #3098b7;/*#ffffff;*/
   content: '';
-  box-shadow: 0 10px 0 #b8bb26, 0 20px 0 #b87c18;
+  box-shadow: 0 10px 0 #b8bb26, 0 20px 0 #b8186a;
 }
 
 .dl-menuwrapper button.dl-active {
@@ -4117,10 +4117,12 @@ body {
 .entry-meta a {
   /*color: #bbbbbb;*/
   color:#735e54;
+  background-color: rgb(235, 225, 235);
 }
 
 .entry-meta a:hover {
   color:#b8bb26;
+  background-color: rgb(253, 250, 253);
 }
 
 .entry-meta .vcard:before {

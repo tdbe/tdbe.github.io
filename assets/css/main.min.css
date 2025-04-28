@@ -21,7 +21,7 @@
   position:absolute;top:10px;left:16%;width:68%;height:5px;
   background: #3098b7;/*#ffffff;*/
   content: '';
-  box-shadow: 0 10px 0 #b8bb26, 0 20px 0 #b87c18;
+  box-shadow: 0 10px 0 #b8bb26, 0 20px 0 #b8186a;
 }
 
 .dl-menuwrapper button.dl-active{display:none}.dl-menuwrapper ul{padding:0;list-style:none;-webkit-transform-style:preserve-3d;-moz-transform-style:preserve-3d;transform-style:preserve-3d}.dl-menuwrapper li{position:relative}.dl-menuwrapper li h4{padding:15px 20px 0;margin:0;color:rgba(255,255,255,0.9)}.dl-menuwrapper li p{padding:15px 20px;margin:0;font-size:16px;font-size:.975rem;color:rgba(255,255,255,0.8)}.dl-menuwrapper li p a{display:inline;padding:0;font-size:16px;font-size:.975rem}.dl-menuwrapper li i{display:inline-block;width:2em}.dl-menuwrapper li a{position:relative;display:block;padding:15px 20px;font-size:16px;font-size:.975rem;font-weight:300;line-height:20px;color:#ffffff;outline:none}.dl-menuwrapper li .dl-back > a{padding-left:30px;background:rgba(0,0,0,0.2)}
@@ -86,8 +86,8 @@
 
 .entry-meta{font-size:12px;font-size:.75rem;color:/*#bbbbbb;*/#757575;text-transform:uppercase}
 
-.entry-meta a{/*color:#bbbbbb*/color:#735e54;}
-.entry-meta a:hover {color:#b8bb26;}
+.entry-meta a{/*color:#bbbbbb*/color:#735e54;background-color: rgb(235, 225, 235);}
+.entry-meta a:hover {color:#b8bb26;background-color: rgb(253, 250, 253);}
 
 .entry-meta .vcard:before{content:" by "}
 
