@@ -1547,9 +1547,9 @@ svg:not(:root) {
   left: 16%;
   width: 68%;
   height: 5px;
-  background: #67c6e2;/*#ffffff;*/
+  background: #3098b7;/*#ffffff;*/
   content: '';
-  box-shadow: 0 10px 0 #ffffff, 0 20px 0 #ffffff;
+  box-shadow: 0 10px 0 #b8bb26, 0 20px 0 #b87c18;
 }
 
 .dl-menuwrapper button.dl-active {
@@ -4120,7 +4120,7 @@ body {
 }
 
 .entry-meta a:hover {
-  color:#8e775a;
+  color:#b8bb26;
 }
 
 .entry-meta .vcard:before {
@@ -4140,7 +4140,8 @@ body {
 }
 
 .entry-meta .tag:hover {
-	background-color: #b8bb26;
+	background-color: #b8bb26!important;
+	color: #fff;
 }
 
 .entry-meta .tag span {
