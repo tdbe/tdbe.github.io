@@ -4582,11 +4582,24 @@ body {
     border-radius: .25rem;
 	
 	max-height: 50vh;
-	overflow: scroll;
+	overflow-y: scroll;
 }
 
-.smallTags::-webkit-scrollbar {
-    width: 1rem;
+/* width */
+.smallTags::-webkit-scrollbar, .giscus_widget_index::part(iframe)::-webkit-scrollbar {
+    width: 6px;
+}
+/* Track */
+.smallTags::-webkit-scrollbar-track, .giscus_widget_index::part(iframe)::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+/* Handle */
+.smallTags::-webkit-scrollbar-thumb, .giscus_widget_index::part(iframe)::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+/* Handle on hover */
+.smallTags::-webkit-scrollbar-thumb:hover, .giscus_widget_index::part(iframe)::-webkit-scrollbar-thumb:hover {
+  background: #555; 
 }
 
 .smallTags li{
