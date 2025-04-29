@@ -12,13 +12,12 @@
 					{{ site.owner.bio1 }}<br/>
 					{{ site.owner.bio2 }}<br/>
 					{{ site.owner.bio3 }}<br/>
-					...
 					</p>
 				</li>
 				<li><a href="{{ site.url }}/about/"><span style="border-bottom: 1px dotted #a2a2a2;">More About Me</span></a></li>
-				<li><p>Contact:</p></li>
-					<li style="display: inline-block!important; height: 8em; width: 1em; float: left;"></li>
-					{% if site.owner.contact %}<li class="m_SocIconLi">
+				<li style="margin-bottom: -.4em;"><p>Contact:</p></li>
+					<li style="display: inline-block!important; height: 8em; width: 1.8em; float: left;"></li>
+					{% if site.owner.contact %}<li class="m_SocIconLi" style="margin-bottom: 0.5em; margin-top: -0.5em">
 						<a href="{{ site.owner.contact }}" alt="Contact info"><i class="icon-envelope icon-2x noPtrEvts"></i> </a>
 					</li>{% endif %}
 					
