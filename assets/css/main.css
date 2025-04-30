@@ -3908,6 +3908,7 @@ body {
 .entry-content p > a:hover,
 .entry-content li > a:hover {
   border-bottom-style: solid;
+  border-color: #b8bb26;
 }
 
 .entry-header {
