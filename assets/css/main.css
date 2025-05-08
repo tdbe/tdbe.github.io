@@ -68,10 +68,13 @@ section {
 audio,
 canvas,
 video {
-  max-width:100%;
+  max-width:calc(100% + 40px);
   display: inline-block;
   *display: inline;
   *zoom: 1;
+  border-radius: .5rem;
+  margin-left: -20px;
+  margin-right: -20px;
 }
 
 audio:not([controls]) {
@@ -118,10 +121,13 @@ blockquote {
 img {
   width: auto\9;
   height: auto;
-  max-width: 100%;
+  max-width: calc(100% + 40px);
   vertical-align: middle;
   border: 0;
   -ms-interpolation-mode: bicubic;
+  margin-left: -20px;
+  margin-right: -20px;
+  border-radius: .5rem;
 }
 
 #map_canvas img,
@@ -394,7 +400,9 @@ figcaption {
 blockquote {
   margin-top: 1.8em;
   margin-bottom: 1.8em;
-  padding-left: 20px;
+  /*padding-left: 20px;*/
+  padding-left: 42px;
+  margin-left: -50px;
   /*font-family: serif;*/
   font-family: sans-serif;
   font-style: italic;
@@ -403,7 +411,8 @@ blockquote {
 
 @media only screen and (min-width: 48em) {
   blockquote {
-    margin-left: -28px;
+    margin-left: -48px;
+	padding-left: 40px;
   }
 }
 
@@ -455,9 +464,9 @@ pre::-webkit-scrollbar {
 
 pre::-webkit-scrollbar-thumb:horizontal {
   background-color: #6a6d5d;
-  -webkit-border-radius: 4px;
-     -moz-border-radius: 4px;
-          border-radius: 4px;
+  -webkit-border-radius: .25rem;
+     -moz-border-radius: .25rem;
+          border-radius: .25rem;
 }
 
 .highlight {
@@ -472,7 +481,7 @@ pre::-webkit-scrollbar-thumb:horizontal {
   -webkit-border-radius: .25rem;
      -moz-border-radius: .25rem;
           border-radius: .25rem;*/
-  border-radius: 8px;
+  border-radius: .5rem;
   margin-left: -20px;
   padding-left: 8px;
   margin-right: -20px;
@@ -1098,9 +1107,9 @@ svg:not(:root) {
 .well {
   padding: 20px;
   border: 1px solid #222222;
-  -webkit-border-radius: 4px;
-     -moz-border-radius: 4px;
-          border-radius: 4px;
+  -webkit-border-radius: .25rem;
+     -moz-border-radius: .25rem;
+          border-radius: .25rem;
 }
 
 .animated {
@@ -1700,6 +1709,9 @@ svg:not(:root) {
      -moz-border-radius: .25rem;
           border-radius: .25rem;
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
+  overflow-y: scroll;
+  overflow-x: hidden;
+  max-height: 93vh;
 }
 
 .dl-menuwrapper li .dl-submenu {
@@ -2065,9 +2077,9 @@ a [class*=" icon-"] {
 
 .icon-2x.icon-border {
   border-width: 2px;
-  -webkit-border-radius: 4px;
-     -moz-border-radius: 4px;
-          border-radius: 4px;
+  -webkit-border-radius: .25rem;
+     -moz-border-radius: .25rem;
+          border-radius: .25rem;
 }
 
 .icon-3x {
@@ -4587,7 +4599,9 @@ body {
 	max-height: 50vh;
 	overflow-y: scroll;
 }
-
+.dl-menuwrapper .dl-submenu ::-webkit-scrollbar, .giscus_widget_index::part(iframe)::-webkit-scrollbar {
+    width: 6px;
+}
 /* width */
 .smallTags::-webkit-scrollbar, .giscus_widget_index::part(iframe)::-webkit-scrollbar {
     width: 6px;
@@ -4648,7 +4662,7 @@ td {
 	border-right: 20px solid hsl(195 4% 10% / 1);
 	padding-top: 0.4em;
 	padding-bottom: 0.4em;
-    border-radius: 10px;
+    border-radius: .5rem;
 	margin-left: -20px;
 }
 .giscus_widget::part(iframe){
