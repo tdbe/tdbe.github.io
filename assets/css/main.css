@@ -4357,7 +4357,9 @@ body {
 
 .read-more-content p > a:hover,
 .read-more-content li > a:hover {
-  border-bottom-style: solid;
+  border-bottom-style:dashed; 
+  border-color: #b8bb26;
+  background-color: rgb(248, 243, 248);
 }
 
 .read-more-content h3 {
