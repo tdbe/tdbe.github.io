@@ -30,7 +30,7 @@ Demystifies ECS / Memory Management, Single Pass Rendering, XR Input, and XR gam
 	<figcaption>Demo video, summer 2025.</figcaption>
 </figure>
 
-(There's also a [1600x1600 youtube version](https://www.youtube.com/user/thistudor/featured).)
+(There's also a [hq 1600x1600 youtube version](https://www.youtube.com/user/thistudor/featured).)
 
 # Abstract: 
 \*Trey Parker voice\* Vulkan has a rich body of work, and many strengths as a people; but lack hoo-man compatibility. I've managed to translate their stack, for hoo-mans, whose lifetimes may otherwise be too short to first decipher the khronos lunar manuals for hope of achieving even the most basic useful contact.
@@ -147,7 +147,7 @@ In any case, thanks to open-source you can now build something pretty good the r
 
 -------------------------------
 
-![Teaser](teaser.gif)
+![Teaser](https://github.com/tdbe/openxr-vulkan-gamedev-framework/raw/main/teaser.gif)
 
 # Overview
 
@@ -166,14 +166,14 @@ Integrating both OpenXR and Vulkan yourself can be a daunting and painfully time
 2. Reference the code while writing your own implementation from scratch, to help you out if you are stuck with a problem, or simply for inspiration.
 
 
-# Running the OpenXR Vulkan Framework
+# Running the OpenXR Vulkan Example
 
 1. Download the latest [release](https://github.com/janhsimon/openxr-vulkan-example/releases) or build the project yourself with the steps below.
 2. Make sure your headset is connected to your computer.
 3. Run the program!
 
 
-# Building the OpenXR Vulkan Framework
+# Building the OpenXR Vulkan Example
 
 1. Install the [Vulkan SDK](https://vulkan.lunarg.com) version 1.3 or newer.
 2. Install [CMake](https://cmake.org/download) version 3.1 or newer.
