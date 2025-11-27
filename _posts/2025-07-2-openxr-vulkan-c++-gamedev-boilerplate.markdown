@@ -7,9 +7,9 @@ description: "OpenXR/Vulkan/C++ boilerplating single-pass Rendering, Input, and 
 modified: 2025-11-27
 tags: [vulkan, openxr, input, gamedev, khronos, C/C++, graphics programming, graphics pipeline, shader, spir-v, geometry]
 image:
-  feature: abstract-10.jpg
-  credit: dargadgetz
-  creditlink: https://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
+  feature: banner-for-openxr-vulkan-gamedev-framework.jpg
+  credit: tdbe
+  creditlink: https://github.com/tdbe/openxr-vulkan-gamedev-framework
 comments: true
 share: true
 ---
@@ -30,7 +30,7 @@ Demystifies ECS / Memory Management, Single Pass Rendering, XR Input, and XR gam
 	<figcaption>Demo video, summer 2025.</figcaption>
 </figure>
 
-(There's also a [hq 1600x1600 youtube version](https://www.youtube.com/user/thistudor/featured).)
+(There's also a [youtube hq 1600x1600/1440p 60fps version](https://www.youtube.com/watch?v=0e41lgULUoA).)
 
 # Abstract: 
 \*Trey Parker voice\* Vulkan has a rich body of work, and many strengths as a people; but lack hoo-man compatibility. I've managed to translate their stack, for hoo-mans, whose lifetimes may otherwise be too short to first decipher the khronos lunar manuals for hope of achieving even the most basic useful contact.
