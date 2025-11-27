@@ -7,7 +7,7 @@ description: "OpenXR/Vulkan/C++ boilerplating single-pass Rendering, Input, and 
 modified: 2025-11-27
 tags: [vulkan, openxr, input, gamedev, khronos, C/C++, graphics programming, graphics pipeline, shader, spir-v, geometry]
 image:
-  feature: banner-for-openxr-vulkan-gamedev-framework.jpg
+  feature: banner1-for-openxr-vulkan-gamedev-framework.jpg
   credit: tdbe
   creditlink: https://github.com/tdbe/openxr-vulkan-gamedev-framework
 comments: true
