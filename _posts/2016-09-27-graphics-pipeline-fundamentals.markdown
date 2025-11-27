@@ -112,7 +112,7 @@ So the `o.pos` in your vertex function does not hold values between 0 and 1 or -
 <br/>
 
 <figure class="half">
-	<img src="https://i950.photobucket.com/albums/ad341/jekylljuice85/lobe%20gallery/relaxovision.png" alt="Freakazoid">
+	<img src="https://blog.deferredreality.com/images/relaxovision.png" alt="Freakazoid">
 	<figcaption>Intermission</figcaption>
 </figure>
 

@@ -121,7 +121,7 @@ This code also works for the Uber shader BTW.
 <br/>
 
 <figure class="half">
-	<img src="https://vignette.wikia.nocookie.net/legendsofthemultiuniverse/images/b/b7/Uncle1.jpg" alt="JAckie Chan Adventures - Uncle 'One more thing!'">
+	<img src="https://blog.deferredreality.com/images/Uncle1.jpg" alt="Jackie Chan Adventures - Uncle 'One more thing!'">
 	<figcaption>One more thing!</figcaption>
 </figure>
 
