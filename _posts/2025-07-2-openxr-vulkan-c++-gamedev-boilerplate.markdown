@@ -54,7 +54,7 @@ In any case, thanks to open-source you can now build something pretty good the r
   - Rotating and (accelerated) Panning of the scene by grabbing with both hands, retreating into a non-euclideanly warped pocket dimension (pushing the world away from you non-linearly) and seeing a "tunnelvision" portal-style chaperone. Highest effectiveness and lowest sickness (carefully tweaked and tested across dozens of different people).
   - Uses state machines for movement and for visuals. Supports animated teleportation with targets.
   
-  ![Teaser](https://blog.deferredreality.com/images/chaperone_demo_gif.gif.gif)
+  ![Teaser](https://blog.deferredreality.com/images/chaperone_demo_gif.gif)
 
 ## Base XR gameplay mechanics
   - Mechanics system based on a list of `GameBehaviour`s set up as FSMs.
