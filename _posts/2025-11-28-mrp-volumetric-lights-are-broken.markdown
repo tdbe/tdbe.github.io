@@ -14,9 +14,11 @@ share: true
 ---
 
 # The overall problem: 
-For advanced lighting in somewhat traditional renderers (without ray bouncing) we need to sample various volumetric / area lights. To my surprise over the years, the prevailing method, MRP (Most Representative Point) volume sampling, suffers from glaring artifact edge cases and nobody fixed them.
+For advanced lighting in somewhat traditional renderers (without ray bouncing) we still need to sample various volumetric / area lights. The prevailing method, MRP (Most Representative Point) volume sampling, suffers from glaring artifact edge cases that over the years nobody fixed.
 
-I'll focus here specifically on the case of tube lights / line lights, because I recently needed them in a strict no-compromise scenario. (You can also see the results in my [my open source openxr boilerplate](https://blog.deferredreality.com/openxr-vulkan-c++-gamedev-boilerplate/).) But the same issues exist on e.g. Quad Lights (if you expect to make them 3D volumetric).
+I'll focus here specifically on the case of tube lights / line lights, because I recently needed them in a strict no-compromise scenario. But the same issues exist on e.g. Quad Lights (if you expect to make them 3D volumetric).
+
+(You can also see the results in my [my open source openxr boilerplate](https://blog.deferredreality.com/openxr-vulkan-c++-gamedev-boilerplate/).)
 
 Here's a TL;DR video:
 
@@ -28,10 +30,10 @@ Here's a TL;DR video:
 	<figcaption>Yes, EVERYONE's MRP lights has these problems.</figcaption>
 </figure>
 
-No I mean it, all the fancy papers, engines, shadertoys, and rockstar authors (who for the record I believe to be smarter than me), have the same problems. I don't want to throw anyone under the bus, but go to literally any pretty shadertoy or engine that features line or tube lights, and cycle the metallic & specular component, point the light at these odd angles against a wall and a sphere, change your view angles, and you see these deal-breaking problems.
+No I mean it, all the fancy papers, engines, shadertoys, and rockstar authors (who for the record I believe to be smarter than me), have the same problems. I don't want to throw anyone under the bus, but go to literally any pretty shadertoy or engine that features line or tube lights, and cycle the metallic & specular components, point the light at these odd angles against a wall and a sphere, change your view angles, and you see these deal-breaking problems.
 
 # The solution: 
-My shader is here and the function is `MRPointOnTubeLight` with plenty of comments, but let's talk about the high level. (`todo:` make cleaner shader for the article).
+My shader is here and the function is `MRPointOnTubeLight` with plenty of comments, but let's talk about it high level. (`todo:` make cleaner shader for the article).
 
 What we need is to handle all these things:
 
@@ -47,10 +49,10 @@ This is sold as the only thing you need for speculars. High level idea is straig
 See [Frostbyte's paper](https://www.ea.com/frostbite/news/moving-frostbite-to-pb) (search for `MRP`), or [Alex Tardif](https://alextardif.com/arealights.html), or [Redorav](https://www.elopezr.com/rendering-line-lights/), or [Unreal / Brian Karis](https://cdn2.unrealengine.com/Resources/files/2013SiggraphPresentationsNotes-26915738.pdf), or [Unity](https://github.com/Unity-Technologies/VolumetricLighting/blob/master/Assets/TubeLight/Shaders/TubeLight.cginc).
 And [Linear-Light Shading with
 Linearly Transformed Cosines (Eric Heitz and Stephen Hill)](https://hal.science/hal-02155101/document) which has excellent visualizations.
-Some of these sources, e.g. Karis, Frostbyte, Unity, admit that they know of and simply accept the artifacts.
+Some of these sources, e.g. Karis, Frostbyte, Unity, mention they know of (some of) the artifacts and simply accept them.
 
 ### Problem
-The concept of this math doesn't work when the dir of fragment to l0 and/or l1 is dead-on the same as the direction of the reflection vector. And the `tspec` term causes a hard cutoff at the ends of the line/segment. This is not an edge case as you might imagine. As you saw in the videos, the distribution is wide and you notice the problem even at >45 degree angles: 
+The concept of this math doesn't work when the direction of the fragment to l0 and/or l1 is approaching dead-on the same as the direction of the reflection vector. And the `tspec` term causes a hard cutoff at the ends of the line/segment. This is not an edge case as you might imagine. As you saw in the videos, the distribution is wide and you notice the problem even at >45 degree angles: 
 1. There's a "cylindrical edge" hard falloff artifact in the reflection on the side of the line light that's furthest away from the fragment point (which should be the blurriest side not the sharpest). 
 2. And you get an "empty center hole" that you need to cap (duh there's no line to pick a point on anymore).
 
@@ -59,10 +61,10 @@ Same idea, but the point is defined by the middle: the bisector of (frag->l0, fr
 Linearly Transformed Cosines (Eric Heitz and Stephen Hill)](https://hal.science/hal-02155101/document).
 
 ### Problem 
-Practically the same issue. Can't work when the dir of fragment to l0 and/or l1 is dead-on the same as the direction of the reflection vector. So you get big holes along the distribution of fragments. And because the diffuse is, well, diffuse, large, you also see it break towards the horizon when you hold your light "parallel" to a sphere.
+Practically the same issue. Can't work when the direction of the fragment to l0 and/or l1 approaches the direction of the reflection vector. So you get big holes along the distribution of fragments. And because the diffuse is, well, diffuse, large, you also see it break towards the curve-horizon when you hold your light "parallel" to a sphere.
 
 ## 4. The caps
-So if you want a volumetric light you need to add (volume and) caps and this would hopefully fix the 2nd "empty center hole" problem. Right?
+So if you want a volumetric light, you need to add (volume and) caps and this would hopefully fix the 2nd "empty center hole" problem. Right?
 
 Check page 18 "Adding the End Caps" in [Linear-Light Shading with
 Linearly Transformed Cosines (Eric Heitz and Stephen Hill)](https://hal.science/hal-02155101/document) but then also page 21 "The caps approximation is not always worth it and can result in visually disturbing artifacts."
@@ -73,7 +75,7 @@ Linearly Transformed Cosines (Eric Heitz and Stephen Hill)"/>
 	<figcaption>(from those pages)</figcaption>
 </figure>
 
-I see those artifacts and raise you another artifact, which happens even without the caps!
+I see those artifacts and raise you another artifact, which happens even without the caps! In the video on the left half.
 
 <figure class="half">
 	<video playsinline="" muted="" controls="" autoplay="" loop="" class="" style="">
@@ -83,7 +85,7 @@ I see those artifacts and raise you another artifact, which happens even without
 	<figcaption>Falloff edge tip skew problem.</figcaption>
 </figure>
 
-The horizon skew problem: when the reflected line is ~parallel to the surface (ground), and the light is big/long and far away, the reflection's end of the line that's closest to you, appears to have a downward sharp slope at the very end. And the opposite end gets a upward sharp end.
+The horizon skew problem: when the reflected line is ~parallel to the surface (e.g. ground), and the light is big / long / far away, the reflection's end of the line that's closest to you, appears to have a downward sharp slope at the very end. And the opposite end gets a upward sharp end.
 
 Yes everyone seems to also have this problem (at least in shadertoys). Unless they cap the cylinder or pinch it somehow.
 
@@ -102,9 +104,9 @@ So we have:
 ## 5. A 3rd MRP and patches
 My magical but annoying fixes:
 
-- We shorten the ends of the tube distribution exponentially (glorified pows and lerps towards the ends of the line). After some effort it nicely rounds the ends across all roughnesses, but shortens the caboose/furthest reflection a tiny amount. Hey it's not more inaccurate than the aberrating original.
+- Specular term: We shorten the ends of the tube distribution exponentially in a tight and roughness-aware way (glorified pows and lerps towards the ends of the line). After some effort it nicely rounds the ends across, but shortens the caboose/furthest end of the tube reflection a tiny amount. Hey it's not more inaccurate than the aberrating original.
 
-- We pick a 3rd MRP that's a simple point / sphere light position equivalent. And we try to place it where the other MRPs fail. But now we're blending between one MRP and another MRP, based on angles; and IRL you get infinite MRPs. So because we got just the 2: MRP1 <-> MRP3 for diffuse, MRP2 <-> MRP3 for specular, it won't blend perfectly out of the box. But it's close! I only needed to go into lerp hell to make sure I cat-heard all the math consistently across different smoothness / roughness and size and distance.
+- Everything: We pick a 3rd MRP that's a simple point / sphere light position equivalent. And we try to place it where the other MRPs fail. But now we're blending between one MRP and another MRP, based on angles; and IRL you get infinite MRPs. So because we got just the 2: MRP1 <-> MRP3 for diffuse, MRP2 <-> MRP3 for specular, it won't blend perfectly out of the box. But it's close! I only needed to go into lerp hell to make sure I cat-heard all the math consistently across different smoothness / roughness and size and distance.
 	
 - For better caps / ends: You can fade the intensity of the tube light towards its ends in some exponential curve way so it muffles the ends only, then substitute with the point or sphere light. We even have enough math already to tell which end of the light (reflection) is closest to us. For tentacles I just faded to 0 by some pleasing curve, without caps.
 
@@ -120,6 +122,6 @@ Then plug the light direction, distance, aPrime, nDotL, into your brdf function,
 
 # Conclusion:
 
-I can even warp / animate / wiggle it a little bit before it starts breaking at the seams (ie the tentacles) so I've managed to make a reasonably™️ flawless™️ and accurate™️ volume light, across all roughnesses. Especially for XR / VR you can't get away with less. And as a nice bonus, the whole thing plugs into whatever BRDF functions you already have / want to use.
+I can even warp / animate / wiggle it a little bit before it starts breaking at the seams (ie the tentacles), so I've managed to make a reasonably™️ flawless™️ and accurate™️ volume light, across all roughnesses. Especially for XR / VR you can't get away with less. And as a nice bonus, the whole thing plugs into whatever BRDF functions you already have / want to use.
 
-So the (patched) MRP technique, has its uses. But by this point I'd rather do more proper raytracing into something sparse. Because it's very high maintenance and becomes pretty heavy compared to what you thought you'd be doing when hearing about the easy geometric shortcuts. Not a fan of solutions that rely on black holes of tweaking or too much smoke.
+So the (patched) MRP technique, has its uses. But by this point I'd rather do more proper raytracing into some sparse scene light data. Because it's very high maintenance and it got heavier compared to what you thought you'd be doing when hearing about the easy MRP geometric shortcuts. Not a fan of solutions that rely on black holes of tweaking or too much smoke.
