@@ -99,7 +99,7 @@ So we have:
 4. a capping problem
 5. a horizon edge skew that happens without the cap
 
-## 5. A 3rd MRP to patch everything
+## 5. A 3rd MRP and patches
 My magical but annoying fixes:
 
 - We shorten the ends of the tube distribution exponentially (glorified pows and lerps towards the ends of the line). After some effort it nicely rounds the ends across all roughnesses, but shortens the caboose/furthest reflection a tiny amount. Hey it's not more inaccurate than the aberrating original.
