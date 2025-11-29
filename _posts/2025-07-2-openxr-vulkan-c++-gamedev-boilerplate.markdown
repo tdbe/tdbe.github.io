@@ -5,7 +5,7 @@ title: OpenXR/Vulkan/ECS/C++ Game Framework
 description: "OpenXR/Vulkan/ECS/C++ boilerplating single-pass Rendering, Input, Gameplay etc. fundamentals."
 #modified: 2023-02-24
 modified: 2025-11-27
-tags: [vulkan, openxr, input, gamedev, khronos, C/C++, graphics programming, graphics pipeline, shader, spir-v, geometry]
+tags: [vulkan, openxr, input, gamedev, khronos, C/C++, graphics programming, graphics pipeline, shader, spir-v, lighting, geometry]
 image:
   feature: banner1-for-openxr-vulkan-gamedev-framework.jpg
   credit: tdbe

@@ -1,10 +1,10 @@
 ---
 published: true
 layout: post
-title: PSA Don't use MRP Tube lights. Here's how I fixed them tho.
+title: Don't use MRP Tube lights. Here's how I fixed them tho.
 description: "MRP shapes are broken and a lot of trouble."
 modified: 2025-11-29
-tags: [vulkan, gamedev, spir-v, graphics programming, graphics pipeline, shader]
+tags: [vulkan, gamedev, spir-v, graphics programming, graphics pipeline, shader, lighting]
 image:
   feature: banner2-for-openxr-vulkan-gamedev-framework.jpg
   credit: tdbe
@@ -18,7 +18,7 @@ For advanced lighting in somewhat traditional renderers (without ray bouncing) w
 
 I'll focus here specifically on the case of tube lights / line lights, because I recently needed them in a strict no-compromise scenario. But the same issues exist on e.g. Quad Lights (if you expect to make them 3D volumetric).
 
-(You can also see the results in my [my open source openxr boilerplate](https://blog.deferredreality.com/openxr-vulkan-c++-gamedev-boilerplate/).)
+(You can also see the results in my [my open source openxr framework](https://blog.deferredreality.com/openxr-vulkan-c++-gamedev-boilerplate/).)
 
 Here's a TL;DR video:
 
@@ -87,7 +87,7 @@ I see those artifacts and raise you another artifact, which happens even without
 
 The horizon skew problem: when the reflected line is ~parallel to the surface (e.g. ground), and the light is big / long / far away, the reflection's end of the line that's closest to you, appears to have a downward sharp slope at the very end. And the opposite end gets a upward sharp end.
 
-Yes everyone seems to also have this problem (at least in shadertoys). Unless they cap the cylinder or pinch it somehow.
+Yes everyone seems to also have this problem. Unless they cap the cylinder or pinch it somehow.
 
 <figure class="full">
 	<img src="https://blog.deferredreality.com/images/spongebob-recap-01.jpg" alt="let's recap the problems"/>
