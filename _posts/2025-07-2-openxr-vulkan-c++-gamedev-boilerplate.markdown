@@ -1,8 +1,8 @@
 ---
 published: true
 layout: post
-title: OpenXR/Vulkan/ECS/C++ Game Engine
-description: "OpenXR/Vulkan/C++ boilerplating single-pass Rendering, Input, and Gameplay fundamentals."
+title: OpenXR/Vulkan/ECS/C++ Game Framework
+description: "OpenXR/Vulkan/ECS/C++ boilerplating single-pass Rendering, Input, Gameplay etc. fundamentals."
 #modified: 2023-02-24
 modified: 2025-11-27
 tags: [vulkan, openxr, input, gamedev, khronos, C/C++, graphics programming, graphics pipeline, shader, spir-v, geometry]
@@ -15,8 +15,8 @@ share: true
 ---
 
 # TL;DR: 
-Performant open-source OpenXR, Vulkan, C++. 
-A boilerplate / engine to quickly make an actual playable modern royalty-free XR game.
+Performant open-source OpenXR, Vulkan, ECS, C++. 
+A boilerplate -> framework -> mini "game engine" to quickly make an actual playable modern royalty-free XR game.
 
 Demystifies ECS / Memory Management, Single Pass Rendering, XR Input, and XR gamedev fundamentals, on top of @janhsimon's excellent timesaving khronos setup [openxr-vulkan-example](https://github.com/janhsimon/openxr-vulkan-example). 
 
@@ -54,7 +54,11 @@ In any case, thanks to open-source you can now build something pretty good the r
   - Rotating and (accelerated) Panning of the scene by grabbing with both hands, retreating into a non-euclideanly warped pocket dimension (pushing the world away from you non-linearly) and seeing a "tunnelvision" portal-style chaperone. Highest effectiveness and lowest sickness (carefully tweaked and tested across dozens of different people).
   - Uses state machines for movement and for visuals. Supports animated teleportation with targets.
   
-  ![Teaser](https://blog.deferredreality.com/images/chaperone_demo_gif.gif)
+<figure class="half">
+	<img src="https://blog.deferredreality.com/images/chaperone_demo_gif.gif" alt="chaperone_demo_gif"/>
+	<figcaption>Chaperone demo. Warps depth away from you, portal is at a few meters distance.</figcaption>
+</figure>
+
 
 ## Base XR gameplay mechanics
   - Mechanics system based on a list of `GameBehaviour`s set up as FSMs.
@@ -95,9 +99,11 @@ In any case, thanks to open-source you can now build something pretty good the r
   - `Material`s {`Shader`, Descriptor-set `UniformData`, instancing, optional/shared `Pipeline` (for e.g blend ops)}
   
 ## Rendering
-  - Implemented the most high quality e.g. Disney BRDF lighting equations for diffuse, specular and MRP based (Most Representative Point) shape lights. There's a [blog post on correct tube lights](https://blog.deferredreality.com/mrp-volumetric-lights-are-broken/):
-  
-  ![Teaser](https://blog.deferredreality.com/images/mrp_volumetric_lights_gif.gif)
+  - Implemented the most high quality e.g. Disney BRDF lighting equations for diffuse, specular and MRP based (Most Representative Point) shape lights.
+<figure class="half">
+	<img src="https://blog.deferredreality.com/images/mrp_volumetric_lights_gif.gif" alt="correct volumetric tube lights"/>
+	<figcaption>I wrote a [blog post on correct tube lights](https://blog.deferredreality.com/mrp-volumetric-lights-are-broken/)</figcaption>
+</figure>
   
   - `TODO:` does not include clearcoat.
   - `TODO:` does not include subsurface scattering,
