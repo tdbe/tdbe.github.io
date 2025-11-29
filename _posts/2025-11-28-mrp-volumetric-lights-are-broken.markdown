@@ -85,7 +85,7 @@ I see those artifacts and raise you another artifact, which happens even without
 	<figcaption>Falloff edge tip skew problem.</figcaption>
 </figure>
 
-The horizon skew problem: when the reflected line is ~parallel to the surface (e.g. ground), and the light is big / long / far away, the reflection's end of the line that's closest to you, appears to have a downward sharp slope at the very end. And the opposite end gets a upward sharp end.
+The horizon skew problem: when the reflected line is ~parallel to the surface (e.g. ground), and the light is big / long / far away, the reflection's end of the line that's closest to you, appears to have a downward sharp slope at the very end. And the end furthest from you gets an upward slope distortion.
 
 Yes everyone seems to also have this problem. Unless they cap the cylinder or pinch it somehow.
 
@@ -104,7 +104,7 @@ So we have:
 ## 5. A 3rd MRP and patches
 My magical but annoying fixes:
 
-- Specular term: We shorten the ends of the tube distribution exponentially in a tight and roughness-aware way (glorified pows and lerps towards the ends of the line). After some effort it nicely rounds the ends across, but shortens the caboose/furthest end of the tube reflection a tiny amount. Hey it's not more inaccurate than the aberrating original.
+- Specular term: We shorten the ends of the tube distribution exponentially in a tight and roughness-aware way (glorified pows and lerps towards the ends of the line). After some effort it nicely rounds the ends, but shortens the caboose/furthest end of the tube reflection a tiny amount. Hey it's not more inaccurate than the aberrating original.
 
 - Everything: We pick a 3rd MRP that's a simple point / sphere light position equivalent. And we try to place it where the other MRPs fail. But now we're blending between one MRP and another MRP, based on angles; and IRL you get infinite MRPs. So because we got just the 2: MRP1 <-> MRP3 for diffuse, MRP2 <-> MRP3 for specular, it won't blend perfectly out of the box. But it's close! I only needed to go into lerp hell to make sure I cat-heard all the math consistently across different smoothness / roughness and size and distance.
 	
