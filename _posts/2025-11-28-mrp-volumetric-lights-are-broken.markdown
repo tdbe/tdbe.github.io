@@ -16,7 +16,7 @@ share: true
 # The overall problem: 
 For advanced lighting in somewhat traditional renderers (without ray bouncing) we still need to sample various volumetric / area lights. The prevailing method, MRP (Most Representative Point) volume sampling, suffers from glaring artifact edge cases that over the years nobody fixed.
 
-I'll focus here specifically on the case of tube lights / line lights, because I recently needed them in a strict no-compromise scenario. But the same issues exist on e.g. Quad Lights (if you expect to make them 3D volumetric).
+I'll focus here specifically on the case of tube lights / line lights, because I recently needed them in a strict no-compromise scenario. But the same issues exist on e.g. Quad Lights (especially if you expect to make them 3D volumetric).
 
 (You can also see the results in [my open source openxr framework](https://blog.deferredreality.com/openxr-vulkan-c++-gamedev-boilerplate/).)
 
@@ -30,10 +30,10 @@ Here's a TL;DR video:
 	<figcaption>Yes, EVERYONE's MRP lights has these problems.</figcaption>
 </figure>
 
-No I mean it, all the fancy papers, engines, shadertoys, and rockstar authors (who for the record I believe to be smarter than me), have the same problems. I don't want to throw anyone under the bus, but go to literally any pretty shadertoy or engine that features line or tube lights, and cycle the metallic & specular components, point the light at these odd angles against a wall and a sphere, change your view angles, and you see these deal-breaking problems.
+No I mean it, all the fancy papers, engines, shadertoys, rockstar authors (who for the record I believe to be smarter than me), have the same artifacts. Not throwing anyone under the bus but go to literally any pretty shadertoy or engine that features line or tube lights, and cycle the specular component, point the light at these odd angles against a wall and a sphere, change your view angles, and you see these deal-breaking problems.
 
 # The solution: 
-My shader is here and the function is `MRPointOnTubeLight` with plenty of comments, but let's discuss high level. (`todo:` make cleaner shader for the article).
+My shader is here and the function is `MRPointOnTubeLight` with plenty of comments, but let's discuss high level. (`todo:` make cleaner shader for the article 🙃).
 
 We need to handle all these things and their problems:
 
@@ -75,7 +75,7 @@ Linearly Transformed Cosines (Eric Heitz and Stephen Hill)"/>
 	<figcaption>(from those pages)</figcaption>
 </figure>
 
-I see those artifacts and raise you another artifact, which happens even without the caps! In the video on the left half.
+I see those artifacts and raise you another artifact, which happens even without the caps! In the video on the left half:
 
 <figure class="half">
 	<video playsinline="" muted="" controls="" autoplay="" loop="" class="" style="">

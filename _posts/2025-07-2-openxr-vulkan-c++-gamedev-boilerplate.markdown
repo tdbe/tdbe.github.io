@@ -104,7 +104,7 @@ In any case, thanks to open-source you can now build something pretty good the r
   - Implemented the most high quality e.g. Disney BRDF lighting equations for diffuse, specular and MRP based (Most Representative Point) shape lights.
 <figure class="half">
 	<img src="https://blog.deferredreality.com/images/mrp_volumetric_lights_gif.gif" alt="correct volumetric tube lights"/>
-	<figcaption>I wrote a [blog post on correct tube lights](https://blog.deferredreality.com/mrp-volumetric-lights-are-broken/)</figcaption>
+	<figcaption>I wrote a <a href="https://blog.deferredreality.com/mrp-volumetric-lights-are-broken/">blog post on correct tube lights</a></figcaption>
 </figure>
   
   - `TODO:` does not include clearcoat.
