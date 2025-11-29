@@ -1,7 +1,7 @@
 ---
 published: true
 layout: post
-title: PSA: Don't use MRP Tube lights. Here's how I fixed them tho.
+title: PSA Don't use MRP Tube lights. Here's how I fixed them tho.
 description: "MRP shapes are broken and a lot of trouble."
 modified: 2025-11-29
 tags: [vulkan, gamedev, spir-v, graphics programming, graphics pipeline, shader]
@@ -67,7 +67,7 @@ So if you want a volumetric light you need to add (volume and) caps and this wou
 Check page 18 "Adding the End Caps" in [Linear-Light Shading with
 Linearly Transformed Cosines (Eric Heitz and Stephen Hill)](https://hal.science/hal-02155101/document) but then also page 21 "The caps approximation is not always worth it and can result in visually disturbing artifacts."
 
-<figure class="half">
+<figure class="full">
 	<img src="https://blog.deferredreality.com/images/hal.science-Eric_Heitz-and-Stephen_Hill.jpg" alt="Linear-Light Shading with
 Linearly Transformed Cosines (Eric Heitz and Stephen Hill)"/>
 	<figcaption>(from those pages)</figcaption>
@@ -87,7 +87,7 @@ The horizon skew problem: when the reflected line is ~parallel to the surface (g
 
 Yes everyone seems to also have this problem (at least in shadertoys). Unless they cap the cylinder or pinch it somehow.
 
-<figure class="half">
+<figure class="full">
 	<img src="https://blog.deferredreality.com/images/spongebob-recap-01.jpg" alt="let's recap the problems"/>
 	<figcaption>let's recap the problems</figcaption>
 </figure>
