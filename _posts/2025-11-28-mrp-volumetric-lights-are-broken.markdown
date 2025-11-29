@@ -33,9 +33,9 @@ Here's a TL;DR video:
 No I mean it, all the fancy papers, engines, shadertoys, and rockstar authors (who for the record I believe to be smarter than me), have the same problems. I don't want to throw anyone under the bus, but go to literally any pretty shadertoy or engine that features line or tube lights, and cycle the metallic & specular components, point the light at these odd angles against a wall and a sphere, change your view angles, and you see these deal-breaking problems.
 
 # The solution: 
-My shader is here and the function is `MRPointOnTubeLight` with plenty of comments, but let's talk about it high level. (`todo:` make cleaner shader for the article).
+My shader is here and the function is `MRPointOnTubeLight` with plenty of comments, but let's discuss high level. (`todo:` make cleaner shader for the article).
 
-What we need is to handle all these things:
+We need to handle all these things and their problems:
 
 ## 1. Horizon intersection
 This is well documented. Handle the case where the light intersects with a horizon or surface (see [frostbite paper](https://www.ea.com/frostbite/news/moving-frostbite-to-pb)).
