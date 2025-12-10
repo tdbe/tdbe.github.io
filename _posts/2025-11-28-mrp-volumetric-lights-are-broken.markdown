@@ -1,7 +1,7 @@
 ---
 published: true
 layout: post
-title: Don not use MRP Tube lights. But here's how I fixed them.
+title: Do not use MRP Tube lights. But here's how I fixed them.
 description: "MRP shapes are broken and a lot of trouble."
 modified: 2025-11-29
 tags: [vulkan, gamedev, spir-v, graphics programming, graphics pipeline, shader, lighting]
@@ -33,7 +33,7 @@ Here's a TL;DR video:
 No I mean it, all the fancy papers, engines, shadertoys, rockstar authors (who for the record I believe to be smarter than me), have the same artifacts. Not throwing anyone under the bus but go to literally any pretty shadertoy or engine that features line or tube lights, and cycle the specular component, point the light at these odd angles against a wall and a sphere, change your view angles, and you see these deal-breaking problems.
 
 # The solution: 
-My shader is (here)[https://github.com/tdbe/openxr-vulkan-gamedev-framework/blob/main/src/shaders/_Lighting.glsl] and the function is `MRPointOnTubeLight` with plenty of comments, but let's discuss high level. (`todo:` make cleaner shader for the article 🙃).
+My shader is [here](https://github.com/tdbe/openxr-vulkan-gamedev-framework/blob/main/src/shaders/_Lighting.glsl) and the function is `MRPointOnTubeLight` with plenty of comments, but let's discuss high level, stream of consciousness. (`todo:` make cleaner shader for the article 🙃).
 
 We need to handle all these things and their problems:
 
@@ -52,7 +52,7 @@ Linearly Transformed Cosines (Eric Heitz and Stephen Hill)](https://hal.science/
 Some of these sources, e.g. Karis, Frostbyte, Unity, mention they know of (some of) the artifacts and simply accept them.
 
 ### Problem
-The concept of this math doesn't work when the direction of the fragment to the light segment is approaching dead-on the same as the direction of the reflection vector. And, the `tspec` term causes a hard cutoff at the ends of the line/segment. This is not uncommon; as you saw in the videos, the distribution is wide and you notice the problem even at >45 degree angles: 
+The concept of this math doesn't work when the direction of the fragment to the light segment is approaching dead-on the same as the direction of the reflection vector. And, the `tspec` term causes a hard cutoff at the ends of the line/segment. This is not uncommon; as you saw in the videos, the distribution is wide and you notice the problems even at >45 degree angles: 
 1. There's a "cylindrical edge" hard falloff artifact in the reflection on the side of the line light that's furthest away from the fragment point (which should be the blurriest side not the sharpest). 
 2. And you get an "empty center hole" that you need to cap (duh there's no line to pick a point on anymore).
 
@@ -64,7 +64,7 @@ Linearly Transformed Cosines (Eric Heitz and Stephen Hill)](https://hal.science/
 Practically the same issue. Can't work when the direction of the fragment to l0 and/or l1 approaches the direction of the reflection vector. So you get big holes along the distribution of fragments. And because the diffuse is, well, diffuse, large, you also see it break towards the curve-horizon when you hold your light "parallel" to a sphere.
 
 ## 4. The caps
-So if you want a volumetric light, you need to add (volume and) caps and this would hopefully fix the 2nd "empty center hole" problem. Right?
+So if you want a volumetric light, you need to add (volume and) caps, and this would hopefully fix the 2nd "empty center hole" problem. Right?
 
 Check page 18 "Adding the End Caps" in [Linear-Light Shading with
 Linearly Transformed Cosines (Eric Heitz and Stephen Hill)](https://hal.science/hal-02155101/document) but then also page 21 "The caps approximation is not always worth it and can result in visually disturbing artifacts."
@@ -124,7 +124,7 @@ Then plug the light direction, distance, aPrime, nDotL, into your brdf function,
 
 I can even warp / animate / wiggle it a little bit before it starts breaking at the seams (ie the tentacles), so I've managed to make a reasonably™️ flawless™️ and accurate™️ volume light, across all roughnesses. Especially for XR / VR you can't get away with less. And as a nice bonus, the whole thing plugs into whatever BRDF functions you already have / want to use.
 
-So the (patched) MRP technique, has its uses. But by this point I'd rather do more proper raytracing into some sparse scene light data. Because it's too high maintenance and it got heavier compared to what you thought you'd be doing when you heard about the easy MRP geometric shortcuts. Not a fan of solutions that rely on black holes of tweaking or too much smoke.
+So the (patched) MRP technique, has its uses. But by this point I'd rather do more proper raytracing into some sparse scene light data. Because it got too high maintenance and heavy compared to what you thought you'd be doing when you heard about the easy MRP geometric shortcuts. Not a fan of solutions that rely on black holes of tweaking or too much smoke.
 
 
 PS: The scene runs on a RTX 4070 mobile at 90FPS (the refresh rate of the headset) with 8 (animated) tube lights and 2 directional lights, and a lot of transparent objects overdraw. It also runs on a RTX 2060 mobile with a bit of lag spikes if you have too much overdraw right on your face.
