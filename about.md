@@ -12,19 +12,19 @@ share: true
 
 This blog is sparse on writing; I blame it on doing and then also trying to life.
 
-Here's a 2021 list of excellent dumb things that describe or rhyme with what I am:
-* Proponent of egoless individuality, awareness, interestedness
-* Computer scientist chaotic-pensively converging to the ground truth
+Here's a 2021 list of excellent/dumb philosophical things that rhyme with me:
+* Proponent of egoless individuality, awareness, interestedness.
+* Computer scientist chaotic-pensively converging to the ground truth.
 * Confidence comes from deconstruction, understanding, doing. Not surface level shortcuts.
-* Engineer of feeling, soul, style
-* Indie director in some circumstances
-* Business-principles-aware but impatiently so
-* 50-50 logic & feelings fuelled storyteller
-* My DnD character has a ton of charisma and a lot of situational debuffs to it
-* Comfortable with complexity & n-dimensional space
-* CEO of wise, loving, and benign disruption
-* Hyperawareness, hyperfocus, hyperplayfulness is the opposite of being comfortably numb to the signal.
-* Protopian futures lover, bitter optimist.
+* Engineer of feeling, soul, style.
+* Indie director of feature and circumstance.
+* Business-principles-aware but impatiently so.
+* 50-50 logic & feelings fueled storyteller.
+* My DnD character has a ton of charisma and many situational debuffs to it.
+* Comfortable in n-dimensional complexity.
+* Co-lead of wise, loving, and benign collaborative disruption.
+* Hyperawareness & hyperfocus is the opposite of being comfortably numb to signal.
+* Creative at heart but specced with hard science and bitter optimism.
 
 Check [my portfolio](https://www.deferredreality.com) for some projects and game-y things.
 
@@ -54,16 +54,16 @@ Here's what I like in gamedev:
 ------------------
 
 
-Old list of vidya I like, for reference:
+Random list of vidya I like, for reference:
 
 |:--------|:-------:|--------:|
-|Valve stuff,| Kamyia stuff, | Shadow of the Colossus,|Psychonauts, | System Shock 2, | Gish,| 
-|Carmack stuff,| Mirror's edge, | Guilty Gear, |Smash,| Legacy of Kain, | Echochrome, |
-|Kojima stuff, | SureAI (eg Skywind) |Katamari Damacy, |Majora's mask,| Thief 2, | N++ & Flat Heroes, |
-|Jonathan Blow,| Riot stuff, |Jet Set Radio, | Metroid, | Gang Beasts,| AVGN Adventures, |
-|Warren Spector,| Overwatch, |Beyond Good & Evil, | Jazz Jackrabbit, | Lethal League, | Skullgirls. |
-
-###### Also, Titanfall 2, Watchdogs 2, Frog Fractions 2..
+| Baldur's Gate 3, | Clair Obscur, | Like a Dragon, | Dead as Disco, | Phantom Liberty, | Outer Wilds, | 
+| Tiny Glade, | Valve stuff, | Kamyia stuff, | Shadow of the Colossus, | System Shock 2, | Gish, | 
+| Ikumi Nakamura, | Mirror's edge, | Guilty Gear, | Street Fighter, | Legacy of Kain, | Echochrome, |
+| Kojima stuff, | SureAI (eg Skywind) | Katamari Damacy, | Majora's mask, | Thief 2, | N++ & Flat Heroes, |
+| Warren Spector, | Devil May Cry, | Jet Set Radio, | Metroid, | Gang Beasts, | AVGN Adventures, |
+| Carmack stuff, | Overwatch 1, | Beyond Good & Evil, | Jazz Jackrabbit, | Lethal League, | Skullgirls, |
+| Titanfall 2, | Watchdogs 2, | Frog Fractions 2, | Grim Fandango, | Monkey Island, | Obra Dinn |
 
 ------
 
@@ -72,14 +72,12 @@ Here is a brief list of things I approve of:
 * [Making Business Personal](https://hbr.org/2014/04/making-business-personal)
 * [Astronaut requirements == Job requirements](https://www.mars-one.com/faq/selection-and-preparation-of-the-astronauts/what-are-the-qualifications-to-apply)
 * [John Cleese on Creativity](https://github.com/tjluoma/John-Cleese-on-Creativity)
-* [Jonathan Blow on deep creativity](https://www.youtube.com/watch?v=d0m0jIzJfiQ)
 * [Gabe Newell: Reflections of a video game maker](https://www.youtube.com/watch?v=t8QEOBgLBQU)
 * [John Carmack and SMU LYLE School of Engineering](https://www.youtube.com/watch?v=EaN4wUii0T0)
 * [SIGGRAPH](https://blog.selfshadow.com/2014/08/14/siggraph-2014-links/)
 * [Octane Renderer for MRT light fields (VR)](https://www.youtube.com/watch?v=0LLHMpbIJNA)
 * [Art and Technology at Pixar](https://graphics.pixar.com/library/)
 * [Feng Zhu Design Cinema](https://fengzhudesign.com/tutorials.htm)
-* [Ray Kurzweil](https://www.kurzweilai.net/)
 * [Jennifer Doudna](https://rna.berkeley.edu/)
 * [Super Best Friend Zaibatsu](https://superbestfriendsplay.com/)
 
