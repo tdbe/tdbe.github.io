@@ -58,10 +58,10 @@ Random list of vidya I like, for reference:
 
 |:--------|:-------:|--------:|
 | Baldur's Gate 3, | Clair Obscur, | Like a Dragon, | Dead as Disco, | Phantom Liberty, | Outer Wilds, | 
-| Tiny Glade, | Valve stuff, | Kamyia stuff, | Shadow of the Colossus, | System Shock 2, | Gish, | 
-| Ikumi Nakamura, | Mirror's edge, | Guilty Gear, | Street Fighter, | Legacy of Kain, | Echochrome, |
+| Ikumi Nakamura, | Valve stuff, | Kamyia stuff, | Shadow of the Colossus, | System Shock 2, | Gish, | 
+| Rebecca Ford, | Tiny Glade, | Mirror's edge, | Guilty Gear, | Street Fighter, | Legacy of Kain, |
 | Kojima stuff, | SureAI (eg Skywind) | Katamari Damacy, | Majora's mask, | Thief 2, | N++ & Flat Heroes, |
-| Warren Spector, | Devil May Cry, | Jet Set Radio, | Metroid, | Gang Beasts, | AVGN Adventures, |
+| Warren Spector, | Devil May Cry, | Jet Set Radio, |  Echochrome, | Gang Beasts, | AVGN Adventures, |
 | Carmack stuff, | Overwatch 1, | Beyond Good & Evil, | Jazz Jackrabbit, | Lethal League, | Skullgirls, |
 | Titanfall 2, | Watchdogs 2, | Frog Fractions 2, | Grim Fandango, | Monkey Island, | Obra Dinn |
 
