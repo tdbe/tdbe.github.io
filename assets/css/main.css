@@ -1897,6 +1897,10 @@ All this is done for any sub-level being entered.
   background: #3098b7;
 }
 
+.no-touch .dl-menuwrapper li a{
+	background: rgba(255, 118, 188, 0.2);
+}
+
 /* No JS Fallback */
 
 .no-js .dl-trigger {
