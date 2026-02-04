@@ -19,12 +19,13 @@ Here's a 2021 list of excellent/dumb philosophical things that rhyme with me:
 * Engineer of feeling, soul, style.
 * Indie director of feature and circumstance.
 * Business-principles-aware but impatiently so.
-* 50-50 logic & feelings fueled storyteller.
+* 50-50 logic & feelings fuelled storyteller.
 * My DnD character has a ton of charisma and many situational debuffs to it.
 * Comfortable in n-dimensional complexity.
-* Co-lead of wise, loving, and benign collaborative disruption.
-* Hyperawareness & hyperfocus is the opposite of being comfortably numb to signal.
+* Pushing for wise, loving, and painless disruption.
 * Creative at heart but specced with hard science and bitter optimism.
+* Hyperawareness & hyperfocus are the opposite of numbly desiring to bathe in louder signal.
+
 
 Check [my portfolio](https://www.deferredreality.com) for some projects and game-y things.
 
@@ -41,14 +42,15 @@ And Dunny krugs vs ego.
 
 Here's what I like in gamedev:
 
-* clear but high-bandwidth input, 
-* [juicy feedback / visuals](https://twitter.com/martinpi/status/789392171791024128), 
-* unique stimulus scapes,
-* liberating mechanics, 
-* emergent multiplayer shenanigans, 
-* fanbase meta and/or para social engagement, 
-* new ideas / approaches.
-* game feel. mouth feel. (taste)
+* unique stimulus scapes;
+* full stack escapism design;
+* juicy feedback, visuals, conveyance of feeling;
+* clear but high-bandwidth input;
+* liberating mechanics;
+* emergent multiplayer shenanigans; 
+* fanbase meta and/or para social engagement; 
+* game feel, mouth feel (taste);
+* bringing new ideas to life, non-derivative work;
 
 
 ------------------
