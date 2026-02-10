@@ -32,7 +32,7 @@ Previously we've learned these 2 relevant things:
 	
 	* vert: 
 		<br/>
-		`o.uv = ComputeScreenPos(o.position); //where o.position = mul(UNITY_MATRIX_MVP, v.vertex);`
+		`o.uv = ComputeScreenPos(o.position); // compute screenspace texture coordinates (where o.position is "clip space" or mul(UNITY_MATRIX_MVP, v.vertex);)`
 		
 	* frag: 
 		<br/>

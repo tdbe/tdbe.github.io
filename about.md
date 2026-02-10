@@ -10,7 +10,7 @@ image:
 share: true
 ---
 
-This blog is sparse on writing; I blame it on doing and then also trying to life.
+This blog is sparse on posts; I blame it on doing and then trying to life afterwards.
 
 Here's a 2021 list of excellent/dumb philosophical things that rhyme with me:
 * Proponent of egoless individuality, awareness, interestedness.

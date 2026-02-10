@@ -8,17 +8,17 @@
 				<li>
 					<img src="{{ site.url }}/images/{{ site.owner.avatar }}" alt="{{ site.owner.name }} photo" class="author-photo">
 					<h4>{{ site.owner.name }}</h4>
-					<p style="line-height: 1.5em; padding: 15px 15px 0px 20px; letter-spacing: 0.014rem;">{{ site.owner.bio }}<br/>
+					<p style="line-height: 1.5em; padding: 10px 15px 0px 20px; letter-spacing: 0.014rem;">{{ site.owner.bio }}<br/>
 					{{ site.owner.bio1 }}<br/>
 					{{ site.owner.bio2 }}<br/>
 					{{ site.owner.bio3 }}<br/>
 					</p>
 				</li>
-				<li><a href="{{ site.url }}/about/"><span style="border-bottom: 1px dotted #a2a2a2;">More About Me</span></a></li>
+				<li><a href="{{ site.url }}/about/" style="margin-top: 0.5rem; margin-left: 4rem; margin-right: 1rem;"><span style="border-bottom: 1px dotted #a2a2a2;">More About Me</span></a></li>
 				<li style="margin-bottom: -.4em;"><p>Contact:</p></li>
 					<li style="display: inline-block!important; height: 8em; width: 1.8em; float: left;"></li>
-					{% if site.owner.contact %}<li class="m_SocIconLi" style="margin-bottom: 0.5em; margin-top: -0.5em">
-						<a href="{{ site.owner.contact }}" alt="Contact info"><i class="icon-envelope icon-2x noPtrEvts"></i> </a>
+					{% if site.owner.contact %}<li class="m_SocIconLi" style="">
+						<a href="{{ site.owner.contact }}" style="margin-top: -0.5em;" alt="Contact info"><i class="icon-envelope icon-2x noPtrEvts"></i> </a>
 					</li>{% endif %}
 					
 					{% if site.owner.github %}<li class="m_SocIconLi">
@@ -26,7 +26,7 @@
 					</li>{% endif %}
 					
 					{% if site.owner.youtube %}<li class="m_SocIconLi">
-						<a href="https://www.youtube.com/user/{{ site.owner.youtube }}/featured" alt="Youtube"><i class="icon-youtube icon-2x noPtrEvts"></i> </a>
+						<a href="https://www.youtube.com/user/{{ site.owner.youtube }}/featured" style="padding-left: 1.1em;" alt="Youtube"><i class="icon-youtube icon-2x noPtrEvts"></i> </a>
 					</li>{% endif %}
 					
 					{% if site.owner.bluesky %}<li class="m_SocIconLi">
