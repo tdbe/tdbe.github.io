@@ -10,7 +10,39 @@ image:
 share: true
 ---
 
-This blog is sparse on posts; I blame it on doing and then trying to life afterwards.
+### Contact
+
+	Check [my portfolio](https://www.deferredreality.com) for some projects, game-y things, resumé.
+	
+	<img src="https://www.deferredreality.com/images/magclippings_1236.jpg" alt="this . tudor" style="float:left; max-width: 50%;"/>
+	
+	<ul class="dl-submenu">
+		<li class="m_SocIconLi" style="">
+			<a href="https://www.deferredreality.com/#resume" style="margin-top: -0.5em;" alt="Contact info"><i class="icon-envelope icon-2x noPtrEvts"></i> </a>
+		</li>
+		
+		<li class="m_SocIconLi">
+			<a href="https://github.com/tdbe" alt="GitHub"><i class="icon-github icon-2x noPtrEvts"></i> </a>
+		</li>
+		
+		<li class="m_SocIconLi">
+			<a href="https://www.youtube.com/user/https://www.youtube.com/channel/UCuZX7zGt0g51-TbmCGbECtA/featured" style="padding-left: 1.1em;" alt="Youtube"><i class="icon-youtube icon-2x noPtrEvts"></i> </a>
+		</li>
+		
+		<li class="m_SocIconLi">
+			<a href="https://bsky.app/profile/carnegielemon.deferredreality.com" alt="Bluesky"><i class="icon-twitter-sign fa-square-bluesky icon-2x noPtrEvts"></i> </a>
+		</li>
+		
+		<li class="m_SocIconLi">
+			<a href="https://twitter.com/CarnegieLemon" alt="Twitter"><i class="icon-twitter-sign icon-2x noPtrEvts"></i> </a>
+		</li>
+		
+		<li class="m_SocIconLi">
+			<a href="https://linkedin.com/in/tudorberechet" alt="LinkedIn"><i class="icon-linkedin-sign icon-2x noPtrEvts"></i> </a>
+		</li>
+	</ul>
+	
+### This blog is sparse on posts; I blame it on doing and then trying to life afterwards.
 
 Here's a 2021 list of excellent/dumb philosophical things that rhyme with me:
 * Proponent of egoless individuality, awareness, interestedness.
@@ -25,9 +57,6 @@ Here's a 2021 list of excellent/dumb philosophical things that rhyme with me:
 * Pushing for wise, loving, and painless disruption.
 * Creative at heart but specced with hard science and bitter optimism.
 * Hyperawareness & hyperfocus are the opposite of numbly desiring to bathe in louder signal.
-
-
-Check [my portfolio](https://www.deferredreality.com) for some projects and game-y things.
 
 Some words about what I encourage, do, or appreciate:
 
