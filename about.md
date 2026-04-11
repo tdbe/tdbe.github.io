@@ -8,9 +8,9 @@ tags: [blog, gamedev, PCG, research, graphics programming, gameplay programming,
 #  credit: dargadgetz
 #  creditlink: https://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
 image:
-  feature: abstract-5.jpg
-  credit: dargadgetz
-  creditlink: https://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
+  feature: about-17-polaroid-banner.jpg
+  credit: me
+  creditlink: https://www.deferredreality.com/
 share: true
 ---
 
@@ -52,7 +52,7 @@ Check [my portfolio](https://www.deferredreality.com) for some projects, game-y 
 
 ### This blog is sparse on posts; I blame it on doing and then trying to life afterwards.
 
-Here's a 2021 list of excellent/dumb philosophical things that rhyme with me:
+Here's my 2021 list of excellent/dumb philosophical things that rhyme with me:
 * Proponent of strong individuality, awareness, interestedness, but minimal & sandboxed ego.
 * Computer scientist chaotic-pensively converging to the ground truth.
 * Confidence comes from deconstruction, understanding, doing. Not surface level shortcuts.
@@ -93,7 +93,7 @@ Here's what I like in gamedev:
 ------------------
 
 
-Random list of vidya I like, for reference:
+Random list of vidyagarmes I like, for taste & influence reference:
 
 |:--------|:-------:|--------:|
 | Baldur's Gate 3, | Clair Obscur, | Like a Dragon, | Dead as Disco, | Phantom Liberty, | Outer Wilds, | 
