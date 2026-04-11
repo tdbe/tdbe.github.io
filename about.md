@@ -3,6 +3,10 @@ layout: page
 permalink: /about/
 title: More About Me
 tags: [blog, gamedev, PCG, research, graphics programming, gameplay programming, simulations, game design, Jekyll]
+#image:
+#  feature: abstract-5.jpg
+#  credit: dargadgetz
+#  creditlink: https://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
 image:
   feature: abstract-5.jpg
   credit: dargadgetz
@@ -18,28 +22,28 @@ Check [my portfolio](https://www.deferredreality.com) for some projects, game-y 
 <ul class="dl-submenu" style="float: left;">
 	
 	<li class="m_SocIconLi" style="overflow: visible;">
-		<a href="https://github.com/{{ site.owner.github }}" alt="GitHub" style="display:inline-flex;"><i class="icon-github icon-2x noPtrEvts"></i> </a>
+		<a href="https://github.com/{{ site.owner.github }}" alt="GitHub" style="display:inline-flex; color: #888a1e;"><i class="icon-github icon-2x noPtrEvts"></i> </a>
 	</li>
 	
 	<li class="m_SocIconLi" style="overflow: visible; margin-right: .25em;">
-		<a href="{{ site.owner.youtube }}" alt="Youtube" style="display:inline-flex;"><i class="icon-youtube icon-2x noPtrEvts"></i> </a>
+		<a href="{{ site.owner.youtube }}" alt="Youtube" style="display:inline-flex; color: #888a1e;"><i class="icon-youtube icon-2x noPtrEvts"></i> </a>
 	</li>
 	
 	<li class="m_SocIconLi" style="overflow: visible;">
-		<a href="https://bsky.app/profile/{{ site.owner.bluesky }}" alt="Bluesky" style="display:inline-flex;"><i class="icon-twitter-sign fa-square-bluesky icon-2x noPtrEvts"></i> </a>
+		<a href="https://bsky.app/profile/{{ site.owner.bluesky }}" alt="Bluesky" style="display:inline-flex; color: #888a1e;"><i class="icon-twitter-sign fa-square-bluesky icon-2x noPtrEvts"></i> </a>
 	</li>
 	
 	<li class="m_SocIconLi" style="overflow: visible;">
-		<a href="https://twitter.com/{{ site.owner.twitter }}" alt="Twitter" style="display:inline-flex;"><i class="icon-twitter-sign icon-2x noPtrEvts"></i> </a>
+		<a href="https://twitter.com/{{ site.owner.twitter }}" alt="Twitter" style="display:inline-flex; color: #888a1e;"><i class="icon-twitter-sign icon-2x noPtrEvts"></i> </a>
 	</li>
 	
 	<li class="m_SocIconLi" style="overflow: visible;">
-		<a href="https://linkedin.com/in/{{ site.owner.linkedin }}" alt="LinkedIn" style="display:inline-flex;"><i class="icon-linkedin-sign icon-2x noPtrEvts"></i> </a>
+		<a href="https://linkedin.com/in/{{ site.owner.linkedin }}" alt="LinkedIn" style="display:inline-flex; color: #888a1e;"><i class="icon-linkedin-sign icon-2x noPtrEvts"></i> </a>
 	</li>
 </ul>
 
 
-<abbr title="this . tudor"> <img src="https://www.deferredreality.com/images/magclippings_1236.jpg" alt="this . tudor" style="max-width: 50%; margin-left: 0px;"/> </abbr>
+<abbr title="this. Tudor"> <img src="https://www.deferredreality.com/images/magclippings_1236.jpg" alt="this. Tudor" style="max-width: 50%; margin-left: 0px; opacity: 0.95;"/> </abbr>
 
 
 
