@@ -12,40 +12,44 @@ share: true
 
 ### Contact
 
-	Check [my portfolio](https://www.deferredreality.com) for some projects, game-y things, resumé.
+Check [my portfolio](https://www.deferredreality.com) for some projects, game-y things, resumé.
+
+
+<ul class="dl-submenu" style="float: left;">
 	
-	<img src="https://www.deferredreality.com/images/magclippings_1236.jpg" alt="this . tudor" style="float:left; max-width: 50%;"/>
+	<li class="m_SocIconLi" style="overflow: visible;">
+		<a href="https://github.com/{{ site.owner.github }}" alt="GitHub" style="display:inline-flex;"><i class="icon-github icon-2x noPtrEvts"></i> </a>
+	</li>
 	
-	<ul class="dl-submenu">
-		<li class="m_SocIconLi" style="">
-			<a href="https://www.deferredreality.com/#resume" style="margin-top: -0.5em;" alt="Contact info"><i class="icon-envelope icon-2x noPtrEvts"></i> </a>
-		</li>
-		
-		<li class="m_SocIconLi">
-			<a href="https://github.com/tdbe" alt="GitHub"><i class="icon-github icon-2x noPtrEvts"></i> </a>
-		</li>
-		
-		<li class="m_SocIconLi">
-			<a href="https://www.youtube.com/user/https://www.youtube.com/channel/UCuZX7zGt0g51-TbmCGbECtA/featured" style="padding-left: 1.1em;" alt="Youtube"><i class="icon-youtube icon-2x noPtrEvts"></i> </a>
-		</li>
-		
-		<li class="m_SocIconLi">
-			<a href="https://bsky.app/profile/carnegielemon.deferredreality.com" alt="Bluesky"><i class="icon-twitter-sign fa-square-bluesky icon-2x noPtrEvts"></i> </a>
-		</li>
-		
-		<li class="m_SocIconLi">
-			<a href="https://twitter.com/CarnegieLemon" alt="Twitter"><i class="icon-twitter-sign icon-2x noPtrEvts"></i> </a>
-		</li>
-		
-		<li class="m_SocIconLi">
-			<a href="https://linkedin.com/in/tudorberechet" alt="LinkedIn"><i class="icon-linkedin-sign icon-2x noPtrEvts"></i> </a>
-		</li>
-	</ul>
+	<li class="m_SocIconLi" style="overflow: visible; margin-right: .25em;">
+		<a href="{{ site.owner.youtube }}" alt="Youtube" style="display:inline-flex;"><i class="icon-youtube icon-2x noPtrEvts"></i> </a>
+	</li>
 	
+	<li class="m_SocIconLi" style="overflow: visible;">
+		<a href="https://bsky.app/profile/{{ site.owner.bluesky }}" alt="Bluesky" style="display:inline-flex;"><i class="icon-twitter-sign fa-square-bluesky icon-2x noPtrEvts"></i> </a>
+	</li>
+	
+	<li class="m_SocIconLi" style="overflow: visible;">
+		<a href="https://twitter.com/{{ site.owner.twitter }}" alt="Twitter" style="display:inline-flex;"><i class="icon-twitter-sign icon-2x noPtrEvts"></i> </a>
+	</li>
+	
+	<li class="m_SocIconLi" style="overflow: visible;">
+		<a href="https://linkedin.com/in/{{ site.owner.linkedin }}" alt="LinkedIn" style="display:inline-flex;"><i class="icon-linkedin-sign icon-2x noPtrEvts"></i> </a>
+	</li>
+</ul>
+
+
+<abbr title="this . tudor"> <img src="https://www.deferredreality.com/images/magclippings_1236.jpg" alt="this . tudor" style="max-width: 50%; margin-left: 0px;"/> </abbr>
+
+
+
+------------------
+
+
 ### This blog is sparse on posts; I blame it on doing and then trying to life afterwards.
 
 Here's a 2021 list of excellent/dumb philosophical things that rhyme with me:
-* Proponent of egoless individuality, awareness, interestedness.
+* Proponent of strong individuality, awareness, interestedness, but minimal & sandboxed ego.
 * Computer scientist chaotic-pensively converging to the ground truth.
 * Confidence comes from deconstruction, understanding, doing. Not surface level shortcuts.
 * Engineer of feeling, soul, style.
