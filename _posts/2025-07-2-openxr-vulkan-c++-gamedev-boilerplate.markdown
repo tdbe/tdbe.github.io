@@ -39,8 +39,8 @@ Demystifies ECS / Memory Management, Single Pass Rendering, XR Input, and XR gam
 |             `"frictionlessly understandable by all humans"`            | `|•║••••••••|••••••••••|` |           `"hoo-man? what is, this, hoo-man?"`          |
 |                `"human craft, real (abductive) attention"`             | `|••║•••••••|••••••••••|` |           `"ai vibecoding slop & copy pasta"`           |
 |             `"beat all benchmarks, even the useless ones"`             | `|•••║••••••|••••••••••|` |   `"I like C# style garbage collection, and hate ECS"`  |
-| `"fix engine tropes, frictions, dev UX"` `(but we got 0 budget)` 		 | `|••••║•••••|••••••••••|` | `"I don't make games I just implement standards and compile engines"` |
-|   | ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ |  |
+| `"fix engine tropes, frictions, dev UX"`						 		 | `|••••║•••••|••••••••••|` | `"I don't make games I just implement standards and compile engines"` |
+|  `(but we got 0 budget)`  | ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ |  |
 
 \*Trey Parker voice\* Vulkan has a rich body of work, and many strengths as a people; but know not what is of hoo-man. I've managed to translate their work, for hoo-mans, whose lifetimes are too short to decipher all the khronos lunar manuals & messaging in hopes of achieving even the most basic contact.
 
