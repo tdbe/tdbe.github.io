@@ -46,7 +46,7 @@ Demystifies ECS / Memory Management, Single Pass Rendering, XR Input, and XR gam
 
 It didn't help that [they didn't want to touch](https://community.khronos.org/t/what-is-the-right-way-to-implement-single-pass-rendering-with-openxr/109157/9) Single-Pass rendering (the performant & industry-standard linchpin of (XR) rendering).
 
-In any case, thanks to open-source (as opposed to commercial / AAA) you can now build something pretty good the right way, without worrying about mighty morphing license agreements or wetting the beaks of people with golden parachutes. And you'll find no insensitivity, abuse, or horrors beyond all comprehension, attached to this project.
+In any case, thanks to open-source (as opposed to commercial / AAA) you can now build something pretty good the right way, without worrying about mighty morphing license agreements or wetting the beaks of people with golden parachutes. PS: you'll find no insensitivity, abuse, or horrors beyond all comprehension, attached to this project.
 
 ## Builds:
 
@@ -73,6 +73,7 @@ In any case, thanks to open-source (as opposed to commercial / AAA) you can now 
 * Rotating and (accelerated) Panning of the scene by grabbing with both hands, retreating into a non-euclideanly warped pocket dimension (pushing the world away from you non-linearly) and seeing a "tunnelvision" portal-style chaperone. Highest effectiveness and lowest sickness (carefully tweaked and tested across dozens of different people).
 
 * Uses state machines for movement and for visuals. Supports animated teleportation with targets.
+
   ![chaperone\_demo\_gif](https://github.com/user-attachments/assets/f5ef5e4b-5c8e-44c8-90fe-723dc2fd6602)
 
 ## Base XR gameplay mechanics
