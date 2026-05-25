@@ -14,7 +14,7 @@ image:
 share: true
 ---
 
-### Contact
+### This is Tudor's public contact info:
 
 <ul class="dl-submenu" style="float: left;">
 	
@@ -24,6 +24,10 @@ share: true
 	
 	<li class="m_SocIconLi" style="overflow: visible; margin-right: .25em;">
 		<a href="{{ site.owner.youtube }}" alt="Youtube" style="display:inline-flex; color: #888a1e;"><i class="icon-youtube icon-2x noPtrEvts"></i> </a>
+	</li>
+	
+	<li class="m_SocIconLi" style="overflow: visible; margin-right: .25em;">
+		<a href="{{ site.owner.discord }}" alt="Discord" style="display:inline-flex; color: #888a1e;"><i class="fa-discord icon-2x noPtrEvts"></i> </a>
 	</li>
 	
 	<li class="m_SocIconLi" style="overflow: visible;">
@@ -40,7 +44,7 @@ share: true
 </ul>
 
 
-<abbr title="this. Tudor"> <img src="https://blog.deferredreality.com/images/magclippings_2048_b.png" alt="this." style="max-width: 50%; margin-left: 0px; opacity: 0.95;"/> </abbr>
+<abbr title="this. "> <img src="https://blog.deferredreality.com/images/magclippings_2048_b.png" alt="this." style="opacity: 0.95; margin-top: -130px; margin-left: -25px;"/> </abbr>
 
 Check [my portfolio](https://www.deferredreality.com) for some projects, game-y things, resumé.
 
