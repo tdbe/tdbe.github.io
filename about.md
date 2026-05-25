@@ -16,9 +16,6 @@ share: true
 
 ### Contact
 
-Check [my portfolio](https://www.deferredreality.com) for some projects, game-y things, resumé.
-
-
 <ul class="dl-submenu" style="float: left;">
 	
 	<li class="m_SocIconLi" style="overflow: visible;">
@@ -43,9 +40,9 @@ Check [my portfolio](https://www.deferredreality.com) for some projects, game-y 
 </ul>
 
 
-<abbr title="this. Tudor"> <img src="https://www.deferredreality.com/images/magclippings_1236.jpg" alt="this. Tudor" style="max-width: 50%; margin-left: 0px; opacity: 0.95;"/> </abbr>
+<abbr title="this. Tudor"> <img src="https://blog.deferredreality.com/images/magclippings_2048_b.png" alt="this." style="max-width: 50%; margin-left: 0px; opacity: 0.95;"/> </abbr>
 
-
+Check [my portfolio](https://www.deferredreality.com) for some projects, game-y things, resumé.
 
 ------------------
 
