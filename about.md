@@ -44,7 +44,7 @@ share: true
 </ul>
 
 
-<abbr title="this. "> <img src="https://blog.deferredreality.com/images/magclippings_2048_b.png" alt="this." style="opacity: 0.95; margin-top: -130px; margin-left: -25px;"/> </abbr>
+<abbr title="this. "> <img src="https://blog.deferredreality.com/images/magclippings_2048_b.png" alt="this." style="opacity: 0.95; margin-top: -130px; margin-left: -25px; pointer-events: none;"/> </abbr>
 
 Check [my portfolio](https://www.deferredreality.com) for some projects, game-y things, resumé.
 
