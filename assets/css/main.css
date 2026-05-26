@@ -3213,6 +3213,12 @@ a .icon-flip-vertical:before {
   font-weight: bold;
 }
 
+.icon-envelope-square:before {
+  font-family: 'FontAwesomeRegular';
+  content:"\f199";
+  font-weight: bold;
+}
+
 .icon-linkedin:before {
   content: "\f0e1";
 }

@@ -26,7 +26,7 @@ share: true
 		<a href="{{ site.owner.youtube }}" alt="Youtube" style="display:inline-flex; color: #888a1e;"><i class="icon-youtube icon-2x noPtrEvts"></i> </a>
 	</li>
 	
-	<li class="m_SocIconLi" style="overflow: visible; margin-right: .25em;">
+	<li class="m_SocIconLi" style="overflow: visible; margin-right: .5em;">
 		<a href="{{ site.owner.discord }}" alt="Discord" style="display:inline-flex; color: #888a1e;"><i class="fa-discord icon-2x noPtrEvts"></i> </a>
 	</li>
 	
