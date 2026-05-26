@@ -3214,9 +3214,11 @@ a .icon-flip-vertical:before {
 }
 
 .icon-envelope-square:before {
-  font-family: 'FontAwesomeRegular';
   content:"\f199";
-  font-weight: bold;
+}
+
+.icon-envelope-at:before {
+  content:"\f1fa";
 }
 
 .icon-linkedin:before {
